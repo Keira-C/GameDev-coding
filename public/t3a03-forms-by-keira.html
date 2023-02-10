@@ -1,4 +1,4 @@
-<h6>Version 0.0.2.-9</h6>
+<h6>Version 0.0.2.-10</h6>
 <title>Forms</title>
 <h1 align=center style="border:2px solid DarkSeaGreen;">t3a03-forms-fred.html</h1>
 <head>
@@ -12,6 +12,17 @@
 
 The following are all form elements (add to them):<br>
 <form >
+ 
+ <label for="username">Username:</label><br>
+  <input type="text" id="username" name="username"><br>
+  <label for="pwd">Password:</label><br>
+  <input type="password" id="pwd" name="pwd"><br><br>
+ <input type="submit" value="Submit"><br><br>
+
+action="/action_page.php">
+  <label for="email">Enter your email:</label>
+  <input type="email" id="email" name="email">
+  <input type="submit" value="Submit">
 
 Enter Your First Name:<input type=text id="myText01" value="Fred"><br><br>
 Checkbox: <br>
@@ -41,23 +52,12 @@ Select Box:<BR>
 <option value='myThree'>Three
 </select><br><br>
  
- <label for="username">Username:</label><br>
-  <input type="text" id="username" name="username"><br>
-  <label for="pwd">Password:</label><br>
-  <input type="password" id="pwd" name="pwd"><br><br>
- <input type="submit" value="Submit"><br><br>
- 
   <label for="favcolor">Select your favorite color:</label>
   <input type="color" id="favcolor" name="favcolor"><br>
- <input type="submit" value="Submit"><br><br>
  
 </form>
  
- <form action="/action_page.php">
-  <label for="favcolor">Select your favorite color:</label>
-  <input type="color" id="favcolor" name="favcolor" value="#ff0000">
-  <input type="submit" value="Submit">
-</form>
+
 
 
 
