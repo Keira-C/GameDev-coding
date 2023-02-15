@@ -1,10 +1,9 @@
-<h6>Version 0.0.2.-14</h6>
+<h6>Version 0.0.2.-15</h6>
 <title>Forms</title>
-<h1 align=center style="border:2px solid DarkSeaGreen;">t3a03-forms-fred.html</h1>
+<h1 align=center style="color: DarkSeaGreen;">t3a03-forms-fred.html</h1>
 <head>
  <style>
   body {background-color: CornSilk;}
-  .myform input {accent-color: MediumSeaGreen;}
   </style>
 </head>
 
@@ -15,7 +14,7 @@
   <label for="pwd">Password:</label><br>
   <input type="password" id="pwd" name="pwd"><br><br>
 <input type=button value="submit" onclick="{
-   document.getElementById('myDiv01').value = 'Thanks'
+   document.getElementById('myDiv01').innerHTML = 'Thank you'
 }"><br>
 <div id="myDiv01">...</div><br><br>
  
@@ -24,7 +23,7 @@
   <input type="submit" value="Submit"><br><br>
 
 Enter Your First Name:<input type=text id="myText01" value="Fred"><br><br>
-Checkbox: <br>
+Checkbox (please check at least one): <br>
 Beef:<input type=checkbox style="accent-color: MediumSeaGreen"><br>
 Veggy: <input type=checkbox style="accent-color: MediumSeaGreen"><br><br>
 Radio Buttons:<br>
@@ -51,11 +50,16 @@ Select Box:<BR>
 <option value='myThree'>Three
 </select><br><br>
  
-  <label for="favcolor">What's your favourite colour?:</label>
+  <label for="favcolor">What's your favourite colour?</label>
   <input type="color" id="favcolor" name="favcolor"><br><br>
  
  <label for="birthday">Birthday:</label>
   <input type="date" id="birthday" name="birthday">
+ 
+ <label for="sea">Search for : </label>
+      <input type="search" name="searchField" spellcheck=true><br><br>
+      <input type="submit" value="Search">
+ Try spelling something wrong
  
 </form>
  
