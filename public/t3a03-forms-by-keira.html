@@ -1,9 +1,9 @@
-<h6>Version 0.0.2.-13</h6>
+<h6>Version 0.0.2.-14</h6>
 <title>Forms</title>
 <h1 align=center style="border:2px solid DarkSeaGreen;">t3a03-forms-fred.html</h1>
 <head>
  <style>
-  body {background-color: PaleGreen;}
+  body {background-color: CornSilk;}
   .myform input {accent-color: MediumSeaGreen;}
   </style>
 </head>
@@ -15,17 +15,18 @@
   <label for="pwd">Password:</label><br>
   <input type="password" id="pwd" name="pwd"><br><br>
 <input type=button value="submit" onclick="{
-   document.getElementById('myDiv01').value = 'Cool'
+   document.getElementById('myDiv01').value = 'Thanks'
 }"><br>
-
+<div id="myDiv01">...</div><br><br>
+ 
   <label for="email">Enter your email:</label>
   <input type="email" id="email" name="email">
   <input type="submit" value="Submit"><br><br>
 
 Enter Your First Name:<input type=text id="myText01" value="Fred"><br><br>
 Checkbox: <br>
-Beef:<input type=checkbox><br>
-Veggy: <input type=checkbox><br><br>
+Beef:<input type=checkbox style="accent-color: MediumSeaGreen"><br>
+Veggy: <input type=checkbox style="accent-color: MediumSeaGreen"><br><br>
 Radio Buttons:<br>
  107.7 <input type=radio name="myRad01" value=""><br>
  83.5 <input type=radio name="myRad01" value=""><br><br>
