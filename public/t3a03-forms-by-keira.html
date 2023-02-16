@@ -1,6 +1,6 @@
 <h6>Version 0.0.2.-15</h6>
 <title>Forms</title>
-<h1 align=center style="color: DarkSeaGreen;">t3a03-forms-fred.html</h1>
+<h1 align=center style="color: OliveDrab;">t3a03-forms-fred.html</h1>
 <head>
  <style>
   body {background-color: CornSilk;}
@@ -57,9 +57,14 @@ Select Box:<BR>
   <input type="date" id="birthday" name="birthday"><br><br>
  
  <label for="sea">Search for : </label>
-      <input type="search" name="searchField" spellcheck=true><br><br>
+      <input type="search" name="searchField" spellcheck=true><br>
       <input type="submit" value="Search"><br>
- Try spelling something wrong
+ Try spelling something wrong<br><br>
+ 
+ action="/action_page.php">
+  <label for="vol">Volume (between 0 and 50):</label>
+  <input type="range" id="vol" name="vol" min="0" max="50">
+
  
 </form>
  
