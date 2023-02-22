@@ -1,9 +1,15 @@
-Version 0.1.2-7
+Version 0.1.2-8
 <title>Input/output</title>
 <head>
     <style>
         body {background-color: PapayaWhip;}
     </style>
+    <script>
+function changeText() {
+  x = document.getElementById("mySelect");
+  x.options[x.selectedIndex].text = "Melon";
+}
+</script>
 </head>
   <html>
       <body>
@@ -22,7 +28,7 @@ Javascript innerHTML value by Fred</a>
 
 <input id="myNum01" type=number value="4" ><br> 
 
-<input type=button style="accent-color: LightBlue" value="myEvent squares" onclick="{
+<input type=button value="myEvent squares" onclick="{
     let myIn01 = parseFloat(document.getElementById('myNum01').value)
     let myAnswer = myIn01 * myIn01
     document.getElementById('myDiv01').innerHTML = 
@@ -30,4 +36,19 @@ Javascript innerHTML value by Fred</a>
 }"><br>
 
 <div id="myDiv01">...</div>
-
+          
+ <form>
+Select your favorite fruit:
+<select id="mySelect">
+  <option>Apple</option>
+  <option>Orange</option>
+  <option>Pineapple</option>
+  <option>Banana</option>
+</select>
+<br>
+<input type="button" onclick="changeText()" value="Set text of selected option">
+</form>
+    
+          
+ <body>         
+          
