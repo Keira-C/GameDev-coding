@@ -1,4 +1,4 @@
-Version 0.1.2-12
+Version 0.1.2-13
 <title>Input/output</title>
 <head>
     <style>
@@ -10,11 +10,23 @@ function changeText() {
   x.options[x.selectedIndex].text = "Melon";
 }
 </script>
+    
+          <script>
+var customerName = prompt("Please enter your name", "<name goes here>");
+if (customerName!= null) {
+    document.getElementById("welcome").innerHTML =
+    "Hello " + customerName + "! How are you today?";
+}
+          </script>
+    
 </head>
   <html>
       <body>
 <h2 align=center style="border: 2px solid DarkBlue; padding: 30px;">t3a05: input output by Keira</h2>
 
+          
+          <div id="welcome">...</div>
+          
 <a href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp" target="_blank">Good reference to input output 
 Javascript innerHTML value by Fred</a>
 
@@ -49,14 +61,6 @@ Select your favorite fruit:<br>
 <input type="button" style="accent-color: DarkBlue" onclick="changeText()" value="Set text of selected option">
 </form>
 
-          <script>
-var customerName = prompt("Please enter your name", "<name goes here>");
-if (customerName!= null) {
-    document.getElementById("welcome").innerHTML =
-    "Hello " + customerName + "! How are you today?";
-}
-          </script>
-          <div id="welcome">...</div>
-          
+      
  <body>         
           
