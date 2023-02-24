@@ -1,4 +1,4 @@
-Version 0.1.2-15
+Version 0.1.2-16
 <html>
 <title>Input/output</title>
 <head>
@@ -12,18 +12,17 @@ function changeText() {
   x.options[x.selectedIndex].text = "Melon";
 }
 
-var customerName = prompt("What's your name?", "<name goes here>");
-if (customerName!= null) {
-    document.getElementById("myWelcome").innerHTML =
-    ("Hello " + customerName + "! How are you today?";)
-}
-          </script>
-    
+var customerName = prompt("What's your name?", "<name goes here>")
+ 
+    </script>
 </head>
       <body>
 <h2 align=center style="border: 2px solid DarkBlue; padding: 30px;">t3a05: input output by Keira</h2><br>
 
-          
+          <input type=button value="myHello" onclick="{
+    document.getElementById("myWelcome").innerhtml =
+       'Hello' + customerName + '! How are you today?';
+}"><br>
           <div id= "myWelcome">...</div>
           
 <a href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp" target="_blank">Good reference to input output 
@@ -61,5 +60,5 @@ Select your favorite fruit:<br>
 </form>
 
       
- <body>         
+ </body>         
      </html>     
