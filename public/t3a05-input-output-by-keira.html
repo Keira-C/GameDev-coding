@@ -1,4 +1,4 @@
-Version 0.1.2-14
+Version 0.1.2-15
 <html>
 <title>Input/output</title>
 <head>
@@ -12,10 +12,10 @@ function changeText() {
   x.options[x.selectedIndex].text = "Melon";
 }
 
-var customerName = prompt("Please enter your name", "<name goes here>");
+var customerName = prompt("What's your name?", "<name goes here>");
 if (customerName!= null) {
     document.getElementById("myWelcome").innerHTML =
-    "Hello " + customerName + "! How are you today?";
+    ("Hello " + customerName + "! How are you today?";)
 }
           </script>
     
@@ -24,7 +24,7 @@ if (customerName!= null) {
 <h2 align=center style="border: 2px solid DarkBlue; padding: 30px;">t3a05: input output by Keira</h2><br>
 
           
-          <div id="myWelcome">...</div>
+          <div id= "myWelcome">...</div>
           
 <a href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp" target="_blank">Good reference to input output 
 Javascript innerHTML value by Fred</a>
