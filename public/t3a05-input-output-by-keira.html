@@ -1,4 +1,4 @@
-Version 0.1.2-11
+Version 0.1.2-12
 <title>Input/output</title>
 <head>
     <style>
@@ -48,15 +48,14 @@ Select your favorite fruit:<br>
 <br>
 <input type="button" style="accent-color: DarkBlue" onclick="changeText()" value="Set text of selected option">
 </form>
-  
+
+          <script>
 var customerName = prompt("Please enter your name", "<name goes here>");
-
 if (customerName!= null) {
-
     document.getElementById("welcome").innerHTML =
-
     "Hello " + customerName + "! How are you today?";
-    
+}
+          </script>
           <div id="welcome">...</div>
           
  <body>         
