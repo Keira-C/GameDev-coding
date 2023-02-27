@@ -1,4 +1,4 @@
-Version 0.1.2-19
+Version 0.1.2-20
 <html>
 <title>Input/output</title>
 <head>
@@ -19,8 +19,9 @@ var customerName = prompt("What's your name?", "<name goes here>")
       <body>
 <h2 align=center style="border: 2px solid DarkBlue; padding: 30px;">t3a05: input output by Keira</h2><br>
 
-          <input type=button style="accent-color:AntiqueWhite" value="Welcome" onclick="{
-    document.getElementById("myWelcome").innerHTML = 'Hello' + customerName + '! How are you today?';
+          <input type=button value="Welcome" onclick="{
+    document.getElementById('myWelcome').innerHTML = 
+     'Hello' + customerName + '! How are you today?';
 }"><br>
           <div id="myWelcome">Fix this button</div>
           
