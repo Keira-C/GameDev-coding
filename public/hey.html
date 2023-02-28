@@ -1,4 +1,4 @@
- version.01-2
+ version.01-3
 <!DOCTYPE html>
 <html>
 
@@ -8,7 +8,7 @@
 
 var customerName = prompt("Please enter your name", "");
 if (customerName!= null) {
-    document.getElementById("demo").innerHTML =
+    document.getElementById('demo').innerHTML =
     "Hello " + customerName + "! How are you today?";
 }
 
@@ -16,8 +16,11 @@ if (customerName!= null) {
 
 <div id="demo">...</div>
  
- <input type=button value=I know your name 
- document.getElementId('hey')
+ <input type=button value=I know your name onclick="{
+    document.getElementById('myDiv01').innerHTML = 
+      customerName
+}"><br>
+
  
-        <div id="hey">...</div>
+        <div id="myDiv01">...</div>
 </html>
