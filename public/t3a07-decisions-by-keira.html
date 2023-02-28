@@ -1,4 +1,4 @@
-Version 0.0.1-4
+Version 0.0.1-5
 <head>
 <title>Decisions</title>
   <style>
@@ -39,13 +39,12 @@ Note: ! = Not,  && = AND,   || = OR
 }">
 
 
-<pre>Code for the following
+<h4>Code for greeting</h4>
+<pre>
 if (new Date().getHours() < 18, > 11) {
   document.getElementById("demo").innerHTML = "Good day!";
 }
-</script>
 
-<script>
 if (new Date().getHours() < 11) {
   document.getElementById("demo").innerHTML = "Good morning!";
 }
@@ -54,7 +53,7 @@ if (new Date().getHours() < 11) {
 <p id="demo">Good Evening!</p>
 
 <script>
-if (new Date().getHours() > 11, < 18) {
+if (new Date().getHours() < 18, > 11) {
   document.getElementById("demo").innerHTML = "Good day!";
 }
 </script>
