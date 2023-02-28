@@ -1,10 +1,14 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
-  <head>
-    <script>
-      var customerName = prompt("Please enter your name", "");
+
+<head>
+
+<script> 
+
+var customerName = prompt("Please enter your name", "");
 if (customerName!= null) {
-    document.getElementById("username").value = customerName;
+    document.getElementById("welcome").innerHTML =
+    "Hello " + customerName + "! How are you today?";
 }
 
 </script>
@@ -12,9 +16,8 @@ if (customerName!= null) {
 </head>
 
 <body>
-  
-  <input type="text" id="username" />
+
+<div id="welcome">My First JavaScript code.</div>
 
 </body>
 </html>
-      
