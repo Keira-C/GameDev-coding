@@ -1,4 +1,4 @@
-Version 0.0.1-6
+Version 0.0.1-7
 <head>
 <title>Decisions</title>
   <style>
@@ -46,17 +46,19 @@ if (new Date().getHours() < 18, > 11) {
 }
 
 if (new Date().getHours() < 11) {
-  document.getElementById("demo").innerHTML = "Good morning!";
+  document.getElementById("greeting").innerHTML = "Good morning!";
 }
 </pre><br>
 
-<p id="demo">Good Evening!</p>
+<p id="greeting">Good Evening!</p>
 
 <script>
 if (new Date().getHours() < 18,) {
-  document.getElementById("demo").innerHTML = "Good day!";
+  document.getElementById("greeting").innerHTML = "Good day!";
 }
 </script>
+
+<h4 style="border-top: 6px solid DarkMagenta;"></h4>
 
 <label for="weather">Select the weather type today: </label>
     <select id="weather">
@@ -90,3 +92,4 @@ if (new Date().getHours() < 18,) {
       }
     </script>
 
+<p id="demo"></p>
