@@ -41,16 +41,13 @@ Note: ! = Not,  && = AND,   || = OR
 
 <h4 style="border-top: 6px solid DarkMagenta;">Code for greeting</h4>
 <pre>
-if (new Date().getHours() < 18, > 11) {
-  document.getElementById("demo").innerHTML = "Good day!";
+if (new Date().getHours() < 18) {
+  document.getElementById("greeting").innerHTML = "Good day!";
 }
 
-if (new Date().getHours() < 11) {
-  document.getElementById("greeting").innerHTML = "Good morning!";
-}
 </pre><br>
 
-<p id="greeting">Good Evening!</p>
+<div id="greeting">Good Evening!</div>
 
 <script>
 if (new Date().getHours() < 18,) {
