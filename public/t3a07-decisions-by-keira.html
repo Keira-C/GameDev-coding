@@ -1,11 +1,11 @@
-Version 0.0.1-5
+Version 0.0.1-6
 <head>
 <title>Decisions</title>
   <style>
     body {background-color: LightYellow}
   </style>
 </head>
-<h2 align=center style="border: 2px solid DarkMagenta">t1a07 decisions by Keira</h2>
+<h2 align=center style="border: 2px solid DarkMagenta">t3a07: decisions by Keira</h2>
 
 <a href="https://www.w3schools.com/js/js_if_else.asp" target="_blank">Good reference to Decisions if ... else statments 
 Javascript innerHTML value by Fred</a><br>
@@ -58,5 +58,35 @@ if (new Date().getHours() < 18,) {
 }
 </script>
 
+<label for="weather">Select the weather type today: </label>
+    <select id="weather">
+      <option value="">--Make a choice--</option>
+      <option value="sunny">Sunny</option>
+      <option value="rainy">Rainy</option>
+      <option value="snowing">Snowing</option>
+      <option value="overcast">Overcast</option>
+    </select>
+    
+    <script>
+      const select = document.querySelector('select');
+      const para = document.querySelector('p');
 
+      select.onchange = setWeather;
+
+      function setWeather() {
+        const choice = select.value;
+
+        if(choice === 'sunny') {
+          para.textContent = 'It\'s nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get some ice cream.';
+        } else if(choice === 'rainy') {
+          para.textContent = 'The rain is falling outside; wear a raincoat or bring an umbrella!';
+        } else if(choice === 'snowing') {
+          para.textContent = 'The snow is coming down — it\'s freezing! Best to stay in where it\'s warm, or go outside and build a snowman.';
+        } else if(choice === 'overcast') {
+          para.textContent = 'It isn\'t raining, but the sky is grey and gloomy, so take a rain coat just in case.';
+        } else {
+          para.textContent = '';
+        }
+      }
+    </script>
 
