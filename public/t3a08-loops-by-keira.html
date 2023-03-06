@@ -1,10 +1,18 @@
-<h5>Version 0.0.1-7</h5>
+<h5>Version 0.0.1-8</h5>
 <head>
 <title>Loops</title>
 <style>
 body {background-color:lavender;}
-    h2 {border: 2px solid LemonChiffon;
-      font-family: courier;}
+    h2 {font-family: courier;}
+    input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: DarkOrchid;
+  color: white;
+}
 </style>
 </head>
 
@@ -97,8 +105,15 @@ Max loops: <input id="myNum01" type=number value="4" ><br>
 
 <div id="myDiv01"><font color=red>...</font></div><br>
 
-let booksRead = 10;
-do {
- console.log("I read ${booksRead} books this year");
- booksRead++;
-} while (booksRead < 14);
+<p id="demo"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+
+let txt = "";
+for (let x in numbers) {
+  txt += numbers[x] + "<br>"; 
+}
+
+document.getElementById("demo").innerHTML = txt;
+</script>
