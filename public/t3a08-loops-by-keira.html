@@ -1,9 +1,9 @@
-<h5>Version 0.0.1-5</h5>
+<h5>Version 0.0.1-6</h5>
 <head>
 <title>Loops</title>
 <style>
 body {background-color:lavender;}
-    h1 {
+    h2 {
         border: 2px solid LemonChiffon
       font-family: courier;
     }
@@ -12,11 +12,11 @@ body {background-color:lavender;}
 
 <h2 align=center>t3a08: loops by Keira</h2>
 
-
+<h4 style="border-top: 6px solid LemonChiffon;"></h4>
 
 <a href="https://www.w3schools.com/js/js_loop_for.asp">Good reference to Javascript Loops</a><br>
 <a href="https://www.programiz.com/javascript/for-loop">Another good reference to Javascript Loops</a><br>
-
+<a href="https://javascript.plainenglish.io/the-5-types-of-loop-in-javascript-8bdb8f8fc1e9">One more reference to Javascript Loops</a><br>
 
 
 <h4> Example input output code</h4>
@@ -96,6 +96,10 @@ Max loops: <input id="myNum01" type=number value="4" ><br>
     document.getElementById('myDiv01').innerHTML = myTemp 
 }">
 
-<div id="myDiv01"><font color=red>...</font></div>
+<div id="myDiv01"><font color=red>...</font></div><br>
 
-for (let myLoop02)
+let booksRead = 10;
+do {
+ console.log(`I read ${booksRead} books this year`);
+ booksRead++;
+} while (booksRead < 14);
