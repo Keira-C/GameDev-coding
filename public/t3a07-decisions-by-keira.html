@@ -1,4 +1,4 @@
-Version 0.0.1-10
+Version 0.0.1-11
 <head>
 <title>Decisions</title>
   <style>
@@ -77,12 +77,12 @@ Note: ! = Not,  && = AND,   || = OR
     </script>
 
 How are you today? 1=Bad 10=Fantastic <input id="myInput01" value=""><br> 
-<script>
-if (myInput01 <5) {
- document.getElementById('myDiv02').innerHTML = 'I\'m sorry'
+<input type=button value="Submit" onclick="{
+if (myInput01 <=5) {
+ document.getElementById('myDiv02').innerHTML = 'I\'m sorry &#128546'
 }
   else {
-    document.getElementById('myDiv02').innerHTML = 'That\'s good!'
-</script>
+    document.getElementById('myDiv02').innerHTML = '&#128515 That\'s good!'
+}">
 
 <div id="myDiv02">...</div>
