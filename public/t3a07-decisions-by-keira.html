@@ -1,4 +1,4 @@
-Version 0.0.1-9
+Version 0.0.1-10
 <head>
 <title>Decisions</title>
   <style>
@@ -38,6 +38,8 @@ Note: ! = Not,  && = AND,   || = OR
         document.getElementById('myDiv01').innerHTML = myIn01 + ' is not complex'}
 }">
 
+<div id="myDiv01">...</div>
+
 <h4 style="border-top: 6px solid DarkMagenta;"></h4>
 
 <label for="weather">Select the weather type today: </label>
@@ -65,7 +67,7 @@ Note: ! = Not,  && = AND,   || = OR
         } else if(choice === 'rainy') {
           para.textContent = 'The rain is falling outside; wear a raincoat or bring an umbrella!';
         } else if(choice === 'snowing') {
-          para.textContent = 'The snow is coming down — it\'s freezing! Best to stay in where it\'s warm, or go outside and build a snowman.';
+          para.textContent = 'The snow is coming down — it\'s freezing! Maybe stay inside where it\'s warm, or go outside and build a snowman.';
         } else if(choice === 'overcast') {
           para.textContent = 'It isn\'t raining, but the sky is grey and gloomy, so take a rain coat just in case.';
         } else {
@@ -74,6 +76,13 @@ Note: ! = Not,  && = AND,   || = OR
       }
     </script>
 
-<input>
-if () {
+How are you today? 1=Bad 10=Fantastic <input id="myInput01" value=""><br> 
+<script>
+if (myInput01 <5) {
+ document.getElementById('myDiv02').innerHTML = 'I\'m sorry'
 }
+  else {
+    document.getElementById('myDiv02').innerHTML = 'That\'s good!'
+</script>
+
+<div id="myDiv02">...</div>
