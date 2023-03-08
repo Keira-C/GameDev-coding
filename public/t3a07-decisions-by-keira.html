@@ -1,8 +1,8 @@
-Version 0.0.1-12
+Version 0.0.1-13
 <head>
 <title>Decisions</title>
   <style>
-    body {background-color: LightCyan}
+    body {background-color: PapayaWhip}
   </style>
 </head>
 <h2 align=center style="border: 2px solid DarkMagenta">t3a07: decisions by Keira</h2>
@@ -76,9 +76,10 @@ Note: ! = Not,  && = AND,   || = OR
       }
     </script>
 
-How are you today on a scale from 1(bad)-10(amazing)?  <input id="myNum02" type=number value=""><br> 
+How are you today on a scale from 1 (bad)-10 (amazing)?  <input id="myNum02" type=number value=""><br> 
+
 <input type=button value="Submit" onclick="{
-    let myIn02 = (document.getElementById('myNum02').value)
+    let myIn02 = parseFloat(document.getElementById('myNum02').value)
 if (myIn02 < 5) {
  document.getElementById('myDiv02').innerHTML = 'I\'m sorry &#128546'
 }
