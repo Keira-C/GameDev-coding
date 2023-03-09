@@ -118,24 +118,9 @@ for (let x in numbers) {
 document.getElementById("demo").innerHTML = txt;
 </script>
 
-<script>
-var SENTINEL = -1;
-
-function start(){
-    while(true){
-        var num = readInt("Enter a number: ");
-        if(num == SENTINEL){
-            break;
-        }
-        println(num);
-    }
-}
-</script>
-
-<script>
 const items = ['apricot', 'banana', 'cherry'];
 
-for (let i = items.length - 1; i >= 0; i -= 1) {
+for (let i = items.length - 1; i >= 0; i -= 1;) {
   console.log(`${i}. ${items[i]}`);
 }
-</script>
+
