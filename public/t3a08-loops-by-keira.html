@@ -1,4 +1,4 @@
-<h5>Version 0.0.1-9</h5>
+<h5>Version 0.0.1-10</h5>
 <head>
 <title>Loops</title>
 <style>
@@ -117,3 +117,15 @@ for (let x in numbers) {
 
 document.getElementById("demo").innerHTML = txt;
 </script>
+
+var SENTINEL = -1;
+
+function start(){
+    while(true){
+        var num = readInt("Enter a number: ");
+        if(num == SENTINEL){
+            break;
+        }
+        println(num);
+    }
+}
