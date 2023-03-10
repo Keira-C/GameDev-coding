@@ -1,4 +1,4 @@
-Version 0.1.2-27
+Version 0.1.2-28
 <html>
 <title>Input/output</title>
 <head>
@@ -61,8 +61,23 @@ Select your favorite fruit:<br>
 <input type="button" style="accent-color: DarkBlue" onclick="changeText()" value="Set text of selected option">
 </form>
 
-          
-          two down, six to go!
+ <form>
+  <label for="sentence">Enter a sentence:</label>
+  <input type="text" id="sentence" name="sentence">
+  <button onclick="displayWordCount()">Submit</button>
+</form>
+<p id="wordCount"></p>
+
+<script>
+function displayWordCount() {
+  var sentence = document.getElementById("sentence").value;
+  var words = sentence.split(" ");
+  var wordCount = words.length;
+  document.getElementById("wordCount").innerHTML = "There are " + wordCount + " words in the sentence.";
+}
+</script>
+         
+          three down, five to go!
       
  </body>         
      </html>     
