@@ -1,4 +1,4 @@
-Version 0.1.2-28
+Version 0.1.2-29
 <html>
 <title>Input/output</title>
 <head>
@@ -60,6 +60,8 @@ Select your favorite fruit:<br>
 <br>
 <input type="button" style="accent-color: DarkBlue" onclick="changeText()" value="Set text of selected option">
 </form>
+    </body>
+</html>
 
  <form>
   <label for="sentence">Enter a sentence:</label>
@@ -76,8 +78,22 @@ function displayWordCount() {
   document.getElementById("wordCount").innerHTML = "There are " + wordCount + " words in the sentence.";
 }
 </script>
-         
-          three down, five to go!
-      
- </body>         
-     </html>     
+
+<form>
+  <label for="numbers">Enter a list of numbers, separated by commas:</label>
+  <input type="text" id="numbers" name="numbers">
+  <button onclick="displayAverage()">Submit</button>
+</form>
+<p id="average"></p>
+
+<script>
+function displayAverage() {
+  var numbersString = document.getElementById("numbers").value;
+  var numbers = numbersString.split(",");
+  var sum = 0;
+  for (var i = 0; i < numbers.length; i++) {
+    sum += Number(numbers[i]);
+  }
+  var average = sum / numbers.length;
+  document.getElementById("average").innerHTML = "The average of " + numbers + "=" + average
+</script>          
