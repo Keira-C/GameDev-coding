@@ -1,4 +1,4 @@
-Version 0.1.2-32
+Version 0.1.2-33
 <html>
 <title>Input/output</title>
 <head>
@@ -66,7 +66,7 @@ Select your favorite fruit:<br>
   <input type="text" id="sentence" name="sentence">
   <input type="button" onclick="displayWordCount()" value="Submit">
 </form>
-<p id="wordCount"></p>
+<p id="wordCount"></p><br>
 
 <script>
 function displayWordCount() {
@@ -82,7 +82,7 @@ function displayWordCount() {
   <input type="text" id="numbers" name="numbers">
   <input type="button" onclick="displayAverage()" value="Submit">
 </form>
-<p id="average"></p>
+<p id="average"></p><br>
 
 <script>
 function displayAverage() {
@@ -93,9 +93,19 @@ function displayAverage() {
     sum += Number(numbers[i]);
   }
   var average = sum / numbers.length;
-  document.getElementById("average").innerHTML = "The average of " + numbersString + "=" + average
+  document.getElementById("average").innerHTML = "The average of " + numbersString + " is " + average
 }
 </script>          
+
+          <input type="button" onclick="generateRandomNumber()" value="Generate number">
+<p id="displayArea"></p>
+
+<script>
+function generateRandomNumber() {
+  var randomNumber = Math.floor(Math.random() * 100) + 1;
+  document.getElementById("displayArea").innerHTML = "Random Number: " + randomNumber;
+}
+</script>
 
     </body>
 </html>
