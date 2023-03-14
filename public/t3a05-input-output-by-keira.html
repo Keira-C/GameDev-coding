@@ -1,12 +1,9 @@
-Version 0.1.2-35
+Version 0.1.2-36
 <html>
 <title>Input/output</title>
 <head>
     <style>
         body {background-color: PapayaWhip;}
-        input [type=text] {
-  accent-color: Gold;
-}
     </style>
     
     <script>
@@ -101,7 +98,7 @@ function displayAverage() {
 </script>          
 
           <input type="button" onclick="generateRandomNumber()" value="Generate number">
-<p id="displayArea"></p>
+<p id="displayArea"></p><br>
 
 <script>
 function generateRandomNumber() {
@@ -109,6 +106,21 @@ function generateRandomNumber() {
   document.getElementById("displayArea").innerHTML = "Random Number: " + randomNumber;
 }
 </script>
+          
+          <input type="button" onclick="toggleVisibility()" value="Toggle Visibility">
+<p id="myParagraph">This paragraph will be hidden or shown when the button is clicked.</p>
+
+<script>
+function toggleVisibility() {
+  var paragraph = document.getElementById("myParagraph");
+  if (paragraph.style.display === "none") {
+    paragraph.style.display = "block";
+  } else {
+    paragraph.style.display = "none";
+  }
+}
+</script>
+
 
     </body>
 </html>
