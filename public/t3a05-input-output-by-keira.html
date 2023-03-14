@@ -1,4 +1,4 @@
-Version 0.1.2-30
+Version 0.1.2-31
 <html>
 <title>Input/output</title>
 <head>
@@ -80,9 +80,9 @@ function displayWordCount() {
 <form>
   <label for="numbers">Enter a list of numbers, separated by commas:</label>
   <input type="text" id="numbers" name="numbers">
-  <button onclick="displayAverage()">Submit</button>
+  <input type="button" onclick="displayAverage()" value="Submit">
 </form>
-<div id="average"></div>
+<p id="average"></p>
 
 <script>
 function displayAverage() {
@@ -93,7 +93,7 @@ function displayAverage() {
     sum += Number(numbers[i]);
   }
   var average = sum / numbers.length;
-  document.getElementById("average").innerHTML = "The average of " + numbers + "=" + average
+  document.getElementById("average").innerHTML = "The average of " + numbersString + "=" + average
 </script>          
 
     </body>
