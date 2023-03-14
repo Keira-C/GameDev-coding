@@ -1,4 +1,4 @@
-Version 0.1.2-29
+Version 0.1.2-30
 <html>
 <title>Input/output</title>
 <head>
@@ -58,15 +58,13 @@ Select your favorite fruit:<br>
   <option>Banana</option>
 </select>
 <br>
-<input type="button" style="accent-color: DarkBlue" onclick="changeText()" value="Set text of selected option">
+<input type="button" style="accent-color: DarkBlue"; onclick="changeText()" value="Set text of selected option">
 </form>
-    </body>
-</html>
 
  <form>
   <label for="sentence">Enter a sentence:</label>
   <input type="text" id="sentence" name="sentence">
-  <button onclick="displayWordCount()">Submit</button>
+  <input type="button" onclick="displayWordCount()" value="Submit">
 </form>
 <p id="wordCount"></p>
 
@@ -84,7 +82,7 @@ function displayWordCount() {
   <input type="text" id="numbers" name="numbers">
   <button onclick="displayAverage()">Submit</button>
 </form>
-<p id="average"></p>
+<div id="average"></div>
 
 <script>
 function displayAverage() {
@@ -97,3 +95,6 @@ function displayAverage() {
   var average = sum / numbers.length;
   document.getElementById("average").innerHTML = "The average of " + numbers + "=" + average
 </script>          
+
+    </body>
+</html>
