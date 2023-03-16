@@ -1,4 +1,4 @@
-Version 0.0.1-7
+Version 0.0.1-8
 <title>Variables</title>
 <style>
     body {background-color:Ivory}
@@ -74,5 +74,18 @@ let b = 10;
 
 [a, b] = [b, a];
 </pre><br>
-To view how this one works, ctrl-shift-i and open the console
-2 (?) down, 6 to go!
+To view how this one works, ctrl-shift-i and open the console<br><br>
+
+<input type="button" onclick="increment()" value="Click me">
+<p>Count: <span id="count"></span></p>
+
+<script>
+  let count = 0;
+  let countElement = document.getElementById("count");
+
+  function increment() {
+    count++;
+    countElement.innerHTML = count;
+  }
+</script>
+
