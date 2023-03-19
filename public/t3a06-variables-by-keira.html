@@ -1,4 +1,4 @@
-Version 0.0.1-15
+Version 0.0.1-16
 <title>Variables</title>
 <style>
     body {background-color:Ivory}
@@ -91,10 +91,14 @@ To view how this one works, ctrl-shift-i and open the console<br><br>
   }
 </script>
 
-<input type="button" value="Show click counter variable" onclick="{
-   document.getElementById('myDiv02').innerHTML =
-      'let count = 0;
-  let countElement = document.getElementById(\'count\');'
-     }">
-<div id="myDiv02">...</div>
+<div><h3>Variable use in the click counter</h3><br><pre>
+let count = 0;
+  let countElement = document.getElementById("count");
+  
+  function increment() {
+    count++;
+    countElement.innerHTML = count;
+  }
+  </pre></div>
+
 
