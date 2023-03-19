@@ -1,4 +1,4 @@
-Version 0.0.1-12
+Version 0.0.1-13
 <title>Variables</title>
 <style>
     body {background-color:Ivory}
@@ -11,7 +11,7 @@ message = 'Hello! This alert uses a variable in the code';
 alert(message); // shows the variable content
 </script>
 
-<h2 align=center style="border:2px solid Indigo;">t1a06: Variables</h2>
+<h2 align=center style="border:2px solid Indigo;">t3a06: Variables</h2>
 
 <ul>Information on Javascript variables
     <li><a href="https://javascript.info/variables" target="_blank">javascript.info</a>
@@ -92,11 +92,8 @@ To view how this one works, ctrl-shift-i and open the console<br><br>
 </script>
 
 <input type="button" value="Show click counter variable" onclick="{
-   document.getElementById('myCode01').innerHTML =
-      'let count = 0;
-  let countElement = document.getElementById("count");'
-           }">
+   document.getElementById('myDiv02').innerHTML =
+      'hey there'
+                                                                  }">
+<div id="myDiv02">...</div>
 
-<div id="myCode01">...</div>
-
-<button onclick="myFunction()">Click me </button>
