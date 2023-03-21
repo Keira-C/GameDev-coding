@@ -1,4 +1,4 @@
-Version 0.0.1-16
+Version 0.0.1-17
 <head>
 <title>Decisions</title>
   <style>
@@ -91,7 +91,7 @@ if (myIn02 < 5) {
 <div id="myDiv02">...</div><br>
 
 <input id="num1" value="first number here"><input id="operation" value="operation">
-<input id="num2" value"second number">
+<input id="num2" value="second number">
 <script>
 const num1 = parseFloat(document.getElementById('num1').value);
 const num2 = parseFloat(document.getElementById('num2').value);
@@ -110,8 +110,10 @@ if (operation === 'addition') {
   result = 'Invalid operation';
 }
 
-document.getElementById('result').textContent = result;
-</script>
+<input type="button" onclick="{ 
+  document.getElementById('result').textContent = result;
+  }">
+
 
 <div id="result">...</div>
 Two down, six to go!
