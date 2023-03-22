@@ -1,4 +1,4 @@
-Version 0.0.1-19
+Version 0.0.120
 <head>
 <title>Decisions</title>
   <style>
@@ -114,7 +114,7 @@ if (myIn02 < 5) {
       }
     </script>
 
-    <h1>Grade Calculator (using if else-if) </h1>
+    <h3>Grade Calculator (using if else-if) </h3>
     <input type="text" id="score">
     <br><br>
     <button onclick="calculate()">Calculate</button>
@@ -135,20 +135,30 @@ if (myIn02 < 5) {
           document.getElementById("result").innerHTML = "Result: F";
         }
       }
+</script>
+
+
+    <h3>Color Picker</h3>
+    <select id="color" onchange="changeColor()">
+      <option value="">Select a color</option>
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+    </select>
+    <br><br>
+    <div id="box" style="width: 100px; height: 100px;"></div>
+    <script>
+      function changeColor() {
+        var color = document.getElementById("color").value;
+        if (color === "red") {
+          document.getElementById("box").style.backgroundColor = "red";
+        } else if (color === "green") {
+          document.getElementById("box").style.backgroundColor = "green";
+        } else if (color === "blue") {
+          document.getElementById("box").style.backgroundColor = "blue";
+        } else {
+          document.getElementById("box").style.backgroundColor = "white";
+        }
+      }
     </script>
 
-    <h1>Discount Calculator (using if)</h1>
-    <input type="text" id="price">
-    <input type="text" id="discount">
-    <br><br>
-    <button onclick="calculate()">Calculate</button>
-    <br><br>
-    <p id="result"></p>
-    <script>
-      function calculate() {
-        var price = parseFloat(document.getElementById("price").value);
-        var discount = parseInt(document.getElementById("discount").value);
-        if (discount >= 0 && discount <= 100) {
-          var discountPrice = price * (discount / 100)}
-      }
-</script>
