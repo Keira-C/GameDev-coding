@@ -1,4 +1,4 @@
-Version 0.0.1-18
+Version 0.0.1-19
 <head>
 <title>Decisions</title>
   <style>
@@ -90,31 +90,65 @@ if (myIn02 < 5) {
 
 <div id="myDiv02">...</div><br>
 
-<input id="num1" value="first number here"><input id="operation" value="operation">
-<input id="num2" value="second number">
-<script>
-const num1 = parseFloat(document.getElementById('num1').value);
-const num2 = parseFloat(document.getElementById('num2').value);
-const operation = document.getElementById('operation').value;
-let result;
+    <h1>Temperature Converter (if else)</h1>
+    <input type="text" id="temp">
+    <select id="unit">
+      <option value="fahrenheit">Fahrenheit</option>
+      <option value="celsius">Celsius</option>
+    </select>
+    <br><br>
+    <button onclick="convert()">Convert</button>
+    <br><br>
+    <p id="result"></p>
+    <script>
+      function convert() {
+        var temp = parseInt(document.getElementById("temp").value);
+        var unit = document.getElementById("unit").value;
+        if (unit === "fahrenheit") {
+          var result = (temp - 32) * 5 / 9;
+          document.getElementById("result").innerHTML = "Result: " + result.toFixed(2) + "°C";
+        } else {
+          var result = (temp * 9 / 5) + 32;
+          document.getElementById("result").innerHTML = "Result: " + result.toFixed(2) + "°F";
+        }
+      }
+    </script>
 
-if (operation === 'addition') {
-  result = num1 + num2;
-} else if (operation === 'subtraction') {
-  result = num1 - num2;
-} else if (operation === 'multiplication') {
-  result = num1 * num2;
-} else if (operation === 'division') {
-  result = num1 / num2;
-} else {
-  result = 'Invalid operation';
-}
+    <h1>Grade Calculator (using if else-if) </h1>
+    <input type="text" id="score">
+    <br><br>
+    <button onclick="calculate()">Calculate</button>
+    <br><br>
+    <p id="result"></p>
+    <script>
+      function calculate() {
+        var score = parseInt(document.getElementById("score").value);
+        if (score >= 90) {
+          document.getElementById("result").innerHTML = "Result: A";
+        } else if (score >= 80) {
+          document.getElementById("result").innerHTML = "Result: B";
+        } else if (score >= 70) {
+          document.getElementById("result").innerHTML = "Result: C";
+        } else if (score >= 60) {
+          document.getElementById("result").innerHTML = "Result: D";
+        } else {
+          document.getElementById("result").innerHTML = "Result: F";
+        }
+      }
+    </script>
 
+    <h1>Discount Calculator (using if)</h1>
+    <input type="text" id="price">
+    <input type="text" id="discount">
+    <br><br>
+    <button onclick="calculate()">Calculate</button>
+    <br><br>
+    <p id="result"></p>
+    <script>
+      function calculate() {
+        var price = parseFloat(document.getElementById("price").value);
+        var discount = parseInt(document.getElementById("discount").value);
+        if (discount >= 0 && discount <= 100) {
+          var discountPrice = price * (discount / 100)}
+      }
 </script>
-<input type="button" onclick="{ 
-  document.getElementById('result').textContent = result;
-  }">
-
-
-<div id="result">...</div>
-Two down, six to go!
