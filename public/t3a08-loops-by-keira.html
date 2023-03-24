@@ -1,4 +1,4 @@
-<h5>Version 0.0.1-15</h5>
+<h5>Version 0.0.1-16</h5>
 <head>
 <title>Loops</title>
 <style>
@@ -105,23 +105,40 @@ Max loops: <input id="myNum01" type=number value="4" ><br>
 
 <div id="myDiv01"><font color=red>...</font></div><br>
 
-<p id="demo"></p>
-
-<script>
-const numbers = [45, 4, 9, 16, 25];
-
-let txt = "";
-for (let x in numbers) {
-  txt += numbers[x] + "<br>"; 
-}
-
-document.getElementById("demo").innerHTML = txt;
-</script>
-
 <script>
 const items = ['apricot', 'banana', 'cherry'];
 
 for (let i = items.length - 1; i >= 0; i -= 1;) {
   txt += items + "
 }
+</script>
+
+Shopping cart (using a for loop)
+<ul id="shopping-cart"></ul><br>
+
+<script>
+var items = ["apple", "banana", "orange"];
+var shoppingCart = document.getElementById("shopping-cart");
+
+for (var i = 0; i < items.length; i++) {
+  var listItem = document.createElement("li");
+  listItem.textContent = items[i];
+  shoppingCart.appendChild(listItem);
+}
+</script>
+
+Countdown (using a while loop)
+<div id="countdown">10</div>
+
+<script>
+var countdown = document.getElementById("countdown");
+var timeLeft = 10;
+
+while (timeLeft > 0) {
+  countdown.textContent = timeLeft;
+  timeLeft--;
+  await new Promise(resolve => setTimeout(resolve, 1000)); 
+}
+
+countdown.textContent = "Time's up!";
 </script>
