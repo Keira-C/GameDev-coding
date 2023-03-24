@@ -1,4 +1,4 @@
-Version 0.0.13
+Version 0.0.14
 <head>
 <title>Decisions</title>
   <style>
@@ -90,7 +90,7 @@ if (myIn02 < 5) {
 
 <div id="myDiv02">...</div><br>
 
-    <h1>Temperature Converter (if else)</h1>
+    <h3>Temperature Converter (if else)</h3>
     <input type="text" id="temp">
     <select id="unit">
       <option value="fahrenheit">Fahrenheit</option>
@@ -115,30 +115,31 @@ if (myIn02 < 5) {
     </script>
 
     <h3>Grade Calculator (using if else-if) </h3>
+Enter your grade percentage and you will recieve your letter grade
     <input type="text" id="score">
     <br><br>
     <button onclick="calculate()">Calculate</button>
     <br><br>
-    <p id="result"></p>
+    <p id="letter-grade"></p>
     <script>
       function calculate() {
         var score = parseInt(document.getElementById("score").value);
         if (score >= 90) {
-          document.getElementById("result").innerHTML = "Result: A";
+          document.getElementById("letter-grade").innerHTML = "Result: A";
         } else if (score >= 80) {
-          document.getElementById("result").innerHTML = "Result: B";
+          document.getElementById("letter-grade").innerHTML = "Result: B";
         } else if (score >= 70) {
-          document.getElementById("result").innerHTML = "Result: C";
+          document.getElementById("letter-grade").innerHTML = "Result: C";
         } else if (score >= 60) {
-          document.getElementById("result").innerHTML = "Result: D";
+          document.getElementById("letter-grade").innerHTML = "Result: D";
         } else {
-          document.getElementById("result").innerHTML = "Result: F";
+          document.getElementById("letter-grade").innerHTML = "Result: F";
         }
       }
 </script>
 
 
-    <h3>Color Picker</h3>
+    <h3>Color Picker (uses if else-if statements)</h3>
     <select id="color" onchange="changeColor()">
       <option value="">Select a color</option>
       <option value="red">Red</option>
@@ -162,15 +163,4 @@ if (myIn02 < 5) {
       }
     </script>
 
-const light = 'green';
-
-if (light === 'green') {
-  // Allow traffic to pass
-  document.getElementById('traffic-light').src = 'green.png';
-} else if (light === 'yellow') {
-  // Prepare to stop
-  document.getElementById('traffic-light').src = 'yellow.png';
-} else if (light === 'red') {
-  // Stop
-  document.getElementById('traffic-light').src
 
