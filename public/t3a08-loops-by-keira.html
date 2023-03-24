@@ -1,4 +1,4 @@
-<h5>Version 0.0.1-17</h5>
+<h5>Version 0.0.1-18</h5>
 <head>
 <title>Loops</title>
 <style>
@@ -128,7 +128,7 @@ for (var i = 0; i < items.length; i++) {
 </script>
 
 Countdown (using a while loop)
-<div id="countdown">10</div>
+<div id="countdown">10</div><br>
 
 <script>
 var countdown = document.getElementById("countdown");
@@ -143,6 +143,7 @@ while (timeLeft > 0) {
 countdown.textContent = "Time's up!";
 </script>
 
+This uses a do-while loop
 <input type="button" value ="Enter a number between 1 and 10" onclick="getNumber()">
 
 <script>
@@ -154,5 +155,27 @@ function getNumber() {
   } while (isNaN(number) || number < 1 || number > 10);
 
   alert("You entered " + number);
+}
+</script>
+
+<input type="button" value="Play this guessing game" onclick="playGame()">
+<script>
+function playGame() {
+  var numberToGuess = Math.floor(Math.random() * 10) + 1;
+  var guess = 0;
+  var numGuesses = 0;
+
+  do {
+    guess = parseInt(prompt("Guess a number between 1 and 10"));
+    numGuesses++;
+
+    if (guess < numberToGuess) {
+      alert("Your guess is too low!");
+    } else if (guess > numberToGuess) {
+      alert("Your guess is too high!");
+    } else {
+      alert("You guessed the number in " + numGuesses + " guesses!");
+    }
+  } while (guess != numberToGuess);
 }
 </script>
