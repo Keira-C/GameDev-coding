@@ -1,4 +1,4 @@
-<h5>Version 0.0.1-18</h5>
+<h5>Version 0.0.1-19</h5>
 <head>
 <title>Loops</title>
 <style>
@@ -144,7 +144,7 @@ countdown.textContent = "Time's up!";
 </script>
 
 This uses a do-while loop
-<input type="button" value ="Enter a number between 1 and 10" onclick="getNumber()">
+<input type="button" value ="Enter a number between 1 and 10" onclick="getNumber()"><br><br>
 
 <script>
 function getNumber() {
@@ -158,7 +158,7 @@ function getNumber() {
 }
 </script>
 
-<input type="button" value="Play this guessing game" onclick="playGame()">
+<input type="button" value="Play this guessing game that uses a do-while loop" onclick="playGame()">
 <script>
 function playGame() {
   var numberToGuess = Math.floor(Math.random() * 10) + 1;
@@ -179,3 +179,4 @@ function playGame() {
   } while (guess != numberToGuess);
 }
 </script>
+
