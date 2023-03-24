@@ -1,4 +1,4 @@
-<h5>Version 0.0.1-16</h5>
+<h5>Version 0.0.1-17</h5>
 <head>
 <title>Loops</title>
 <style>
@@ -143,3 +143,16 @@ while (timeLeft > 0) {
 countdown.textContent = "Time's up!";
 </script>
 
+<input type="button" value ="Enter a number between 1 and 10" onclick="getNumber()">
+
+<script>
+function getNumber() {
+  var number = 0;
+
+  do {
+    number = parseInt(prompt("Enter a number between 1 and 10"));
+  } while (isNaN(number) || number < 1 || number > 10);
+
+  alert("You entered " + number);
+}
+</script>
