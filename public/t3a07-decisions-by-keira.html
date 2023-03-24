@@ -1,4 +1,4 @@
-Version 0.0.120
+Version 0.0.13
 <head>
 <title>Decisions</title>
   <style>
@@ -161,4 +161,16 @@ if (myIn02 < 5) {
         }
       }
     </script>
+
+const light = 'green';
+
+if (light === 'green') {
+  // Allow traffic to pass
+  document.getElementById('traffic-light').src = 'green.png';
+} else if (light === 'yellow') {
+  // Prepare to stop
+  document.getElementById('traffic-light').src = 'yellow.png';
+} else if (light === 'red') {
+  // Stop
+  document.getElementById('traffic-light').src
 
