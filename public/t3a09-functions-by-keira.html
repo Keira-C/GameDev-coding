@@ -1,4 +1,4 @@
-<h5>version 0.0.1-4</h5>
+<h5>version 0.0.1-5</h5>
 <head>
 <title>Functions</title>
  <style>
@@ -54,7 +54,7 @@ function myGrabNumber(){
 </script>
 
 <p id="quote"></p>
-<button onclick="getQuote()">Get quote</button>
+<button onclick="getQuote()">Get quote</button><br><br>
 
 <script>
   function getQuote() {
@@ -69,4 +69,23 @@ function myGrabNumber(){
     let randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
     quoteElement.innerHTML = randomQuote;
   }
+</script>
+
+
+<p>Countdown: <span id="countdown"></span></p>
+<button onclick="startCountdown()">Start countdown</button>
+
+<script>
+function startCountdown() {
+  let timeleft = 10;
+  let countdownElement = document.getElementById("countdown");
+  let countdown = setInterval(function() {
+    countdownElement.innerHTML = timeleft;
+    timeleft -= 1;
+    if (timeleft < 0) {
+      clearInterval(countdown);
+      countdownElement.innerHTML = "Finished!";
+    }
+  }, 1000);
+}
 </script>
