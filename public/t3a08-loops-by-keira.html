@@ -1,4 +1,4 @@
-<h5>Version 0.0.1-21</h5>
+<h5>Version 0.0.1-22</h5>
 <head>
 <title>Loops</title>
 <style>
@@ -127,22 +127,6 @@ for (var i = 0; i < items.length; i++) {
 }
 </script>
 
-Countdown (using a while loop)
-<div id="countdown">10</div><br>
-
-<script>
-var countdown = document.getElementById("countdown");
-var timeLeft = 10;
-
-while (timeLeft > 0) {
-  countdown.textContent = timeLeft;
-  timeLeft--;
-  await new Promise(resolve => setTimeout(resolve, 1000)); 
-}
-
-countdown.textContent = "Time's up!";
-</script>
-
 This uses a do-while loop
 <input type="button" value ="Enter a number between 1 and 10" onclick="getNumber()"><br><br>
 
@@ -202,23 +186,3 @@ for (var i = 0; i < 4; i++) {
 </script>
 
 <br>
-
-<div id="marquee">This is a scrolling marquee!It uses a while loop</div>
-
-<script>
-var marquee = document.getElementById("marquee");
-var position = 0;
-
-while (true) {
-  position += 5;
-  
-  if (position > document.documentElement.clientWidth) {
-    position = -marquee.clientWidth;
-  }
-  
-  marquee.style.left = position + "px";
-  
-  await new Promise(resolve => setTimeout(resolve, 20));
-}
-</script>
-
