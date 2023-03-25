@@ -1,4 +1,4 @@
-<h5>Version 0.0.1-20</h5>
+<h5>Version 0.0.1-21</h5>
 <head>
 <title>Loops</title>
 <style>
@@ -198,5 +198,26 @@ for (var i = 0; i < 4; i++) {
   }
   
   tableBody.appendChild(row);
+}
+</script>
+
+<br>
+
+<div id="marquee">This is a scrolling marquee!It uses a while loop</div>
+
+<script>
+var marquee = document.getElementById("marquee");
+var position = 0;
+
+while (true) {
+  position += 5;
+  
+  if (position > document.documentElement.clientWidth) {
+    position = -marquee.clientWidth;
+  }
+  
+  marquee.style.left = position + "px";
+  
+  await new Promise(resolve => setTimeout(resolve, 20));
 }
 </script>
