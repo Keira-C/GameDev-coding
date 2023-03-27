@@ -1,4 +1,4 @@
-Version 0.0.1-19
+Version 0.0.1-20
 <title>Variables</title>
 <style>
     body {background-color:Ivory}
@@ -121,19 +121,13 @@ let count = 0;
   greetingElement.innerHTML = greeting;
 </script>
 
-<input type="button" value="code" onclick="{
+<input type="button" value="The code" onclick="{
    document.getElementById('myDiv02') =
       'let now = new Date();
   let hour = now.getHours();
 
   let greeting;
-  if (hour < 12) {
-    greeting = "Good morning";
-  } else if (hour < 18) {
-    greeting = "Good afternoon";
-  } else {
-    greeting = "Good evening";
-  }'
-                             }">
+  if (hour < 12)' 
+     }">
 
 <div id="myDiv02">...</div>
