@@ -1,4 +1,4 @@
-<h5>version 0.0.1-5</h5>
+<h5>version 0.0.1-6</h5>
 <head>
 <title>Functions</title>
  <style>
@@ -71,9 +71,10 @@ function myGrabNumber(){
   }
 </script>
 
+<p style="top-border: 2px solid BlueViolet"></p>
 
 <p>Countdown: <span id="countdown"></span></p>
-<button onclick="startCountdown()">Start countdown</button>
+<button onclick="startCountdown()">Start countdown</button><br><br>
 
 <script>
 function startCountdown() {
@@ -87,5 +88,25 @@ function startCountdown() {
       countdownElement.innerHTML = "Finished!";
     }
   }, 1000);
+}
+</script>
+
+<button onclick="delayMessage()">Click me to display a message after 3 seconds</button><br>
+<p id="message"></p><br><br>
+
+<script>
+function delayMessage() {
+  setTimeout(function() {
+    document.getElementById("message").innerHTML = "Bonjour! Ce message a montré après trois seconde";
+  }, 3000);
+}
+</script>
+
+<button onclick="playSound()">Click me to play a sound</button>
+
+<script>
+function playSound() {
+  let audio = new Audio("kick.mp3");
+  audio.play();
 }
 </script>
