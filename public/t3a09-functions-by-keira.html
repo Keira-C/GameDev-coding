@@ -1,4 +1,4 @@
-<h5>version 0.0.1-6</h5>
+<h5>version 0.0.1-7</h5>
 <head>
 <title>Functions</title>
  <style>
@@ -102,11 +102,14 @@ function delayMessage() {
 }
 </script>
 
-<button onclick="playSound()">Click me to play a sound</button>
+<div id="box" style="background-color: yellow;" onclick="myColourChange"()>Click this div to see myColourChange code in action
+</div>
 
 <script>
-function playSound() {
-  let audio = new Audio("kick.mp3");
-  audio.play();
+function myColourChange() {
+  let colors = ["red", "green", "blue", "orange", "purple"];
+  let randomColor = colors[Math.floor(Math.random() * colors.length)];
+  document.getElementById("box").style.backgroundColor = randomColor;
 }
 </script>
+
