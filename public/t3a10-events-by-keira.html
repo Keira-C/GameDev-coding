@@ -39,6 +39,8 @@ You do at least 8 other events:<br>
 onClick, onDBClick, onChange, onBlur, onFocus, orMouseMove, onTouch, onKeyDown, onKeyPress, onDragStart, onTouchStart, onTouchEnd, onTouchMove 
 <br> 
 
+ <h4 style="bottom-border: 2px solid DarkGreen">ondragover and ondragstart</h4>
+ 
  <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
   <p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget">Drag me!</p>
 </div>
@@ -67,3 +69,4 @@ function drop(event) {
   event.target.appendChild(document.getElementById(data));
 }
 </script>
+<h4 style="top-border: 2px solid DarkGreen"></h4>
