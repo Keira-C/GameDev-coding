@@ -1,4 +1,4 @@
-<h5 style="color: FloralWhite">version 0.0.1-5</h5>
+<h5 style="color: FloralWhite">version 0.0.1-6</h5>
 <head>
   <title>Spy</title>
   <style>
@@ -9,7 +9,7 @@
 <h1 align=center style="color: FloralWhite">t4a06: spy</h1>
 <p style="border-bottom: 2px FloralWhite"></p><br>
 
-<textarea id="myArea01" rows=4 cols=70>This is a message</textarea><br> 
+<textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
 
 
 <input type=button value="encrypt" onclick="{
@@ -30,7 +30,17 @@
 
 <input type=button value="decrypt" onclick="{
    alert('Sorry, you have to do this!')
-}"><br><br>
+ let myTemp = '';
+myString = document.getElementById('myArea02').value.toLowerCase().split('');
+for (let myLoop = 0; myLoop < myString.length; myLoop++){
+   myTemp = myString[myLoop];
+   if (myString[myLoop] == 'f') {myTemp = 'e';}
+   if (myString[myLoop] == 'i') {myTemp = 'h';}
+   myString[myLoop] = myTemp;
+}
+document.getElementById('myArea03').value = myString.join('');
+
+                                            }"><br><br>
 
 
 
