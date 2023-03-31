@@ -1,11 +1,11 @@
-version 0.0.1-2
+version 0.0.1-3
 <head>
-   <title> Local Storage</title>
+   <title>Local Storage</title>
    <style> 
       body {background-color: LavenderBlush}
    </style>
 </head>
-<h2>t4a09: local storage Instructions:</h2>
+<h2 align=center>t4a09: local storage Instructions:</h2>
 
 <body onload="{
    myStorage = localStorage.getItem('myStoredText')
@@ -22,7 +22,7 @@ Text example: <input id="myText1" type=text size=70 value="" placeholder="Write 
 
 <input type="button" value="Store Text" onClick="{
    localStorage.setItem('myStoredText', document.getElementById('myText1').value)
-   alert(document.getElementById('myText1').value + ' \nHas been stored')
+   alert(document.getElementById('myText1').value + '  get rid of alerts!\nHas been stored')
    document.getElementById('myText1').value = ''
 }">
 
