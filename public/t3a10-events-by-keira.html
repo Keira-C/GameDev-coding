@@ -1,4 +1,4 @@
-<h5>Version 0.0.1-13</h5><br>
+<h5>Version 0.0.1-14</h5><br>
 <head>
 <title>Events</title>
  <style>
@@ -85,8 +85,8 @@ function keyDown(event) {
 
  
  <div id="hoverMe" onmouseover="mouseOver()" onmouseout="mouseOut()">
-  <p>Hover over me!</p><br><br><br>
-</div>
+  <p>Hover over me!</p>
+</div><br><br><br>
 
 <script>
 function mouseOver() {
@@ -98,8 +98,11 @@ function mouseOut() {
 }
 </script>
 
+ Double click the image
  <img width="200" src="https://res.cloudinary.com/whistler/image/upload/w_400,h_400,c_fill,dpr_3.0,q_auto/v1/s3/images/summer-activities/peak-2-peak-gondola-summer.jpg" ondblclick="toggleImage()" />
 
+ <br><br><br>
+ 
 <script>
 var imageIndex = 1;
 
@@ -115,3 +118,78 @@ function toggleImage() {
   }
 }
 </script>
+
+ <div ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)" ontouchend="handleTouchEnd(event)" style="width: 100px; height: 100px; background-color: red;"></div>
+
+<script>
+var touchStartX = 0;
+var touchEndX = 0;
+
+function handleTouchStart(event) {
+  touchStartX = event.touches[0].clientX;
+}
+
+function handleTouchMove(event) {
+  touchEndX = event.touches[0].clientX;
+}
+
+function handleTouchEnd(event) {
+  var divElement = document.querySelector('div');
+  
+  if (touchEndX < touchStartX) {
+    divElement.style.backgroundColor = "green";
+  } else if (touchEndX > touchStartX) {
+    divElement.style.backgroundColor = "blue";
+  }
+}
+</script>
+
+ <ul>
+  <li ontouchstart="addItem()">Touch to add a new item!</li>
+</ul>
+
+<script>
+function addItem() {
+  var ulElement = document.querySelector('ul');
+  var newLiElement = document.createElement('li');
+  newLiElement.textContent = "New Item";
+  ulElement.appendChild(newLiElement);
+}
+</script>
+
+ <p class="default-class" onclick="toggleClass()">Click to switch the element class</p>
+
+<style>
+.default-class {
+  color: black;
+}
+
+.new-class {
+  color: red;
+}
+</style>
+
+<script>
+function toggleClass() {
+  var pElement = document.querySelector('p');
+  pElement.classList.toggle('new-class');
+}
+</script>
+
+ This is how the previous event works
+ <pre>
+ <style>
+.default-class {
+  color: black;
+}
+
+.new-class {
+  color: red;
+}
+</style>
+
+function toggleClass() {
+  var pElement = document.querySelector('p');
+  pElement.classList.toggle('new-class');
+}
+</pre>
