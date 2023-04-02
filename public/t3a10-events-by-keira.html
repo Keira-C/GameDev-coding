@@ -1,8 +1,16 @@
-<h5>Version 0.0.1-14</h5><br>
+<h5>Version 0.0.1-15</h5><br>
 <head>
 <title>Events</title>
  <style>
   body {background-color: HoneyDew;}
+  
+  .default-class {
+  color: black;
+}
+
+.new-class {
+  color: red;
+}
  </style>
 
 <h2 align=center>t3a10: Events by Keira</h2> 
@@ -98,7 +106,7 @@ function mouseOut() {
 }
 </script>
 
- Double click the image
+ Double click the image<br>
  <img width="200" src="https://res.cloudinary.com/whistler/image/upload/w_400,h_400,c_fill,dpr_3.0,q_auto/v1/s3/images/summer-activities/peak-2-peak-gondola-summer.jpg" ondblclick="toggleImage()" />
 
  <br><br><br>
@@ -119,6 +127,8 @@ function toggleImage() {
 }
 </script>
 
+ <h4 style="border-top: 2px solid DarkGreen">The following uses onTouch</h4><br><br>
+ 
  <div ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)" ontouchend="handleTouchEnd(event)" style="width: 100px; height: 100px; background-color: red;"></div>
 
 <script>
@@ -157,17 +167,9 @@ function addItem() {
 }
 </script>
 
+ <h4 style="border-top: 2px solid DarkGreen"></h4><br><br>
+ 
  <p class="default-class" onclick="toggleClass()">Click to switch the element class</p>
-
-<style>
-.default-class {
-  color: black;
-}
-
-.new-class {
-  color: red;
-}
-</style>
 
 <script>
 function toggleClass() {
