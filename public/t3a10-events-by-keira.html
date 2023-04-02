@@ -1,4 +1,4 @@
-<h5>Version 0.0.1-11</h5><br>
+<h5>Version 0.0.1-12</h5><br>
 <head>
 <title>Events</title>
  <style>
@@ -85,7 +85,7 @@ function keyDown(event) {
 
  
  <div id="hoverMe" onmouseover="mouseOver()" onmouseout="mouseOut()">
-  <p>Hover over me!</p>
+  <p>Hover over me!</p><br><br><br>
 </div>
 
 <script>
@@ -95,5 +95,23 @@ function mouseOver() {
 
 function mouseOut() {
   document.getElementById("hoverMe").style.backgroundColor = "LightPink";
+}
+</script>
+
+ <img src="https://res.cloudinary.com/whistler/image/upload/w_400,h_400,c_fill,dpr_3.0,q_auto/v1/s3/images/summer-activities/peak-2-peak-gondola-summer.jpg" ondblclick="toggleImage()" />
+
+<script>
+var imageIndex = 1;
+
+function toggleImage() {
+  var imageElement = document.querySelector('img');
+
+  if (imageIndex === 1) {
+    imageElement.src = "https://res.cloudinary.com/whistler/image/upload/w_400,h_400,c_fill,dpr_3.0,q_auto/v1/s3/images/uc/activities-peak-to-peak-2.jpg";
+    imageIndex = 2;
+  } else {
+    imageElement.src = "https://res.cloudinary.com/whistler/image/upload/w_400,h_400,c_fill,dpr_3.0,q_auto/v1/s3/images/summer-activities/peak-2-peak-gondola-summer.jpg";
+    imageIndex = 1;
+  }
 }
 </script>
