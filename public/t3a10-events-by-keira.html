@@ -1,4 +1,4 @@
-<h5>Version 0.0.1-16</h5><br>
+<h5>Version 0.0.1-17</h5><br>
 <head>
 <title>Events</title>
  <style>
@@ -178,23 +178,16 @@ function toggleClass() {
 }
 </script>
 
- This is how the previous event works
- <pre>
- 
- This is in the head:
- 
-.default-class {
-  color: black;
-}
+ <label for="name">Name:</label>
+<input type="text" id="name" onBlur="validateName()">
 
-.new-class {
-  color: red;
+<script>
+function validateName() {
+  var nameInput = document.getElementById("name");
+  if (nameInput.value === "") {
+    alert("Please enter your name.");
+  }
 }
+</script>
 
-This is in the script:
 
-function toggleClass() {
-  var pElement = document.querySelector('p');
-  pElement.classList.toggle('new-class');
-}
-</pre>
