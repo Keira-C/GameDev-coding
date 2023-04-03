@@ -1,4 +1,4 @@
-Version 0.0.1-21
+Version 0.0.1-23
 <title>Variables</title>
 <style>
     body {background-color:Ivory}
@@ -93,9 +93,12 @@ let count = 0;
     countElement.innerHTML = count;
   }
   </pre></div>
-<h4 style="border-top: 6px solid Indigo"></h4>
+<h4 style="border-top: 6px solid Indigo"></h4><br><br>
 
-<p id="greeting"></p>
+Greeting changes depending on time of day<br>
+<p id="greeting"></p><br>
+
+<h4 style="border-top: 6px solid Indigo"></h4><br><br>
 
 <script>
   let now = new Date();
@@ -112,4 +115,23 @@ let count = 0;
 
   let greetingElement = document.getElementById("greeting");
   greetingElement.innerHTML = greeting;
+</script>
+
+Calculate area of a rectangle (this uses vriables and a function
+<label for="width">Width:</label>
+<input type="number" id="width">
+
+<label for="height">Height:</label>
+<input type="number" id="height">
+
+<button onclick="calculateArea()">Calculate area</button>
+<p>Area: <span id="area"></span></p>
+
+<script>
+  function calculateArea() {
+    let width = Number(document.getElementById("width").value);
+    let height = Number(document.getElementById("height").value);
+    let area = width * height;
+    document.getElementById("area").innerHTML = area;
+  }
 </script>
