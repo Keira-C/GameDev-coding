@@ -1,4 +1,4 @@
-version 0.0.1-11
+version 0.0.1-12
 <head>
    <title>Move background</title>
 </head>
@@ -27,16 +27,15 @@ version 0.0.1-11
     
 }">
 
+   <input type="button" value="Stop Background" onclick="{
+  clearInterval(myClock);
+  myClock = null;
+}">
+   
 <input type=button value="Image Right" onclick="{
   document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 10 + 'px'
 }"><br><br>
 
 <img id="myImage01" style="position:relative; width:100px; height:100px; top:0px; left:0px;" src="https://static.vecteezy.com/system/resources/previews/016/475/652/original/transparent-of-a-hot-air-balloon-png.png" alt="hot air balloon">
 
-   <input type=button value="Auto image right" onclick="{
-  clearInterval('myClock')
-  myClock = setInterval(function(){
-     document.getElementById('Image Right').click() 
-  }, 100)
-    
-}">
+  
