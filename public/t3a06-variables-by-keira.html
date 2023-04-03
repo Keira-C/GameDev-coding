@@ -1,4 +1,4 @@
-Version 0.0.1-23
+Version 0.0.1-24
 <title>Variables</title>
 <style>
     body {background-color:Ivory}
@@ -117,12 +117,15 @@ Greeting changes depending on time of day<br>
   greetingElement.innerHTML = greeting;
 </script>
 
-Calculate area of a rectangle (this uses vriables and a function
+Calculate area of a rectangle (this uses variables and a function)<br>
 <label for="width">Width:</label>
 <input type="number" id="width">
 
 <label for="height">Height:</label>
 <input type="number" id="height">
+
+<label for="units">Unit:</label>
+<input id="units"><br>
 
 <button onclick="calculateArea()">Calculate area</button>
 <p>Area: <span id="area"></span></p>
@@ -131,7 +134,8 @@ Calculate area of a rectangle (this uses vriables and a function
   function calculateArea() {
     let width = Number(document.getElementById("width").value);
     let height = Number(document.getElementById("height").value);
+    let units = (document.getElementById("units").value);
     let area = width * height;
-    document.getElementById("area").innerHTML = area;
+    document.getElementById("area").innerHTML = area + units;
   }
 </script>
