@@ -1,38 +1,27 @@
-<h5>Version 0.0.1-44</h5></br>
+<h5>Version 0.0.1-45</h5></br>
 <html>
 <head>
   <title>CSS</title>
   <style> 
     body {
-  background-color: #000;
-  overflow: hidden;
+  background: linear-gradient(to right, #FF6B6B, #556270);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 }
 
-.particles {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-.particle {
-  position: absolute;
-  background-color: #fff;
-  border-radius: 50%;
-  animation: particle 1s linear infinite;
-}
-
-@keyframes particle {
+@keyframes gradient {
   0% {
-    transform: translate3d(0, 0, 0) scale(1);
-    opacity: 1;
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
   100% {
-    transform: translate3d(50px, 50px, 0) scale(2);
-    opacity: 0;
+    background-position: 0% 50%;
   }
 }
+
+ 
 
     h1 {
       border-bottom-style: solid;
