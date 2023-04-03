@@ -1,4 +1,4 @@
-<h5>version 0.0.1-8</h5>
+<h5>version 0.0.1-9</h5>
 <head>
 <title>Functions</title>
  <style>
@@ -6,6 +6,7 @@
   </style>
 </head>
 <script>
+  
 
 function myExampleFunction(){
    let myIn01 = parseInt(document.getElementById('myText01').value)
@@ -17,12 +18,32 @@ function myExampleFunction(){
 
 </script>
 
-<h2 align=center style="border:2px solid BlueViolet" >t3a09: functions by Keira</h2>
+<h2 align=center style="border:2px solid BlueViolet" >t3a09: functions by Keira</h2><br><br>
 
 <a href="https://www.w3schools.com/js/js_functions.asp" target="_blank">Good reference to Javascript functions</a><br>
 
 Functions are used to sensibly organzie code. Then they are "Called" elsewhere. 
-Information can also be passed to functions (that's more advanced).
+Information can also be passed to functions (that's more advanced).<br><br>
+
+
+<p align=center>Countdown: <span id="countdown"></span></p>
+<button align=center onclick="startCountdown()">Start countdown</button><br><br>
+
+<script>
+function startCountdown() {
+  let timeleft = 10;
+  let countdownElement = document.getElementById("countdown");
+  let countdown = setInterval(function() {
+    countdownElement.innerHTML = timeleft;
+    timeleft -= 1;
+    if (timeleft < 0) {
+      clearInterval(countdown);
+      countdownElement.innerHTML = "Finished!";
+    }
+  }, 1000);
+}
+</script>
+
 
 <h4> Example Functions code</h4>
 <pre>
@@ -31,7 +52,7 @@ function myGrabNumber(){
 }
 </pre>
 
-<h4> Example working code</h4>
+<h4> Example working code</h4><br>
 
 
 <input type=text id="myText01" value="3"><br>
@@ -42,7 +63,7 @@ function myGrabNumber(){
 
 <div id="myDiv01">...</div>
 
-<p id="text" onclick="myChangeColor()">Click me to change my color!</p>
+<p id="text" onclick="myChangeColor()">Click to change font colour!</p>
 
 <script>
   function myChangeColor() {
@@ -73,25 +94,7 @@ function myGrabNumber(){
 
 <p style="top-border: 2px solid BlueViolet"></p>
 
-<p>Countdown: <span id="countdown"></span></p>
-<button onclick="startCountdown()">Start countdown</button><br><br>
-
-<script>
-function startCountdown() {
-  let timeleft = 10;
-  let countdownElement = document.getElementById("countdown");
-  let countdown = setInterval(function() {
-    countdownElement.innerHTML = timeleft;
-    timeleft -= 1;
-    if (timeleft < 0) {
-      clearInterval(countdown);
-      countdownElement.innerHTML = "Finished!";
-    }
-  }, 1000);
-}
-</script>
-
-<button onclick="delayMessage()">Click to display a message after 3 seconds</button><br>
+<button onclick="delayMessage()">Click and wait 3 seconds</button><br>
 <p id="message"></p><br><br>
 
 <script>
