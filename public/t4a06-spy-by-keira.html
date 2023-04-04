@@ -59,12 +59,12 @@
 }">
 
 <input type="button" value="base64 encrypt" onclick="{
-const input = document.getElementById("myArea01");
+const input = document.getElementById('myArea01').innerHTML;
                                                 
 const inputValue = input.value;
 const base64Value = btoa(inputValue);
 
-const output = document.getElementById("myArea02");
+const output = document.getElementById('myArea02');
 output.innerHTML = base64Value;
  }">        <br><br>  
 
