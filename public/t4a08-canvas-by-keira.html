@@ -1,4 +1,4 @@
-version 0.0.1-2
+version 0.0.1-3
 <head>
    <title>Canvas</title>
 </head>
@@ -54,6 +54,17 @@ You use loops and variables to make fast fancy drawings <br><br>
 
 <input type="button" value="clearRect(20, 20, 50, 50)" onclick="{
    myContext.clearRect(20, 20, 50, 50);
+}">
+
+<input type="button" value="strokeRect (30, 30, 160, 90)" onlick="{
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+ctx.shadowColor = "#d53";
+ctx.shadowBlur = 20;
+ctx.lineJoin = "bevel";
+ctx.lineWidth = 15;
+ctx.strokeStyle = "#38f";
+ctx.strokeRect(30, 30, 160, 90);
 }">
 
 <input type=button value="Clear all" onclick="{
