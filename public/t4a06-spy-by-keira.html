@@ -1,4 +1,4 @@
-<h5 style="color: FloralWhite">version 0.0.1-14</h5>
+<h5 style="color: FloralWhite">version 0.0.1-16</h5>
 <head>
   <title>Spy</title>
   <style>
@@ -9,19 +9,14 @@
 <h1 align=center style="color: FloralWhite">t4a06: spy</h1>
 <p style="border-bottom: 2px FloralWhite"></p><br>
 
-<textarea id="myArea01" rows=4 cols=70>Hello how are
-  you</textarea><br> 
+<textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
 
 
 <input type=button value="encrypt" onclick="{
    let myTemp = ''
    myString = document.getElementById('myArea01').value.toLowerCase().split('')
    for (let myLoop=0;   myLoop < myString.length; myLoop++){
-      myTemp = myString[myLoop]                        
-                                           
-
-                                    
-                                            
+      myTemp = myString[myLoop]                                                                                        
                                             
       if (myString[myLoop] == 'a') {myTemp  = 'z'} 
       if (myString[myLoop] == 'b') {myTemp  = 'a'} 
@@ -59,7 +54,7 @@
 }">
 
 <input type="button" value="base64 encrypt" onclick="{
-const input = document.getElementById('myArea01').value;
+const input = document.getElementById('myArea01');
                                                 
 const inputValue = input.value;
 const base64Value = btoa(inputValue);
@@ -110,7 +105,14 @@ document.getElementById('myArea03').value = myString.join('');
 
                                             }"><br><br>
 
+const input = document.getElementById("myArea02");
 
+const base64Value = input.value;
+
+const decodedValue = atob(base64Value);
+
+const output = document.getElementById("");
+output.innerHTML = decodedValue;
 
 <textarea id="myArea03" rows=4 cols=70></textarea><br><br><br> 
 
