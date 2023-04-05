@@ -1,4 +1,4 @@
-<h5 style="color: FloralWhite">version 0.0.1-26</h5>
+<h5 style="color: FloralWhite">version 0.0.1-27</h5>
 <head>
   <title>Spy</title>
   <style>
@@ -63,30 +63,31 @@
     else if (myString[myLoop] == '&') {myTemp = '*'} 
     else if (myString[myLoop] == '*') {myTemp = '('} 
     else if (myString[myLoop] == '(') {myTemp = ')'} 
-    else if (myString[myLoop] == ')') {myTemp = '-'} 
-    else if (myString[myLoop] == '-') {myTemp = '_'} 
-    else if (myString[myLoop] == '_') {myTemp = '='}
-    else if (myString[myLoop] == '=') {myTemp = '+'} 
-    else if (myString[myLoop] == '+') {myTemp = '{'}
-    else if (myString[myLoop] == '{') {myTemp = '}'} 
-    else if (myString[myLoop] == '}') {myTemp = '['} 
-    else if (myString[myLoop] == '[') {myTemp = ']'}
-    else if (myString[myLoop] == ']') {myTemp = ';'} 
-    else if (myString[myLoop] == ';') {myTemp = ':'} 
-    else if (myString[myLoop] == ':') {myTemp = '''} 
-    else if (myString[myLoop] == ''') {myTemp = '"'} 
-    else if (myString[myLoop] == '"') {myTemp = '\'}           
-    else if (myString[myLoop] == '\') {myTemp = '|'}
-    else if (myString[myLoop] == '|') {myTemp = '<'} 
-    else if (myString[myLoop] == '<') {myTemp = ','}
-    else if (myString[myLoop] == ',') {myTemp = '.'} 
-    else if (myString[myLoop] == '.') {myTemp = '>'} 
-    else if (myString[myLoop] == '>') {myTemp = '/'}
-    else if (myString[myLoop] == '/') {myTemp = '?'} 
-    else if (myString[myLoop] == '?') {myTemp = '`'} 
-    else if (myString[myLoop] == '`') {myTemp = '~'} 
-    else if (myString[myLoop] == '~') {myTemp = '!'}      
-                                              
+   else if (myString[myLoop] == ')') {myTemp = '-'} 
+else if (myString[myLoop] == '-') {myTemp = '_'} 
+else if (myString[myLoop] == '_') {myTemp = '='}
+else if (myString[myLoop] == '=') {myTemp = '+'} 
+else if (myString[myLoop] == '+') {myTemp = '{'}
+else if (myString[myLoop] == '{') {myTemp = '}'}
+else if (myString[myLoop] == '}') {myTemp = '['} 
+else if (myString[myLoop] == '[') {myTemp = ']'} 
+else if (myString[myLoop] == ']') {myTemp = ';'} 
+else if (myString[myLoop] == ';') {myTemp = ':'} 
+else if (myString[myLoop] == ':') {myTemp = "'"} 
+else if (myString[myLoop] == "'") {myTemp = '"'} 
+else if (myString[myLoop] == '"') {myTemp = '\\'}           
+else if (myString[myLoop] == '\\') {myTemp = '|'}
+else if (myString[myLoop] == '|') {myTemp = '<'} 
+else if (myString[myLoop] == '<') {myTemp = ','}
+else if (myString[myLoop] == ',') {myTemp = '.'} 
+else if (myString[myLoop] == '.') {myTemp = '>'} 
+else if (myString[myLoop] == '>') {myTemp = '/'}
+else if (myString[myLoop] == '/') {myTemp = '?'} 
+else if (myString[myLoop] == '?') {myTemp = '`'} 
+else if (myString[myLoop] == '`') {myTemp = '~'} 
+else if (myString[myLoop] == '~') {myTemp = '!'}
+
+                                             
     myString[myLoop] = myTemp;
   }
                                               
