@@ -1,4 +1,4 @@
-<h5 style="color: FloralWhite">version 0.0.1-36</h5>
+<h5 style="color: FloralWhite">version 0.0.1-37</h5>
 <head>
   <title>Spy</title>
   <style>
@@ -12,14 +12,12 @@
 <textarea id="myArea01" rows="4" cols="70">Hello how are you</textarea><br>
 
 <input type="button" value="Base64 Encrypt" onclick="base64Encrypt()">
-
-<input type="button" value="! Encrypt" onclick="encrypt()"><br><br>
+<br><br>
 
 <textarea id="myArea02" rows="4" cols="70"></textarea><br>
 
 <input type="button" value="Base64 Decrypt" onclick="base64Decrypt()">
-
-<input type="button" value="! Decrypt" onclick="decrypt()"><br><br>
+<br><br>
 
 <textarea id="myArea03" rows="4" cols="70"></textarea>
 
@@ -33,41 +31,12 @@
     myArea02.innerHTML = base64Value;
   }
 
-  function encrypt() {
-    const inputValue = MyArea01.value.toLowerCase().split('');
-    let outputValue = '';
-    for (let i = 0; i < inputValue.length; i++) {
-      let charCode = inputValue[i].charCodeAt(0);
-      if (charCode >= 97 && charCode <= 122) { // lowercase letters
-        outputValue += String.fromCharCode((charCode - 97 + 1) % 26 + 97); // shift by 1, wrap around
-      } else if (charCode >= 48 && charCode <= 57) { // numeric characters
-        outputValue += String.fromCharCode((charCode - 48 + 1) % 10 + 48); // shift by 1, wrap around
-      } else { // special characters
-        outputValue += String.fromCharCode((charCode - 33 + 1) % 15 + 33); // shift by 1, wrap around
-      }
-    }
-    myArea02.value = outputValue;
-  }
-
   function base64Decrypt() {
     const inputValue = myArea02.value;
     const decodedValue = atob(inputValue);
     myArea03.value = decodedValue;
   }
 
-  function decrypt() {
-    const inputValue = myArea02.value.toLowerCase().split('');
-    let outputValue = '';
-    for (let i = 0; i < inputValue.length; i++) {
-      let charCode = inputValue[i].charCodeAt(0);
-      if (charCode >= 97 && charCode <= 122) { // lowercase letters
-        outputValue += String.fromCharCode((charCode - 97 + 25) % 26 + 97); // shift by -1, wrap around
-      } else if (charCode >= 48 && charCode <= 57) { // numeric characters
-        outputValue += String.fromCharCode((charCode - 48 + 9) % 10 + 48); // shift by -1, wrap around
-      } else { // special characters
-        outputValue += String.fromCharCode((charCode - 33 + 14) % 15 + 33); // shift by -1, wrap around
-      }
-    }
     myArea03.value = outputValue;
   }
 </script>
