@@ -1,4 +1,4 @@
-<h5 style="color: FloralWhite">version 0.0.1-32</h5>
+<h5 style="color: FloralWhite">version 0.0.1-33</h5>
 <head>
   <title>Spy</title>
   <style>
@@ -10,6 +10,14 @@
 <p style="border-bottom: 2px FloralWhite"></p><br>
 
 <textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
+
+<input type="button" value="base64 encrypt" onclick="{
+  const input = document.getElementById('myArea01');
+  const inputValue = input.value;
+  const base64Value = btoa(inputValue);
+  const output = document.getElementById('myArea02');
+  output.innerHTML = base64Value;
+}">
 
 <input type="button" value="encrypt" onclick="{
   let myTemp = '';
@@ -53,18 +61,43 @@
     else if (myString[myLoop] == '8') {myTemp = '7'} 
     else if (myString[myLoop] == '9') {myTemp = '8'} 
     else if (myString[myLoop] == '0') {myTemp = '9'} 
+                                              
+    else if (myString[myLoop] == '!') {myTemp = '@'}
+    else if (myString[myLoop] == '@') {myTemp = '#'} 
+    else if (myString[myLoop] == '#') {myTemp = '$'}
+    else if (myString[myLoop] == '$') {myTemp = '%'} 
+    else if (myString[myLoop] == '%') {myTemp = '^'} 
+    else if (myString[myLoop] == '^') {myTemp = '&'}
+    else if (myString[myLoop] == '&') {myTemp = '*'} 
+    else if (myString[myLoop] == '*') {myTemp = '('} 
+    else if (myString[myLoop] == '(') {myTemp = ')'} 
+    else if (myString[myLoop] == ')') {myTemp = '-'} 
+    else if (myString[myLoop] == '-') {myTemp = '_'} 
+    else if (myString[myLoop] == '_') {myTemp = '='}
+    else if (myString[myLoop] == '=') {myTemp = '+'} 
+    else if (myString[myLoop] == '+') {myTemp = '{'}
+    else if (myString[myLoop] == '{') {myTemp = '}'} 
+    else if (myString[myLoop] == '}') {myTemp = '['} 
+    else if (myString[myLoop] == '[') {myTemp = ']'}
+    else if (myString[myLoop] == ']') {myTemp = ';'} 
+    else if (myString[myLoop] == ';') {myTemp = ':'} 
+    else if (myString[myLoop] == ':') {myTemp = '''} 
+    else if (myString[myLoop] == ''') {myTemp = '"'} 
+    else if (myString[myLoop] == '"') {myTemp = '\'}           
+    else if (myString[myLoop] == '\') {myTemp = '|'}
+    else if (myString[myLoop] == '|') {myTemp = '<'} 
+    else if (myString[myLoop] == '<') {myTemp = ','}
+    else if (myString[myLoop] == ',') {myTemp = '.'} 
+    else if (myString[myLoop] == '.') {myTemp = '/'} 
+    else if (myString[myLoop] == '/') {myTemp = '?'} 
+    else if (myString[myLoop] == '?') {myTemp = '`'} 
+    else if (myString[myLoop] == '`') {myTemp = '~'} 
+    else if (myString[myLoop] == '~') {myTemp = '!'} 
      myString[myLoop] = myTemp;
   }
   document.getElementById('myArea02').value = myString.join('');
 }">
 
-<input type="button" value="base64 encrypt" onclick="{
-  const input = document.getElementById('myArea01');
-  const inputValue = input.value;
-  const base64Value = btoa(inputValue);
-  const output = document.getElementById('myArea02');
-  output.innerHTML = base64Value;
-}">
 
 <input type="button" value="! encrypt" onclick="{
   let myTemp = '';
@@ -85,6 +118,13 @@
 
 <textarea id="myArea02" rows=4 cols=70></textarea><br>
 
+<input type="button" value="base64 decrypt" onclick="{
+  const input = document.getElementById('myArea02');
+  const inputValue = input.value;
+  const decodedValue = atob(inputValue);
+  const output = document.getElementById('myArea03');
+  output.value = decodedValue;
+}">
 
           <input type="button" value="decrypt" onclick="{
   let myTemp = '';
@@ -129,19 +169,43 @@
     else if (myString[myLoop] == '9') {myTemp = '8'} 
     else if (myString[myLoop] == '0') {myTemp = '9'} 
                                               
-    
+     else if (myString[myLoop] == '!') {myTemp = '@'}
+    else if (myString[myLoop] == '@') {myTemp = '#'} 
+    else if (myString[myLoop] == '#') {myTemp = '$'}
+    else if (myString[myLoop] == '$') {myTemp = '%'} 
+    else if (myString[myLoop] == '%') {myTemp = '^'} 
+    else if (myString[myLoop] == '^') {myTemp = '&'}
+    else if (myString[myLoop] == '&') {myTemp = '*'} 
+    else if (myString[myLoop] == '*') {myTemp = '('} 
+    else if (myString[myLoop] == '(') {myTemp = ')'} 
+    else if (myString[myLoop] == ')') {myTemp = '-'} 
+    else if (myString[myLoop] == '-') {myTemp = '_'} 
+    else if (myString[myLoop] == '_') {myTemp = '='}
+    else if (myString[myLoop] == '=') {myTemp = '+'} 
+    else if (myString[myLoop] == '+') {myTemp = '{'}
+    else if (myString[myLoop] == '{') {myTemp = '}'} 
+    else if (myString[myLoop] == '}') {myTemp = '['} 
+    else if (myString[myLoop] == '[') {myTemp = ']'}
+    else if (myString[myLoop] == ']') {myTemp = ';'} 
+    else if (myString[myLoop] == ';') {myTemp = ':'} 
+    else if (myString[myLoop] == ':') {myTemp = '''} 
+    else if (myString[myLoop] == ''') {myTemp = '"'} 
+    else if (myString[myLoop] == '"') {myTemp = '\'}           
+    else if (myString[myLoop] == '\') {myTemp = '|'}
+    else if (myString[myLoop] == '|') {myTemp = '<'} 
+    else if (myString[myLoop] == '<') {myTemp = ','}
+    else if (myString[myLoop] == ',') {myTemp = '.'} 
+    else if (myString[myLoop] == '.') {myTemp = '/'} 
+    else if (myString[myLoop] == '/') {myTemp = '?'} 
+    else if (myString[myLoop] == '?') {myTemp = '`'} 
+    else if (myString[myLoop] == '`') {myTemp = '~'} 
+    else if (myString[myLoop] == '~') {myTemp = '!'} 
     myString[myLoop] = myTemp;
   }
   document.getElementById('myArea03').value = myString.join('');
 }">
 
-<input type="button" value="base64 decrypt" onclick="{
-  const input = document.getElementById('myArea02');
-  const inputValue = input.value;
-  const decodedValue = atob(inputValue);
-  const output = document.getElementById('myArea03');
-  output.value = decodedValue;
-}">
+
 
 <input type="button" value="! decrypt" onclick="{
   let myTemp = '';
