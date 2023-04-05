@@ -1,4 +1,4 @@
-<h5 style="color: FloralWhite">version 0.0.1-31</h5>
+<h5 style="color: FloralWhite">version 0.0.1-32</h5>
 <head>
   <title>Spy</title>
   <style>
@@ -129,37 +129,7 @@
     else if (myString[myLoop] == '9') {myTemp = '8'} 
     else if (myString[myLoop] == '0') {myTemp = '9'} 
                                               
-    else if (myString[myLoop] == '!') {myTemp = '@'}
-    else if (myString[myLoop] == '@') {myTemp = '#'} 
-    else if (myString[myLoop] == '#') {myTemp = '$'}
-    else if (myString[myLoop] == '$') {myTemp = '%'} 
-    else if (myString[myLoop] == '%') {myTemp = '^'} 
-    else if (myString[myLoop] == '^') {myTemp = '&'}
-    else if (myString[myLoop] == '&') {myTemp = '*'} 
-    else if (myString[myLoop] == '*') {myTemp = '('} 
-    else if (myString[myLoop] == '(') {myTemp = ')'} 
-    else if (myString[myLoop] == ')') {myTemp = '-'} 
-    else if (myString[myLoop] == '-') {myTemp = '_'} 
-    else if (myString[myLoop] == '_') {myTemp = '='}
-    else if (myString[myLoop] == '=') {myTemp = '+'} 
-    else if (myString[myLoop] == '+') {myTemp = '{'}
-    else if (myString[myLoop] == '{') {myTemp = '}'} 
-    else if (myString[myLoop] == '}') {myTemp = '['} 
-    else if (myString[myLoop] == '[') {myTemp = ']'}
-    else if (myString[myLoop] == ']') {myTemp = ';'} 
-    else if (myString[myLoop] == ';') {myTemp = ':'} 
-    else if (myString[myLoop] == ':') {myTemp = '''} 
-    else if (myString[myLoop] == ''') {myTemp = '"'} 
-    else if (myString[myLoop] == '"') {myTemp = '\'}           
-    else if (myString[myLoop] == '\') {myTemp = '|'}
-    else if (myString[myLoop] == '|') {myTemp = '<'} 
-    else if (myString[myLoop] == '<') {myTemp = ','}
-    else if (myString[myLoop] == ',') {myTemp = '.'} 
-    else if (myString[myLoop] == '.') {myTemp = '/'} 
-    else if (myString[myLoop] == '/') {myTemp = '?'} 
-    else if (myString[myLoop] == '?') {myTemp = '`'} 
-    else if (myString[myLoop] == '`') {myTemp = '~'} 
-    else if (myString[myLoop] == '~') {myTemp = '!'}  
+    
     myString[myLoop] = myTemp;
   }
   document.getElementById('myArea03').value = myString.join('');
