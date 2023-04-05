@@ -1,4 +1,4 @@
-<h5 style="color: FloralWhite">version 0.0.1-34</h5>
+<h5 style="color: FloralWhite">version 0.0.1-35</h5>
 <head>
   <title>Spy</title>
   <style>
@@ -9,58 +9,63 @@
 <h1 align=center style="color: FloralWhite">t4a06: spy</h1>
 <p style="border-bottom: 2px FloralWhite"></p><br>
 
-<textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
+<textarea id="inputArea" rows="4" cols="70">Hello how are you</textarea><br>
 
-<input type="button" value="base64 encrypt" onclick="{
-  const input = document.getElementById('myArea01');
-  const inputValue = input.value;
-  const base64Value = btoa(inputValue);
-  const output = document.getElementById('myArea02');
-  output.innerHTML = base64Value;
-}">
+<input type="button" value="Base64 Encrypt" onclick="base64Encrypt()">
 
+<input type="button" value="! Encrypt" onclick="encrypt()"><br><br>
 
-<input type="button" value="! encrypt" onclick="{
-  let myTemp = '';
-  myString = document.getElementById('myArea01').value.toLowerCase().split('');
-  for (let myLoop=0; myLoop < myString.length; myLoop++) {
-    let charCode = myString[myLoop].charCodeAt(0);
-    if (charCode >= 97 && charCode <= 122) { // lowercase letters
-      myTemp += String.fromCharCode((charCode - 97 + 1) % 26 + 97); // shift by 1, wrap around
-    } else if (charCode >= 48 && charCode <= 57) { // numeric characters
-      myTemp += String.fromCharCode((charCode - 48 + 1) % 10 + 48); // shift by 1, wrap around
-    } else { // special characters
-      myTemp += String.fromCharCode((charCode - 33 + 1) % 15 + 33); // shift by 1, wrap around
-    }
+<textarea id="outputArea" rows="4" cols="70"></textarea><br>
+
+<input type="button" value="Base64 Decrypt" onclick="base64Decrypt()">
+
+<input type="button" value="! Decrypt" onclick="decrypt()"><br><br>
+
+<script>
+  const inputArea = document.getElementById('inputArea');
+  const outputArea = document.getElementById('outputArea');
+
+  function base64Encrypt() {
+    const inputValue = inputArea.value;
+    const base64Value = btoa(inputValue);
+    outputArea.innerHTML = base64Value;
   }
-  document.getElementById('myArea02').value = myTemp;
-}"><br><br>
- 
 
-<textarea id="myArea02" rows=4 cols=70></textarea><br>
-
-<input type="button" value="base64 decrypt" onclick="{
-  const input = document.getElementById('myArea02');
-  const inputValue = input.value;
-  const decodedValue = atob(inputValue);
-  const output = document.getElementById('myArea03');
-  output.value = decodedValue;
-}">
-    
-<input type="button" value="! decrypt" onclick="{
-  let myTemp = '';
-  myString = document.getElementById('myArea02').value.toLowerCase().split('');
-  for (let myLoop=0; myLoop < myString.length; myLoop++) {
-    let charCode = myString[myLoop].charCodeAt(0);
-    if (charCode >= 97 && charCode <= 122) { // lowercase letters
-      myTemp += String.fromCharCode((charCode - 97 + 25) % 26 + 97); // shift by -1, wrap around
-    } else if (charCode >= 48 && charCode <= 57) { // numeric characters
-      myTemp += String.fromCharCode((charCode - 48 + 9) % 10 + 48); // shift by -1, wrap around
-    } else { // special characters
-      myTemp += String.fromCharCode((charCode - 33 + 14) % 15 + 33); // shift by -1, wrap around
+  function encrypt() {
+    const inputValue = inputArea.value.toLowerCase().split('');
+    let outputValue = '';
+    for (let i = 0; i < inputValue.length; i++) {
+      let charCode = inputValue[i].charCodeAt(0);
+      if (charCode >= 97 && charCode <= 122) { // lowercase letters
+        outputValue += String.fromCharCode((charCode - 97 + 1) % 26 + 97); // shift by 1, wrap around
+      } else if (charCode >= 48 && charCode <= 57) { // numeric characters
+        outputValue += String.fromCharCode((charCode - 48 + 1) % 10 + 48); // shift by 1, wrap around
+      } else { // special characters
+        outputValue += String.fromCharCode((charCode - 33 + 1) % 15 + 33); // shift by 1, wrap around
+      }
     }
+    outputArea.value = outputValue;
   }
-  document.getElementById('myArea03').value = myTemp;
-}"><br><br>
 
-<textarea id="myArea03" rows="4" cols="70"></textarea>
+  function base64Decrypt() {
+    const inputValue = outputArea.value;
+    const decodedValue = atob(inputValue);
+    inputArea.value = decodedValue;
+  }
+
+  function decrypt() {
+    const inputValue = outputArea.value.toLowerCase().split('');
+    let outputValue = '';
+    for (let i = 0; i < inputValue.length; i++) {
+      let charCode = inputValue[i].charCodeAt(0);
+      if (charCode >= 97 && charCode <= 122) { // lowercase letters
+        outputValue += String.fromCharCode((charCode - 97 + 25) % 26 + 97); // shift by -1, wrap around
+      } else if (charCode >= 48 && charCode <= 57) { // numeric characters
+        outputValue += String.fromCharCode((charCode - 48 + 9) % 10 + 48); // shift by -1, wrap around
+      } else { // special characters
+        outputValue += String.fromCharCode((charCode - 33 + 14) % 15 + 33); // shift by -1, wrap around
+      }
+    }
+    inputArea.value = outputValue;
+  }
+</script>
