@@ -1,4 +1,4 @@
-<h5 style="color: FloralWhite">version 0.0.1-30</h5>
+<h5 style="color: FloralWhite">version 0.0.1-31</h5>
 <head>
   <title>Spy</title>
   <style>
@@ -53,7 +53,8 @@
     else if (myString[myLoop] == '8') {myTemp = '7'} 
     else if (myString[myLoop] == '9') {myTemp = '8'} 
     else if (myString[myLoop] == '0') {myTemp = '9'} 
-                                              
+     myString[myLoop] = myTemp;
+  }
   document.getElementById('myArea02').value = myString.join('');
 }">
 
