@@ -1,4 +1,4 @@
-version 0.0.1-5
+<h5>version 0.0.1-6</h5>
 <head>
    <title>Canvas</title>
 </head>
@@ -56,6 +56,30 @@ You use loops and variables to make fast fancy drawings <br><br>
    myContext.clearRect(20, 20, 50, 50);
 }">
 
+<input type="button" value="strokeRect (30, 30, 160, 90)" onclick="{
+  const canvas = document.getElementById('myCoolTag');
+  const ctx = canvas.getContext('2d');
+  ctx.shadowColor = '#d53';
+  ctx.shadowBlur = 20;
+  ctx.lineJoin = 'bevel';
+  ctx.lineWidth = 15;
+  ctx.strokeStyle = '#38f';
+  ctx.strokeRect(30, 30, 160, 90);
+}">
+
+<input type="button" value="Clear all" onclick="{
+  const canvas = document.getElementById('myCoolTag');
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}"><br><br>
+
+<canvas id="myCoolTag" width="1000" height="600" style="border:1px solid #000000;"></canvas>
+
+<script>
+  // set up global variables
+  const myCanvas = document.getElementById('myCoolTag');
+  const myContext = myCanvas.getContext('2d');
+</script>
 
 
 <input type=button value="Clear all" onclick="{
