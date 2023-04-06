@@ -12,6 +12,7 @@
   for ( let myLoop = 0;   myLoop < myMax;  myLoop++){
      myCards[myLoop] = Math.floor(Math.random()*10)
   }
+                                         
 }">
 
 <input type=button value="Show" onclick="{
@@ -27,6 +28,7 @@
   for ( let myLoop = 0;   myLoop < myMax;  myLoop++){
      myCards[myLoop] = 0 // you do this stuff
   }
+ document.getElementByID('myDiv01').innerHTML = myTemp
 }">
 
 <div id="myDiv01"></div>
