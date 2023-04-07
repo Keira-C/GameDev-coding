@@ -1,4 +1,4 @@
-version 0.0.1-5
+version 0.0.1-6
 <head>
    <title>Local Storage</title>
    <style> 
@@ -24,7 +24,7 @@ Text example: <input id="myText1" type=text size=70 value="" placeholder="Write 
 <input type="button" value="Store Text" onClick="{
    localStorage.setItem('myStoredText', document.getElementById('myText1').value)
                                                  
-   document.getElementById('myDiv01').innerHTML=Text has been stored!
+   document.getElementById('myDiv01').innerHTML="Text has been stored!"
    document.getElementById('myText1').value = ''
 }">
 
