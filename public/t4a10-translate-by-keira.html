@@ -12,6 +12,8 @@ version 0.0.1-4
 <body>
     <h2 align="center">t4a10: Translate</h2>
 
+    <div id="google_translate_element">I really like javascript</div><br><br>
+
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script>
         function googleTranslateElementInit() {
@@ -24,11 +26,10 @@ version 0.0.1-4
         }
     </script>
 
-    <div id="google_translate_element">I really like javascript</div><br><br>
-
     <input type="button" value="initialize speak" onclick="{
         let myVoice = 'Russian Female';
         responsiveVoice.speak(document.getElementById('google_translate_element').innerText, myVoice, {pitch: 1, rate: 1, volume: 1});
     }"><br><br>
 </body>
+
 </html>
