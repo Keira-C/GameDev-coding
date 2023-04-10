@@ -1,5 +1,5 @@
 
-<h5>Version 0.0.1-1</h5>
+<h5>Version 0.0.1-2</h5>
 <head>
    <title>Arrays</title>
    <style>
@@ -48,3 +48,12 @@ Max Array Entry: <input type=text id="myText01" value="3"><br>
 
 You do at least 7 other arrays:<br>
 
+let fruits = ['apple', 'orange', 'watermelon', 'grape'];
+
+let list = '<ul>';
+for (let i = 0; i < fruits.length; i++) {
+  list += '<li>' + fruits[i] + '</li>';
+}
+list += '</ul>';
+
+document.getElementById('myList').innerHTML = list;
