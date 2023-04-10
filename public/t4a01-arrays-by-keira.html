@@ -1,59 +1,97 @@
 
-<h5>Version 0.0.1-2</h5>
+<h5>Version 0.0.1-3</h5>
+
+<html>
 <head>
    <title>Arrays</title>
    <style>
       body {background-color: PapayaWhip}
    </style>
-   </head>
-<h2 align=center>t4a01: arrays by Keira</h2>
+</head>
 
-<a href="https://www.w3schools.com/js/js_arrays.asp" target="_blank">Good reference to Javasccript Arrays</a><br>
+<body>
+  <h2 align=center>t4a01: arrays by Keira</h2>
 
-Arrays are stored numbered variables
+  <a href="https://www.w3schools.com/js/js_arrays.asp" target="_blank">Good reference to Javasccript Arrays</a><br>
 
-<h4> Example Array code</h4>
-<pre>
-   myArray = new Array()
-   myArray[0] = 'Fred'
-   myArray[1] = 'Mary'
+  <p>Arrays are stored numbered variables</p>
 
-</pre>
+  <h4>Example Array code</h4>
+  <pre>
+     myArray = new Array()
+     myArray[0] = 'Fred'
+     myArray[1] = 'Mary'
+  </pre>
 
-<h4> Example working Array code</h4>
+  <h4>Example working Array code</h4>
 
+  Max Array Entry: <input type="text" id="myText01" value="3"><br>
 
-Max Array Entry: <input type=text id="myText01" value="3"><br>
+  <input type="button" value="Example onClick" onClick="{
+     let myTemp = document.getElementById('myText01').value;
+     let mySum = '';
+     document.getElementById('myDiv01').innerHTML = '';
 
-<input type=button value="Example onClick" onClick="{
-   let myTemp = document.getElementById('myText01').value
-   let mySum = ''
-   document.getElementById('myDiv01').innerHTML = ' '
+     let myArray = new Array();
+     myArray[0] = 'Fred';
+     myArray[1] = 'Mary';
+     myArray[2] = 'Zizzy';
 
-   myArray = new Array()
-   myArray[0] = 'Fred'
-   myArray[1] = 'Mary'
-   myArray[2] = 'Zizzy'
+     for (let myLoop = 0; myLoop < myTemp; myLoop++){
+        mySum += 'Loop #: ' + myLoop + ' array entry: ' + myArray[myLoop] +'<br>';
+     }
 
-   for (let myLoop=0;   myLoop < myTemp;  myLoop++){
-      mySum += 'Loop #: ' + myLoop + ' array entry: ' + myArray[myLoop] +'<br>'
-   }
-   document.getElementById('myDiv01').innerHTML = mySum
-}">
+     document.getElementById('myDiv01').innerHTML = mySum;
+  }">
 
-<div id="myDiv01">...</div>
+  <div id="myDiv01">...</div>
 
+  <br>
 
-<br>
+  <p>You can display at least 7 other arrays:</p>
 
-You do at least 7 other arrays:<br>
+  <div id="myList"></div>
+  <script>
+    let fruits = ['apple', 'orange', 'watermelon', 'grape'];
 
-let fruits = ['apple', 'orange', 'watermelon', 'grape'];
+    let list = '<ul>';
+    for (let i = 0; i < fruits.length; i++) {
+      list += '<li>' + fruits[i] + '</li>';
+    }
+    list += '</ul>';
 
-let list = '<ul>';
-for (let i = 0; i < fruits.length; i++) {
-  list += '<li>' + fruits[i] + '</li>';
-}
-list += '</ul>';
+    document.getElementById('myList').innerHTML = list;
+  </script>
 
-document.getElementById('myList').innerHTML = list;
+  <div id="myQuiz"></div>
+  <script>
+    let quiz = [
+      {
+        question: "What is the capital of France?",
+        options: ["London", "Paris", "Madrid", "Rome"],
+        answer: "Paris"
+      },
+      {
+        question: "What is the largest country in the world?",
+        options: ["Russia", "China", "Canada", "USA"],
+        answer: "Russia"
+      },
+      {
+        question: "What is the symbol for sodium?",
+        options: ["Na", "K", "Cl", "O"],
+        answer: "Na"
+      }
+    ];
+
+    let quizHTML = '';
+    for (let i = 0; i < quiz.length; i++) {
+      quizHTML += '<h3>' + quiz[i].question + '</h3>';
+      for (let j = 0; j < quiz[i].options.length; j++) {
+        quizHTML += '<label><input type="radio" name="q' + i + '" value="' + quiz[i].options[j] + '"> ' + quiz[i].options[j] + '</label><br>';
+      }
+    }
+
+    document.getElementById('myQuiz').innerHTML = quizHTML;
+  </script>
+</body>
+</html>
