@@ -1,4 +1,4 @@
-<h5>version 0.0.1-12</h5>
+<h5>version 0.0.1-13</h5>
 <head>
    <title>Sort</title>
    <style>
@@ -29,11 +29,11 @@
    }">
 
    <input type="button" value="Sort" onclick="{
-      for (let i = 0; i < myMax - 1; i++) {
-        if (myCards[i] > myCards[i + 1]) {
-          let myTemp = myCards[i];
-          myCards[i] = myCards[i + 1];
-          myCards[i + 1] = myTemp;
+      for (let myLoop = 0; myLoop < myMax - 1; myLoop++) {
+        if (myCards[myLoop] > myCards[myLoop + 1]) {
+          let myTemp = myCards[myLoop];
+          myCards[myLoop] = myCards[myLoop + 1];
+          myCards[myLoop + 1] = myTemp;
         }
       }
       let myTemp = '';
