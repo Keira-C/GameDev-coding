@@ -14,13 +14,21 @@ assyme 200 days<br>
 <p> 
 <h3>Wage: $<textarea id="wage" placeholder="15"></textarea>per hour<br>
 Hours: <textarea id="hours" placeholder="8"></textarea>hours<br>
-Tax rate: <textarea id="tax rate" placeholder="30"></textarea>%<br></h3></p>
+Tax rate: <textarea id="taxRate" placeholder="30"></textarea>%<br></h3></p>
 
-<input type="button" value="Calculate tax" onclick="{
- 
-                                                    }">
+<input type="button" value="Calculate tax" onclick="{calculatePay()
+    function calculatePay() {
+    
+    const wage = parseFloat(document.getElementById("wage").value);
+    const hours = parseFloat(document.getElementById("hours").value);
+    const taxRate = parseFloat(document.getElementById("taxRate").value) / 100;
+    
+    let total = wage * hours
+    let tax = total * taxRate
 
-<p id="day pay"></p>
+             }">
+
+<p id="dayPay"></p>
 <p id="total"></p>
 <p id="tax"></p>
-<p id="take home pay"></p>
+<p id="takeHomePay"></p>
