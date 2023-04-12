@@ -1,4 +1,4 @@
-<h5>version 0.0.1-15</h5>
+<h5>version 0.0.1-16</h5>
 <head>
   <title>Taxes</title>
   <style> 
@@ -18,17 +18,17 @@ Tax rate: <input id="taxRate" placeholder="30"> %<br><br></p>
 
 <input type="button" value="Calculate tax" onclick="{
  
-   const wage = document.getElementById('wage').value
-   const hours = document.getElementById('hours').value
-   const taxRate = document.getElementById('taxRate').value / 100
+   const wage = document.getElementById('wage').value;
+   const hours = document.getElementById('hours').value;
+   const taxRate = document.getElementById('taxRate').value / 100;
                                                         
-                                                    const grossPay  = wage * hours
-                                                    const grossMonthPay = grossPay * 20
-                                                    const grossYearPay = grossPay * 200
-                                                    const taxMonth = grossMonthPay * taxRate
-                                                    const taxYear = grossYearPay * taxRate
-                                                    const netPayMonth = grossMonthPay - taxMonth
-                                                    const netPayYear = grossYearPay - taxYear
+                                                    const grossPay  = wage * hours;
+                                                    const grossMonthPay = grossPay * 20;
+                                                    const grossYearPay = grossPay * 200;
+                                                    const taxMonth = grossMonthPay * taxRate;
+                                                    const taxYear = grossYearPay * taxRate;
+                                                    const netPayMonth = grossMonthPay - taxMonth;
+                                                    const netPayYear = grossYearPay - taxYear;
                                                     
 document.getElementById('dayPay').textContent = 'Day pay is $' + grossPay
 document.getElementById('total').textContent = 'Total pay per month is $' + grossMonthPay + ' and total pay per year is $' + grossYearPay
