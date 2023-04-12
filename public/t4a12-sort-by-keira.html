@@ -1,4 +1,4 @@
-<h5>version 0.0.1-18</h5>
+<h5>version 0.0.1-19</h5>
 <head>
    <title>Sort</title>
    <style>
@@ -50,18 +50,6 @@
       document.getElementById('myDiv01').innerHTML = myTemp;
    }">
 
-   <input type="button" value="Sort in one step" onclick="{
-     for (let myRepeat = 0; myRepeat < myMax - 1; myRepeat++) {
-        for (let myLoop = 0; myLoop < myMax - 1; myLoop++) {
-        if (myCards[myLoop] > myCards[myLoop + 1]) {
-          let myTemp = myCards[myLoop];
-          myCards[myLoop] = myCards[myLoop + 1];
-          myCards[myLoop + 1] = myTemp;
-        }
-      }
-         }
-      document.getElementById('myDiv01').innerHTML = myTemp;
-   }">
       
 <input type="button" value="Sort using a function" onclick="{
       myCards.sort(function(a, b){return a - b});
