@@ -1,4 +1,4 @@
-<h5>version 0.0.1-13</h5>
+<h5>version 0.0.1-14</h5>
 <head>
   <title>Taxes</title>
   <style> 
@@ -17,11 +17,28 @@ Hours:   <input id="hours" placeholder="8"></textarea> hours<br><br>
 Tax rate: <input id="taxRate" placeholder="30"></textarea> %<br><br></p>
 
 <input type="button" value="Calculate tax" onclick="{
-             }">
+ 
+   const wage = document.getElementById('wage').value
+   const hours = document.getElementById('hours').value
+   const taxRate = document.getElementById('taxRate').value / 100
+                                                        
+                                                    const grossPay  = wage * hours
+                                                    const grossMonthPay = grossPay * 20
+                                                    const grossYearPay = grossPay * 200
+                                                    const taxMonth = grossMonthPay * taxRate
+                                                    const taxYear = grossYearPay * taxRate
+                                                    netPayMonth = grossMonthPay - taxMonth
+                                                    netPayYear = grossYearPay - taxYear
+                                                    
+document.getElementById('dayPay').textContent = 'Day pay is $' + grossPay
+document.getElementById('total').textContent = 'Total pay per month is $' + grossMonthPay + ' and total pay per year is $' + grossYearPay
+document.getElementById('tax').textContent = 'Tax paid per month is $' + taxMonth + ', $' + taxYear + ' per year.'
+document.getElementById('takeHomePay').textContent = `Take home pay per month: $' + netPayMonth + ', take home pay per year year: $' + neyPayYear                                                    
+                                                    }">
 
-<p id="dayPay"></p>
-<p id="total"></p>
-<p id="tax"></p>
+<p id="dayPay"></p><br>
+<p id="total"></p><br>
+<p id="tax"></p><br>
 <p id="takeHomePay"></p>
 
 <p style="color: DarkOrange"><e>This code assumes there are 20 work days in a month and 200 work days in a year</e></p>
