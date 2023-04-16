@@ -1,147 +1,63 @@
-<h5>version 0.0.1-9</h5>
+<!DOCTYPE html>
+<html>
+   <h5>version 0.0.1-10</h5>
 <head>
    <title>Canvas</title>
 </head>
-<h2 align=center>t3a08: canvas </h2>
-You use loops and variables to make fast fancy drawings <br><br>
+<body>
+   <h2 align=center>t3a08: canvas </h2>
+   You use loops and variables to make fast fancy drawings <br><br>
 
- <button onclick="moveLeft()">Move Left</button>
-    <button onclick="moveRight()">Move Right</button>
-    <button onclick="rotate()">Rotate</button>
-    <button onclick="scaleUp()">Scale Up</button>
-    <button onclick="scaleDown()">Scale Down</button>
-    <br><br>
-<script>
-      const canvas = document.getElementById("myCanvas");
-      const context = canvas.getContext("2d");
+   <button onclick="moveLeft()">Move Left</button>
+   <button onclick="moveRight()">Move Right</button>
+   <button onclick="rotate()">Rotate</button>
+   <button onclick="scaleUp()">Scale Up</button>
+   <button onclick="scaleDown()">Scale Down</button>
+   <br><br>
 
-      let x = 100;
-      let y = 100;
-      let rotation = 0;
-      let scale = 1;
+   <canvas id="myCanvas" width="600" height="400" style="border:1px solid #000000;"></canvas>
 
-      function drawRect() {
-        context.save();
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        context.translate(x, y);
-        context.rotate((rotation * Math.PI) / 180);
-        context.scale(scale, scale);
-        context.fillRect(-50, -50, 100, 100);
-        context.restore();
-      }
+   <input type="button" value=".lineTo(30,200)" onclick="{
+      myContext.beginPath();
+      myContext.lineWidth = 1;   
+      myContext.moveTo(20,10);
+      myContext.lineTo(30,200);
+      myContext.stroke();
+   }">
 
-      function moveLeft() {
-        x -= 10;
-        drawRect();
-      }
+   <input type="button" value=".arc(95, 50, 40, 0, 2 * Math.PI)" onclick="{
+      myContext.beginPath();
+      myContext.lineWidth = 10;
+      myContext.strokeStyle = 'green';
+      myContext.arc(95, 50, 40, 0, 2 * Math.PI);
+      myContext.stroke();
+   }">
 
-      function moveRight() {
-        x += 10;
-        drawRect();
-      }
+   <input type="button" value=".fillText('Hello World', 400, 100)" onclick="{
+      myContext.font = '20px Arial';
+      myContext.fillText('Hello World', 400, 100);
+      myContext.translate(400, 100);  
+      myContext.rotate(60 * Math.PI / 180); 
+      myContext.fillText('Hello World', 10, 10);
+      myContext.stroke();
+      myContext.setTransform();  
+   }">
 
-      function rotate() {
-        rotation += 10;
-        drawRect();
-      }
+   <input type="button" value=".quadraticCurveTo(100,220,240,110)" onclick="{
+      myContext.beginPath();
+      myContext.moveTo(300,100);
+      myContext.quadraticCurveTo(100,220,240,110);
+      myContext.stroke();
+   }">
 
-      function scaleUp() {
-        scale += 0.1;
-        drawRect();
-      }
+   <input type="button" value=".createLinearGradient(100, 300, 200, 400)" onclick="{
+      let myGradient = myContext.createLinearGradient(100, 300, 200, 400);
+      myGradient.addColorStop(0, 'red');
+      myGradient.addColorStop(0.5, 'blue');
+      myGradient.addColorStop(1, 'yellow');
+      myContext.fillStyle = myGradient;
+      myContext.fillRect(100, 300, 200, 400);
+      myContext.fillStyle = 'black';
+   }"><br><br>
 
-      function scaleDown() {
-        scale -= 0.1;
-        drawRect();
-      }
-
-      drawRect();
-    </script>
-<input type="button" value=".lineTo(30,200)" onclick="{
-   myContext.beginPath();
-   myContext.lineWidth = 1;   
-   myContext.moveTo(20,10);
-   myContext.lineTo(30,200);
-   myContext.stroke();
-}">
-
-<input type="button" value=".arc(95, 50, 40, 0, 2 * Math.PI)" onclick="{
-   myContext.beginPath();
-   myContext.lineWidth = 10;
-   myContext.strokeStyle = 'green';
-   myContext.arc(95, 50, 40, 0, 2 * Math.PI);
-   myContext.stroke();
-}">
-
-<input type="button" value=".fillText('Hello World', 400, 100)" onclick="{
-   myContext.font = '20px Arial';
-   myContext.fillText('Hello World', 400, 100);
-   myContext.translate(400, 100);  
-   myContext.rotate(60 * Math.PI / 180); 
-   myContext.fillText('Hello World', 10, 10);
-   myContext.stroke();
-   myContext.setTransform();  
-   //myContext.rotate(-60 * Math.PI / 180); 
-}">
-
-<input type="button" value=".quadraticCurveTo(100,220,240,110)" onclick="{
-   myContext.beginPath();
-   myContext.moveTo(300,100);
-   myContext.quadraticCurveTo(100,220,240,110);
-   myContext.stroke();
-}">
-
-
-
-<input type="button" value=".createLinearGradient(100, 300, 200, 400)" onclick="{
-   let myGradient = myContext.createLinearGradient(100, 300, 200, 400);
-   myGradient.addColorStop(0, 'red');
-   myGradient.addColorStop(0.5, 'blue');
-   myGradient.addColorStop(1, 'yellow');
-   myContext.fillStyle = myGradient;
-   myContext.fillRect(100, 300, 200, 400);
-   // reset fillstyle
-   myContext.fillStyle = 'black';
-}"><br><br>
-
-<input type="button" value="clearRect(20, 20, 50, 50)" onclick="{
-   myContext.clearRect(20, 20, 50, 50);
-}">
-
-<input type="button" value="strokeRect (200, 200, 160, 600)" onclick="{
-  const canvas = document.getElementById('myCoolTag');
-  const ctx = canvas.getContext('2d');
-  myCtx.shadowColor = '#d53';
-  myCtx.shadowBlur = 20;
-  myCtx.lineJoin = 'bevel';
-  myCtx.lineWidth = 15;
-  myCtx.strokeStyle = '#38f';
-  myCtx.strokeRect(200, 200, 160, 600);
-}">
-
-<input type="button" value="Clear all" onclick="{
-  const canvas = document.getElementById('myCoolTag');
-  const ctx = canvas.getContext('2d');
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-}"><br><br>
-
-<canvas id="myCoolTag" width="1000" height="600" style="border:1px solid #000000;"></canvas>
-
-<script>
-  // set up global variables
-  const myCanvas = document.getElementById('myCoolTag');
-  const myContext = myCanvas.getContext('2d');
-</script>
-
-
-<input type=button value="Clear all" onclick="{
-   myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
-}"><br><br>
-
-<canvas id="myCoolTag" width="1000" height="600" style="border:1px solid #000000;"></canvas>
-
-<script>
-   // set up global variables
-   let myCanvas=document.getElementById('myCoolTag');
-   let myContext=myCanvas.getContext('2d');
-</script>
+   <input type="button" value="clearRect(20, 20, 50, 50
