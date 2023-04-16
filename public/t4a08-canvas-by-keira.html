@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   <h5>version 0.0.1-10</h5>
+   <h5>version 0.0.1-11</h5>
 <head>
    <title>Canvas</title>
 </head>
@@ -60,4 +60,44 @@
       myContext.fillStyle = 'black';
    }"><br><br>
 
-   <input type="button" value="clearRect(20, 20, 50, 50
+   <input type="button" value="clearRect(20, 20, 50, 50)" onclick="{
+   myContext.clearRect(20, 20, 50, 50);
+}"><input type="button" value="strokeRect (200, 200, 160, 600)" onclick="{
+  const canvas = document.getElementById('myCanvas');
+  const ctx = canvas.getContext('2d');
+  myCtx.shadowColor = '#d53';
+  myCtx.shadowBlur = 20;
+  myCtx.lineJoin = 'bevel';
+  myCtx.lineWidth = 15;
+  myCtx.strokeStyle = '#38f';
+  myCtx.strokeRect(200, 200, 160, 600);
+}">
+
+<input type="button" value="Clear all" onclick="{
+  const canvas = document.getElementById('myCanvas');
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}"><br><br>
+
+
+
+<script>
+  // set up global variables
+  const myCanvas = document.getElementById('myCanvas');
+  const myContext = myCanvas.getContext('2d');
+</script>
+
+
+<input type=button value="Clear all" onclick="{
+   myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
+}"><br><br>
+
+
+
+<script>
+   // set up global variables
+   let myCanvas=document.getElementById('myCanvas');
+   let myContext=myCanvas.getContext('2d');
+</script>
+                               </body>
+                              </html>
