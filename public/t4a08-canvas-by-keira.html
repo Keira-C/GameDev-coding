@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   <h5>version 0.0.1-12</h5>
+   <h5>version 0.0.1-13</h5>
 <head>
    <title>Canvas</title>
 </head>
@@ -22,7 +22,7 @@
       myContext.moveTo(20,10);
       myContext.lineTo(30,200);
       myContext.stroke();
-   }">
+   }"><br>
 
    <input type="button" value=".arc(95, 50, 40, 0, 2 * Math.PI)" onclick="{
       myContext.beginPath();
@@ -61,16 +61,18 @@
 
    <input type="button" value="clearRect(20, 20, 50, 50)" onclick="{
    myContext.clearRect(20, 20, 50, 50);
-}"><input type="button" value="strokeRect (200, 200, 160, 600)" onclick="{
+}"><br><br>
+   
+   <input type="button" value="strokeRect (200, 200, 160, 600)" onclick="{
   const canvas = document.getElementById('myCanvas');
   const ctx = canvas.getContext('2d');
-  myCtx.shadowColor = '#d53';
-  myCtx.shadowBlur = 20;
-  myCtx.lineJoin = 'bevel';
-  myCtx.lineWidth = 15;
-  myCtx.strokeStyle = '#38f';
-  myCtx.strokeRect(200, 200, 160, 600);
-}">
+  myContext.shadowColor = '#d53';
+  myContext.shadowBlur = 20;
+  myContext.lineJoin = 'bevel';
+  myContext.lineWidth = 15;
+  myContext.strokeStyle = '#38f';
+  myContext.strokeRect(200, 200, 160, 600);
+}"><br><br>
 
 <input type="button" value="Clear all" onclick="{
   const canvas = document.getElementById('myCanvas');
@@ -87,16 +89,5 @@
 </script>
 
 
-<input type=button value="Clear all" onclick="{
-   myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
-}"><br><br>
-
-
-
-<script>
-   // set up global variables
-   let myCanvas=document.getElementById('myCanvas');
-   let myContext=myCanvas.getContext('2d');
-</script>
                                </body>
                               </html>
