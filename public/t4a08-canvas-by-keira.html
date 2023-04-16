@@ -1,10 +1,62 @@
-<h5>version 0.0.1-8</h5>
+<h5>version 0.0.1-9</h5>
 <head>
    <title>Canvas</title>
 </head>
 <h2 align=center>t3a08: canvas </h2>
 You use loops and variables to make fast fancy drawings <br><br>
 
+ <button onclick="moveLeft()">Move Left</button>
+    <button onclick="moveRight()">Move Right</button>
+    <button onclick="rotate()">Rotate</button>
+    <button onclick="scaleUp()">Scale Up</button>
+    <button onclick="scaleDown()">Scale Down</button>
+    <br><br>
+<script>
+      const canvas = document.getElementById("myCanvas");
+      const context = canvas.getContext("2d");
+
+      let x = 100;
+      let y = 100;
+      let rotation = 0;
+      let scale = 1;
+
+      function drawRect() {
+        context.save();
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.translate(x, y);
+        context.rotate((rotation * Math.PI) / 180);
+        context.scale(scale, scale);
+        context.fillRect(-50, -50, 100, 100);
+        context.restore();
+      }
+
+      function moveLeft() {
+        x -= 10;
+        drawRect();
+      }
+
+      function moveRight() {
+        x += 10;
+        drawRect();
+      }
+
+      function rotate() {
+        rotation += 10;
+        drawRect();
+      }
+
+      function scaleUp() {
+        scale += 0.1;
+        drawRect();
+      }
+
+      function scaleDown() {
+        scale -= 0.1;
+        drawRect();
+      }
+
+      drawRect();
+    </script>
 <input type="button" value=".lineTo(30,200)" onclick="{
    myContext.beginPath();
    myContext.lineWidth = 1;   
