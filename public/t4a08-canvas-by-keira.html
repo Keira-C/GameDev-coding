@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   <h5>version 0.0.1-13</h5>
+   <h5>version 0.0.1-14</h5>
 <head>
    <title>Canvas</title>
 </head>
@@ -87,6 +87,52 @@
   const myCanvas = document.getElementById('myCanvas');
   const myContext = myCanvas.getContext('2d');
 </script>
+   
+   <script>
+  // set up global variables
+  const myCanvas = document.getElementById('myCanvas');
+  const myContext = myCanvas.getContext('2d');
+  let x = 50;
+  let y = 50;
+  let angle = 0;
+  let scale = 1;
+
+  function moveLeft() {
+    x -= 10;
+    redraw();
+  }
+
+  function moveRight() {
+    x += 10;
+    redraw();
+  }
+
+  function rotate() {
+    angle += Math.PI / 6;
+    redraw();
+  }
+
+  function scaleUp() {
+    scale += 0.1;
+    redraw();
+  }
+
+  function scaleDown() {
+    scale -= 0.1;
+    redraw();
+  }
+
+  function redraw() {
+    myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
+    myContext.save();
+    myContext.translate(x, y);
+    myContext.rotate(angle);
+    myContext.scale(scale, scale);
+    myContext.fillRect(-50, -50, 100, 100);
+    myContext.restore();
+  }
+</script>
+
 
 
                                </body>
