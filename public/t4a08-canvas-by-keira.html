@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-   <h5>version 0.0.1-17</h5>
+   <h5>version 0.0.1-18</h5>
 <head>
    <title>Canvas</title>
 </head>
 <body>
-   <h2 align=center>t3a08: canvas </h2> 
+   <h2 align=center syle="border: 2px solid DarkBlue" >t3a08: canvas </h2> 
                          
 You use loops and variables to make fast fancy drawings <br><br>
 
@@ -36,12 +36,18 @@ You use loops and variables to make fast fancy drawings <br><br>
    //myContext.rotate(-60 * Math.PI / 180); 
 }">
 
-<input type="button" value=".quadraticCurveTo(100,220,240,110)" onclick="{
+<input id="myQuadCurve" type="button" value=".quadraticCurveTo(100,220,240,110)" onclick="{
    myContext.beginPath();
    myContext.moveTo(300,100);
    myContext.quadraticCurveTo(100,220,240,110);
    myContext.stroke();
+}"><br>
+   <input type="button" value="move right" onclick="{
+       document.getElementById('myQuadCurve').style.left = parseInt(document.getElementById('myQuadCurve').style.left) + 10 + 'px'
 }">
+                   <input type="button" value="move left" onclick="{
+            document.getElementById('myQuadCurve').style.right = parseInt(document.getElementById('myQuadCurve').style.right) + 10 + 'px'
+}">                                                                     
 
 
 
