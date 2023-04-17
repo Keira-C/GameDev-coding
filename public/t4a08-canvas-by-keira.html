@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   <h5>version 0.0.1-18</h5>
+   <h5>version 0.0.1-19</h5>
 <head>
    <title>Canvas</title>
 </head>
@@ -16,6 +16,18 @@ You use loops and variables to make fast fancy drawings <br><br>
    myContext.lineTo(30,200);
    myContext.stroke();
 }">
+   <input type="button" value="Move Left" onclick="{
+   x -= 10;
+}">
+<input type="button" value="Move Right" onclick="{
+   x += 10;
+}">
+<input type="button" value="Move Up" onclick="{
+   y -= 10;
+}">
+<input type="button" value="Move Down" onclick="{
+   y += 10;
+}"><br><br>
 
 <input type="button" value=".arc(95, 50, 40, 0, 2 * Math.PI)" onclick="{
    myContext.beginPath();
@@ -105,7 +117,9 @@ for (let i = 0; i < numCircles; i++) {
 <canvas id="myCoolTag" width="1000" height="600" style="border:1px solid #000000;"></canvas>
 
 <script>
-   // set up global variables
-   let myCanvas=document.getElementById('myCoolTag');
-   let myContext=myCanvas.getContext('2d');
+  // set up global variables
+  const myCanvas = document.getElementById('myCoolTag');
+  const myContext = myCanvas.getContext('2d');
+  let x = 20;
+  let y = 10;
 </script>
