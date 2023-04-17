@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
-   <h5>version 0.0.1-19</h5>
+   <h5>version 0.0.1-20</h5>
 <head>
    <title>Canvas</title>
 </head>
 <body>
-   <h2 align=center syle="border: 2px solid DarkBlue" >t3a08: canvas </h2> 
+   <h2 align="center" style="border: 2px solid DarkBlue">t3a08: canvas </h2> 
                          
 You use loops and variables to make fast fancy drawings <br><br>
 
 <input type="button" value=".lineTo(30,200)" onclick="{
    myContext.beginPath();
    myContext.lineWidth = 1;   
-   myContext.moveTo(20,10);
-   myContext.lineTo(30,200);
+   myContext.moveTo(x, y);
+   myContext.lineTo(x + 10 ,y + 190);
    myContext.stroke();
 }">
    <input type="button" value="Move Left" onclick="{
@@ -35,7 +35,7 @@ You use loops and variables to make fast fancy drawings <br><br>
    myContext.strokeStyle = 'green';
    myContext.arc(95, 50, 40, 0, 2 * Math.PI);
    myContext.stroke();
-}">
+}"><br>
 
 <input type="button" value=".fillText('Hello World', 400, 100)" onclick="{
    myContext.font = '20px Arial';
@@ -46,7 +46,7 @@ You use loops and variables to make fast fancy drawings <br><br>
    myContext.stroke();
    myContext.setTransform();  
    //myContext.rotate(-60 * Math.PI / 180); 
-}">
+}"><br>
 
 <input id="myQuadCurve" type="button" value=".quadraticCurveTo(100,220,240,110)" onclick="{
    myContext.beginPath();
@@ -54,12 +54,7 @@ You use loops and variables to make fast fancy drawings <br><br>
    myContext.quadraticCurveTo(100,220,240,110);
    myContext.stroke();
 }"><br>
-   <input type="button" value="move right" onclick="{
-       document.getElementById('myQuadCurve').style.left = parseInt(document.getElementById('myQuadCurve').style.left) + 10 + 'px'
-}">
-                   <input type="button" value="move left" onclick="{
-            document.getElementById('myQuadCurve').style.right = parseInt(document.getElementById('myQuadCurve').style.right) + 10 + 'px'
-}">                                                                     
+   
 
 
 
@@ -76,7 +71,7 @@ You use loops and variables to make fast fancy drawings <br><br>
 
 <input type="button" value="clearRect(20, 20, 50, 50)" onclick="{
    myContext.clearRect(20, 20, 50, 50);
-}">
+}"><br>
 
 <input type="button" value="strokeRect (200, 200, 160, 600)" onclick="{
   const canvas = document.getElementById('myCoolTag');
