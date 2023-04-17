@@ -1,14 +1,25 @@
-<h5>version 0.0.1-2</h5>
+<h5>version 0.0.1-3</h5>
 <head>
  <title>Sound</title>
+ <style>
+  body {color: LavenderBlush}
+ </style>
 </head>
-<script> let mySound1 = new Audio('Yeh.m4a') </script>
- 
+<script> let mySound1 = new Audio('Yeh.m4a')
+let mySound2 = new Audio('Yay.m4a')
+let mySound3 = new Audio('Ya.m4a')
+</script>
 
+<h1 align=center style="border: 2px solid MediumSpringGreen">t4a10b: Sounds and events</h1>
 
-<h1 align=center>t4a10b: Sounds and events</h1>
-
-
-<input type=button value=sound onClick="{
+<input type="button" value="sound" onClick="{
     mySound1.play()
+}">
+
+<input type="button" value="sound" onClick="{
+    mySound2.play()
+}">
+
+<input type="button" value="sound" onClick="{
+    mySound3.play()
 }">
