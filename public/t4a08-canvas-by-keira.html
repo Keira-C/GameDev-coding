@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   <h5>version 0.0.1-20</h5>
+   <h5>version 0.0.1-21</h5>
 <head>
    <title>Canvas</title>
 </head>
@@ -17,16 +17,20 @@ You use loops and variables to make fast fancy drawings <br><br>
    myContext.stroke();
 }">
    <input type="button" value="Move Left" onclick="{
-   x -= 10;
+  myContext.translate(-10, 0);
+  redraw();
 }">
 <input type="button" value="Move Right" onclick="{
-   x += 10;
+  myContext.translate(10, 0);
+  redraw();
 }">
 <input type="button" value="Move Up" onclick="{
-   y -= 10;
+    myContext.translate(0, -10);
+  redraw();
 }">
 <input type="button" value="Move Down" onclick="{
-   y += 10;
+   myContext.translate(0, 10);
+  redraw();
 }"><br><br>
 
 <input type="button" value=".arc(95, 50, 40, 0, 2 * Math.PI)" onclick="{
@@ -37,7 +41,8 @@ You use loops and variables to make fast fancy drawings <br><br>
    myContext.stroke();
 }"><br>
 
-<input type="button" value=".fillText('Hello World', 400, 100)" onclick="{
+   
+<input type="button" value="Text (Hello World)" onclick="{
    myContext.font = '20px Arial';
    myContext.fillText('Hello World', 400, 100);
    myContext.translate(400, 100);  
