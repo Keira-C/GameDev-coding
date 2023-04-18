@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<h5>version 0.0.1-28</h5>
+<h5>version 0.0.1-29</h5>
 <head>
   <title>Taxes</title>
   <style> 
@@ -21,6 +21,12 @@
     <button id="calcButton" onclick="{ myCalculate()}" >Calculate tax</button>
   </p><br<br>
   
+  <p id="grossPay" class="answer"></p>
+  <p id="netIncome" class="answer"></p>
+  <p id="moneyDeducted" class="answer"></p>
+  <p id="monthlyPay" class="answer"></p>
+  <p id="yearlyPay" class="answer"></p>
+
   <p style="color: DarkOrange"><i>This code assumes there are 20 work days in a month and 200 work days in a year</i></p>
 
   <script>
@@ -46,12 +52,7 @@
       yearlyPay.style.display = 'block';
   </script>
   
-  <p id="grossPay" class="answer"></p>
-  <p id="netIncome" class="answer"></p>
-  <p id="moneyDeducted" class="answer"></p>
-  <p id="monthlyPay" class="answer"></p>
-  <p id="yearlyPay" class="answer"></p>
-
+  
 </body>
 </html>
 
