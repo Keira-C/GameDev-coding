@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<h5>version 0.0.1-30</h5>
+<h5>version 0.0.1-31</h5>
 <head>
   <title>Taxes</title>
   <style> 
@@ -21,14 +21,15 @@
     Tax rate: <input id="taxRate" type="number" value="30"> %<br><br>
     <button id="calcButton" onclick="{ myCalculate()}" >Calculate tax</button>
   </p><br<br>
-
+<p style="color: DarkOrange"><i>This code assumes there are 20 work days in a month and 200 work days in a year</i></p><br><br>
+  
   <p id="grossPay" class="answer"></p>
   <p id="netIncome" class="answer"></p>
   <p id="moneyDeducted" class="answer"></p>
   <p id="monthlyPay" class="answer"></p>
   <p id="yearlyPay" class="answer"></p>
 
-  <p style="color: DarkOrange"><i>This code assumes there are 20 work days in a month and 200 work days in a year</i></p>
+  
 
   <script>
      function myCalculate(){                         
