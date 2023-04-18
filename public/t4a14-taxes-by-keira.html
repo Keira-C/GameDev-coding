@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<h5>version 0.0.1-31</h5>
+<h5>version 0.0.1-32</h5>
 <head>
   <title>Taxes</title>
   <style> 
@@ -24,8 +24,8 @@
 <p style="color: DarkOrange"><i>This code assumes there are 20 work days in a month and 200 work days in a year</i></p><br><br>
   
   <p id="grossPay" class="answer"></p>
-  <p id="netIncome" class="answer"></p>
   <p id="moneyDeducted" class="answer"></p>
+  <p id="dailyPay" class="answer"></p>
   <p id="monthlyPay" class="answer"></p>
   <p id="yearlyPay" class="answer"></p>
 
@@ -41,16 +41,16 @@
    let monthpay = netpay * 20;
    let yearpay = netpay * 200;
    let moneyded = grosspay * taxRate;
-   document.getElementById('grossPay').innerHTML = 'Gross pay is $' + grosspay;
-   document.getElementById('netIncome').innerHTML = 'Net income is $' + netpay;
+   document.getElementById('grossPay').innerHTML = 'Total money made is $' + grosspay;
    document.getElementById('moneyDeducted').innerHTML = 'Money deducted is $' + moneyded;
-   document.getElementById('monthlyPay').innerHTML = 'Monthly pay is $' + monthpay;
-   document.getElementById('yearlyPay').innerHTML = 'Yearly pay is $' + yearpay;
+       document.getElementById('dailyPay').innerHTML = 'Money you take home each day is $' + netpay
+   document.getElementById('monthlyPay').innerHTML = 'Money you take home each month is $' + monthpay;
+   document.getElementById('yearlyPay').innerHTML = 'Money you take home each year is $' + yearpay;
        }     
        
-       grossPay.style.display = 'block';
-      netIncome.style.display = 'block';
+      grossPay.style.display = 'block';
       moneyDeducted.style.display = 'block';
+      dailyPay.style.display = 'block';
       monthlyPay.style.display = 'block';
       yearlyPay.style.display = 'block';
   </script>
