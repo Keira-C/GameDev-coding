@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<h5>version 0.0.1-29</h5>
+<h5>version 0.0.1-30</h5>
 <head>
   <title>Taxes</title>
   <style> 
@@ -8,7 +8,8 @@
     h2 {border: 4px solid DarkOrange; text-align: center; font-style: italic}
     button {background-color: DarkOrange; color: white; font-weight: bold; border: none; border-radius: 5px; padding: 10px 20px; margin-right: 10px;}
     button:hover {cursor: pointer; background-color: Orange;}
-    p.answer {display: none; color:DarkOrange; background-color: OldLace; padding: 10px; border-radius: 5px; margin-top: 20px;}
+   p.answer {display: none; color:DarkOrange; background-color: OldLace; padding: 10px; border-radius: 5px; margin-top: 20px;}
+  </style>
   </style>
 </head>
 <body>
@@ -20,7 +21,7 @@
     Tax rate: <input id="taxRate" type="number" value="30"> %<br><br>
     <button id="calcButton" onclick="{ myCalculate()}" >Calculate tax</button>
   </p><br<br>
-  
+
   <p id="grossPay" class="answer"></p>
   <p id="netIncome" class="answer"></p>
   <p id="moneyDeducted" class="answer"></p>
@@ -30,7 +31,7 @@
   <p style="color: DarkOrange"><i>This code assumes there are 20 work days in a month and 200 work days in a year</i></p>
 
   <script>
-       function myCalculate(){                       
+     function myCalculate(){                         
    let wage = parseFloat(document.getElementById('wage').value);
    let hours = parseFloat(document.getElementById('hours').value);
    let taxRate = parseFloat(document.getElementById('taxRate').value) / 100;
@@ -44,15 +45,13 @@
    document.getElementById('moneyDeducted').innerHTML = 'Money deducted is $' + moneyded;
    document.getElementById('monthlyPay').innerHTML = 'Monthly pay is $' + monthpay;
    document.getElementById('yearlyPay').innerHTML = 'Yearly pay is $' + yearpay;
-        
-    grossPay.style.display = 'block';
+       }     
+       
+       grossPay.style.display = 'block';
       netIncome.style.display = 'block';
       moneyDeducted.style.display = 'block';
       monthlyPay.style.display = 'block';
       yearlyPay.style.display = 'block';
   </script>
-  
-  
 </body>
 </html>
-
