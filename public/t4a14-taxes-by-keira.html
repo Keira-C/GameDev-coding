@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<h5>version 0.0.1-21</h5>
+<h5>version 0.0.1-22</h5>
 <head>
   <title>Taxes</title>
   <style> 
@@ -15,49 +15,42 @@
   <h2>Taxes</h2>
 
   <p> 
-    Wage: $<input id="wage" placeholder="15"> per hour<br><br>
-    Hours: <input id="hours" placeholder="8"> hours<br><br>
-    Tax rate: <input id="taxRate" placeholder="30"> %<br><br>
+    Wage: $<input id="wage" type="number" value="15"> per hour<br><br>
+    Hours: <input id="hours" type="number" value="8"> hours<br><br>
+    Tax rate: <input id="taxRate" type="number" value="30"> %<br><br>
     <button id="calcButton">Calculate tax</button>
-  </p>
+  </p><br<br>
 
-  <p id="dayPay" class="answer"></p>
-  <p id="total" class="answer"></p>
-  <p id="tax" class="answer"></p>
-  <p id="takeHomePay" class="answer"></p>
+  <p id="grossPay" class="answer"></p>
+  <p id="netIncome" class="answer"></p>
+  <p id="moneyDeducted" class="answer"></p>
+  <p id="monthlyPay" class="answer"></p>
+  <p id="yearlyPay" class="answer"></p>
 
   <p style="color: DarkOrange"><i>This code assumes there are 20 work days in a month and 200 work days in a year</i></p>
 
   <script>
-    const calcButton = document.getElementById('calcButton');
-    const dayPay = document.getElementById('dayPay');
-    const total = document.getElementById('total');
-    const tax = document.getElementById('tax');
-    const takeHomePay = document.getElementById('takeHomePay');
-
-    calcButton.addEventListener('click', function() {
-      const wage = document.getElementById('wage').value;
-      const hours = document.getElementById('hours').value;
-      const taxRate = document.getElementById('taxRate').value / 100;
-                                                          
-      const grossPay  = wage * hours;
-      const grossMonthPay = grossPay * 20;
-      const grossYearPay = grossPay * 200;
-      const taxMonth = grossMonthPay * taxRate;
-      const taxYear = grossYearPay * taxRate;
-      const netPayMonth = grossMonthPay - taxMonth;
-      const netPayYear = grossYearPay - taxYear;
-                                                          
-      dayPay.textContent = 'Day pay is $' + grossPay;
-      total.textContent = 'Total pay per month is $' + grossMonthPay + ' and total pay per year is $' + grossYearPay;
-      tax.textContent = 'Tax paid per month is $' + taxMonth + ', $' + taxYear + ' per year.';
-      takeHomePay.textContent = 'Take home pay per month: $' + netPayMonth + ', take home pay per year: $' + netPayYear;
+   let wage = parseFloat(document.getElementById('wage').value);
+   let hours = parseFloat(document.getElementById('hours').value);
+   let taxRate = parseFloat(document.getElementById('taxRate').value) / 100;
+   let grosspay = wage * hours;
+   let netpay = grosspay - (grosspay * taxRate);
+   let monthpay = netpay * 20;
+   let yearpay = netpay * 200;
+   let moneyded = grosspay * taxRate;
+   document.getElementById('myDiv4').innerHTML = 'Gross pay is $' + grosspay;
+   document.getElementById('myDiv').innerHTML = 'Net income is $' + netpay;
+   document.getElementById('myDiv5').innerHTML = 'Money deducted is $' + moneyded;
+   document.getElementById('myDiv2').innerHTML = 'Monthly pay is $' + monthpay;
+   document.getElementById('myDiv3').innerHTML = 'Yearly pay is $' + yearpay;
+                                                     
 
       // show the answers
-      dayPay.style.display = 'block';
-      total.style.display = 'block';
-      tax.style.display = 'block';
-      takeHomePay.style.display = 'block';
+      grossPay.style.display = 'block';
+      netIncome.style.display = 'block';
+      moneyDeducted.style.display = 'block';
+      monthlyPay.style.display = 'block';
+      yearlyPay.style.display = 'block';
     });
   </script>
 </body>
