@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<h5>version 0.0.1-23</h5>
+<h5>version 0.0.1-24</h5>
 <head>
   <title>Taxes</title>
   <style> 
@@ -38,11 +38,11 @@
    let monthpay = netpay * 20;
    let yearpay = netpay * 200;
    let moneyded = grosspay * taxRate;
-   document.getElementById('myDiv4').innerHTML = 'Gross pay is $' + grosspay;
-   document.getElementById('myDiv').innerHTML = 'Net income is $' + netpay;
-   document.getElementById('myDiv5').innerHTML = 'Money deducted is $' + moneyded;
-   document.getElementById('myDiv2').innerHTML = 'Monthly pay is $' + monthpay;
-   document.getElementById('myDiv3').innerHTML = 'Yearly pay is $' + yearpay;
+   document.getElementById('grossPay').innerHTML = 'Gross pay is $' + grosspay;
+   document.getElementById('netIncome').innerHTML = 'Net income is $' + netpay;
+   document.getElementById('moneyDeducted').innerHTML = 'Money deducted is $' + moneyded;
+   document.getElementById('monthlyPay').innerHTML = 'Monthly pay is $' + monthpay;
+   document.getElementById('yearlyPay').innerHTML = 'Yearly pay is $' + yearpay;
                                                      
   </script>
 </body>
