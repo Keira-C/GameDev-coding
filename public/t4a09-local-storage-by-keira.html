@@ -36,14 +36,14 @@
         margin-top: 10px;
       }
     </style>
-    <h5>version 0.0.1-17</h5>
+    <h5>version 0.0.1-18</h5>
   </head>
   <body>
     <h2>Local Storage</h2>
     <input type="text" id="myText1" value="" placeholder="Write here to store">
     <div id="myDiv01"></div><br><br>
     
-    <div id="myText2"></div>
+   
     <input type="button" value="Store Text" onClick="{
        localStorage.setItem('myStoredText', document.getElementById('myText1').value);
        document.getElementById('myDiv01').innerHTML='Text has been stored!';
@@ -58,5 +58,8 @@
         localStorage.setItem('myStoredText', document.getElementById('myText1').value);
       };
     </script>
+    
+     <textarea id="myText2"></textarea>
+    
   </body>
 </html>
