@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   <h5>version 0.0.1-25</h5>
+   <h5>version 0.0.1-26</h5>
 <head>
    <title>Canvas</title>
 </head>
@@ -33,23 +33,11 @@ You use loops and variables to make fast fancy drawings <br><br>
 <input type="button" value=".arc(95, 50, 40, 0, 2 * Math.PI)" onclick="{
    myContext.beginPath();
    myContext.lineWidth = 10;
-   myContext.moveTo(x, y);
    myContext.strokeStyle = 'green';
    myContext.arc(95, 50, 40, 0, 2 * Math.PI);
    myContext.stroke();
 }">
-   <input type="button" value="Move Left" onclick="{
-   x -= 10;
-}">
-<input type="button" value="Move Right" onclick="{
-   x += 10;
-}">
-<input type="button" value="Move Up" onclick="{
-   y -= 10;
-}">
-<input type="button" value="Move Down" onclick="{
-   y += 10;
-}"><br><br>
+   <br><br>
 
 
    
@@ -62,7 +50,7 @@ You use loops and variables to make fast fancy drawings <br><br>
    myContext.stroke();
    myContext.setTransform();  
    //myContext.rotate(-60 * Math.PI / 180); 
-}"><br>
+}"><br><br>
 
 <input id="myQuadCurve" type="button" value=".quadraticCurveTo(100,220,240,110)" onclick="{
    myContext.beginPath();
@@ -99,7 +87,7 @@ You use loops and variables to make fast fancy drawings <br><br>
 
 <input type="button" value="clearRect(20, 20, 50, 50)" onclick="{
    myContext.clearRect(20, 20, 50, 50);
-}"><br>
+}"><br><br>
 
 <input type="button" value="strokeRect (200, 200, 160, 600)" onclick="{
   const canvas = document.getElementById('myCoolTag');
@@ -112,25 +100,6 @@ You use loops and variables to make fast fancy drawings <br><br>
   myCtx.strokeRect(200, 200, 160, 600);
 }"><br><br>
    
-   <input type="button" value="Draw Circles" onclick="{
-const myCanvas = document.getElementById('myCoolTag');
-const myContext = myCanvas.getContext('2d');
-myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
-myContext.fillStyle = 'blue';
-const startX = 50;
-const startY = 50;
-const radius = 20;
-const padding = 10;
-const numCircles = 10;
-for (let i = 0; i < numCircles; i++) {
- const x = startX + (i * (radius * 2 + padding));
- const y = startY + (i % 2 === 0 ? 0 : radius * 2 + padding);
- myContext.beginPath();
- myContext.arc(x, y, radius, 0, 2 * Math.PI);
- myContext.fill();
-}
-}"><br><br>
-
 <input type="button" value="Clear all" onclick="{
   const canvas = document.getElementById('myCoolTag');
   const ctx = canvas.getContext('2d');
