@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Extra canvas</title>
+	<style>
+		canvas {
+			border: 1px solid black;
+		}
+		button {
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+  <h2 align="center" >Extra canvas thing because I couldn't figure out the other canvas thing very well</h2><br>
+  ChatGPT helped me figure this out! I'm not super amazingly smart, I promise<br><br>
+  
+	<canvas id="art-canvas" width="400" height="400"></canvas>
+	<br>
+	<button id="blue-btn">Blue</button>
+	<button id="red-btn">Red</button>
+	<button id="green-btn">Green</button>
+	<button id="erase-btn">Erase</button>
+
+<script>
+const canvas = document.getElementById("art-canvas");
+const myContex = canvas.getContext("2d");
+
+let isDrawing = false;
+let lastX = 0;
+let lastY = 0;
+let color = "blue";
+
+canvas.addEventListener("mousedown", (e) => {
+	isDrawing = true;
+	lastX = e.offsetX;
+	lastY = e.offsetY;
+});
+
+canvas.addEventListener("mousemove", (e) => {
+	if (isDrawing) {
+		myContex.beginPath();
+		myContex.moveTo(lastX, lastY);
+		myContex.lineTo(e.offsetX, e.offsetY);
+		myContex.strokeStyle = color;
+		myContex.lineWidth = 5;
+		myContex.stroke();
+		lastX = e.offsetX;
+		lastY = e.offsetY;
+	}
+});
+
+canvas.addEventListener("mouseup", () => {
+	isDrawing = false;
+});
+
+canvas.addEventListener("mouseout", () => {
+	isDrawing = false;
+});
+
+document.getElementById("blue-btn").addEventListener("click", () => {
+	color = "blue";
+});
+
+document.getElementById("red-btn").addEventListener("click", () => {
+	color = "red";
+});
+
+document.getElementById("green-btn").addEventListener("click", () => {
+	color = "green";
+});
+
+document.getElementById("erase-btn").addEventListener("click", () => {
+	myContex.clearRect(0, 0, canvas.width, canvas.height);
+});
+
+</script>
+	<script src="app.js"></script>
+</body>
+</html>
