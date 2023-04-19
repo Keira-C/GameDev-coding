@@ -1,18 +1,28 @@
-<h5>version 0.0.1-6</h5>
+<h5>version 0.0.1-7</h5>
 <head>
  <title>Sound</title>
  <style>
   body {background-color: LavenderBlush}
  </style>
 </head>
-<script> let mySound1 = new Audio('Yeh.m4a')
+<script> let mySound1 = new Audio('Radiostar.m4a')
 let mySound2 = new Audio('Yay.m4a')
 let mySound3 = new Audio('Ya.m4a')
+
+function stopSound() {
+mySound1.pause();
+mySound1.currentTime = 0;
+mySound2.pause();
+mySound2.currentTime = 0;
+mySound3.pause();
+mySound3.currentTime = 0;
+}
 </script>
 
-<h1 align=center style="border: 2px solid MediumSpringGreen">t4a10b: Sounds and events</h1>
+<h1 align=center style="border: 2px solid MediumSpringGreen; color: DarkGreen">t4a10b: Sounds and events</h1>
 
 <input type="button" value="&#127925" onClick="{
+      stopSound();
     mySound1.play()
 }">
 
@@ -20,6 +30,6 @@ let mySound3 = new Audio('Ya.m4a')
     mySound2.play()
 }">
 
-<input type="button" value="sound" onClick="{
-    mySound3.play()
+<input type="button" value="Stop" onClick="{
+ stopSound();
 }">
