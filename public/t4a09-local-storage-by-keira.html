@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<h5>version 0.0.1-14</h5>
+<h5>version 0.0.1-15</h5>
 <html>
   <head>
     <title>Local Storage</title>
@@ -46,14 +46,16 @@
   }">
     <h2>Local Storage</h2>
     <input type="text" id="myText1" value="" placeholder="Write here to store">
-    <div id="myDiv01"></div>
+    <div id="myDiv01"></div><br><br>
+    
+    <div id="myDiv02"></div>
     <input type="button" value="Store Text" onClick="{
        localStorage.setItem('myStoredText', document.getElementById('myText1').value);
        document.getElementById('myDiv01').innerHTML='Text has been stored!';
        document.getElementById('myText1').value = '';
     }">
     <input type="button" value="Retrieve Text" onClick="{
-       document.getElementById('myText1').value = localStorage.getItem('myStoredText');
+       document.getElementById('myDiv01').value = localStorage.getItem('myStoredText');
        document.getElementById('myDiv01').innerHTML='';
     }"> 
     <script>
