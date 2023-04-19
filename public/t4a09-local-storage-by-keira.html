@@ -36,7 +36,7 @@
         margin-top: 10px;
       }
     </style>
-    <h5>version 0.0.1-18</h5>
+    <h5>version 0.0.1-19</h5>
   </head>
   <body>
     <h2>Local Storage</h2>
@@ -50,7 +50,7 @@
        document.getElementById('myText1').value = '';
     }">
     <input type="button" value="Retrieve Text" onClick="{
-       document.getElementById('myText2').value = localStorage.getItem('myStoredText');
+       document.getElementById('myText1').value = localStorage.getItem('myStoredText');
        document.getElementById('myDiv01').innerHTML='';
     }"> 
     <script defer>
@@ -59,7 +59,7 @@
       };
     </script>
     
-     <textarea id="myText2"></textarea>
+     
     
   </body>
 </html>
