@@ -1,4 +1,4 @@
-Version 0.0.1-24
+Version 0.0.1-25
 <title>Variables</title>
 <style>
     body {background-color:Ivory}
@@ -128,7 +128,7 @@ Calculate area of a rectangle (this uses variables and a function)<br>
 <input id="units"><br>
 
 <button onclick="calculateArea()">Calculate area</button>
-<p>Area: <span id="area"></span></p>
+<p>Area: <span id="area"></span></p><br><br>
 
 <script>
   function calculateArea() {
@@ -139,3 +139,28 @@ Calculate area of a rectangle (this uses variables and a function)<br>
     document.getElementById("area").innerHTML = area + units;
   }
 </script>
+<h4 style="border-top: 6px solid Indigo"></h4><br><br>
+
+<label>Countdown seconds:</label>
+<input type="number" id="seconds">
+<button onclick="startTimer()">Start Countdown</button>
+<p id="timer"></p>
+
+<script>
+let intervalId;
+
+function startTimer() {
+  let seconds = Number(document.getElementById("seconds").value);
+  let countdown = seconds;
+
+  intervalId = setInterval(function() {
+    countdown--;
+    document.getElementById("timer").innerHTML = countdown;
+    if (countdown === 0) {
+      clearInterval(intervalId);
+      document.getElementById("timer").innerHTML = "Countdown finished!";
+    }
+  }, 1000);
+}
+</script>
+
