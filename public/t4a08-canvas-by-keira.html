@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   <h5>version 0.0.1-23</h5>
+   <h5>version 0.0.1-24</h5>
 <head>
    <title>Canvas</title>
 </head>
@@ -32,10 +32,24 @@ You use loops and variables to make fast fancy drawings <br><br>
 <input type="button" value=".arc(95, 50, 40, 0, 2 * Math.PI)" onclick="{
    myContext.beginPath();
    myContext.lineWidth = 10;
+   myContext.moveTo(x, y);
    myContext.strokeStyle = 'green';
    myContext.arc(95, 50, 40, 0, 2 * Math.PI);
    myContext.stroke();
-}"><br>
+}">
+   <input type="button" value="Move Left" onclick="{
+   x -= 10;
+}">
+<input type="button" value="Move Right" onclick="{
+   x += 10;
+}">
+<input type="button" value="Move Up" onclick="{
+   y -= 10;
+}">
+<input type="button" value="Move Down" onclick="{
+   y += 10;
+}"><br><br>
+
 
    
 <input type="button" value="Text (Hello World)" onclick="{
@@ -51,10 +65,22 @@ You use loops and variables to make fast fancy drawings <br><br>
 
 <input id="myQuadCurve" type="button" value=".quadraticCurveTo(100,220,240,110)" onclick="{
    myContext.beginPath();
-   myContext.moveTo(300,100);
+   myContext.moveTo(x, y);
    myContext.quadraticCurveTo(100,220,240,110);
    myContext.stroke();
-}"><br>
+}">
+<input type="button" value="Move Left" onclick="{
+   x -= 10;
+}">
+<input type="button" value="Move Right" onclick="{
+   x += 10;
+}">
+<input type="button" value="Move Up" onclick="{
+   y -= 10;
+}">
+<input type="button" value="Move Down" onclick="{
+   y += 10;
+}"><br><br>
    
 
 
