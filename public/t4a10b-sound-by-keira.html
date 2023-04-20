@@ -6,8 +6,9 @@
  </style>
 </head>
 <script> let mySound1 = new Audio('Radiostar.m4a')
-let mySound2 = new Audio('Yay.m4a')
-let mySound3 = new Audio('Ya.m4a')
+let mySound2 = new Audio('New Recording 24.m4a')
+let mySound3 = new Audio('New Recording 25.m4a')
+let mySound4 = new Audio('New Recording 26.m4a')
 
 function stopSound() {
 mySound1.pause();
@@ -28,7 +29,20 @@ Sorry I've only got one sound up so far
     mySound1.play()
 }">
 
+<input type="button" value="Drum beat 1" onClick="{
+      stopSound();
+    mySound2.play()
+}">
 
+<input type="button" value="Drum beat 2" onClick="{
+      stopSound();
+    mySound3.play()
+}">
+
+<input type="button" value="More music" onClick="{
+      stopSound();
+    mySound4.play()
+}">
 
 <input type="button" value="Stop" onClick="{
  stopSound();
