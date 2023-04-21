@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-   <h5>version 0.0.1-28</h5>
+   <h5>version 0.0.1-29</h5>
 <head>
    <title>Canvas</title>
 </head>
 <body>
    <h2 align="center" style="border: 2px solid DarkBlue">t3a08: canvas </h2> 
-  <a href="extra-canvas.html" target="_blank">Link to a cool canvas that isn't really what this assignment is but I thought it was cool</a>                       
+  <a href="extra-canvas.html" target="_blank" display="none">Link to a cool canvas that isn't what this assignment is but I thought it was cool</a>  <br>                     
 You use loops and variables to make fast fancy drawings <br><br>
 
    <i> Not the most user friendly, but click on the move buttons before adding a shape </i><br><br>
@@ -70,9 +70,6 @@ You use loops and variables to make fast fancy drawings <br><br>
 <input type="button" value="Move Down" onclick="{
    y += 10;
 }"><br><br>
-   
-
-
 
 <input type="button" value="Gradient rectange" onclick="{
    let myGradient = myContext.createLinearGradient(100, 300, 200, 400);
@@ -87,17 +84,6 @@ You use loops and variables to make fast fancy drawings <br><br>
 
 <input type="button" value="white rectangle" onclick="{
    myContext.clearRect(20, 20, 50, 50);
-}"><br><br>
-
-<input type="button" value="strokeRect (40, 40, 160, 600)" onclick="{
-  const canvas = document.getElementById('myCoolTag');
-  const ctx = canvas.getContext('2d');
-  myCtx.shadowColor = '#d53';
-  myCtx.shadowBlur = 20;
-  myCtx.lineJoin = 'bevel';
-  myCtx.lineWidth = 15;
-  myCtx.strokeStyle = '#38f';
-  myCtx.strokeRect(40, 40, 160, 600);
 }"><br><br>
    
 <input type="button" value="Clear all" onclick="{
