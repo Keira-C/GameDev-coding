@@ -10,7 +10,7 @@
 You use loops and variables to make fast fancy drawings <br><br>
 
    Not the most user friendly, but click on the move buttons before adding a shape<br><br>
-<input type="button" value=".lineTo(30,200)" onclick="{
+<input type="button" value="Line" onclick="{
    myContext.beginPath();
    myContext.lineWidth = 1;   
    myContext.moveTo(x, y);
@@ -30,7 +30,7 @@ You use loops and variables to make fast fancy drawings <br><br>
    y += 10;
 }"><br><br>
 
-<input type="button" value=".arc(95, 50, 40, 0, 2 * Math.PI)" onclick="{
+<input type="button" value="Circle" onclick="{
    myContext.beginPath();
    myContext.lineWidth = 10;
    myContext.strokeStyle = 'green';
@@ -52,7 +52,7 @@ You use loops and variables to make fast fancy drawings <br><br>
    //myContext.rotate(-60 * Math.PI / 180); 
 }"><br><br>
 
-<input id="myQuadCurve" type="button" value=".quadraticCurveTo(100,220,240,110)" onclick="{
+<input id="myQuadCurve" type="button" value="Quadratic curve" onclick="{
    myContext.beginPath();
    myContext.moveTo(x, y);
    myContext.quadraticCurveTo(100,220,240,110);
@@ -74,7 +74,7 @@ You use loops and variables to make fast fancy drawings <br><br>
 
 
 
-<input type="button" value=".createLinearGradient(100, 300, 200, 400)" onclick="{
+<input type="button" value="Gradient rectange" onclick="{
    let myGradient = myContext.createLinearGradient(100, 300, 200, 400);
    myGradient.addColorStop(0, 'red');
    myGradient.addColorStop(0.5, 'blue');
@@ -85,11 +85,11 @@ You use loops and variables to make fast fancy drawings <br><br>
    myContext.fillStyle = 'black';
 }"><br><br>
 
-<input type="button" value="clearRect(20, 20, 50, 50)" onclick="{
+<input type="button" value="white rectangle" onclick="{
    myContext.clearRect(20, 20, 50, 50);
 }"><br><br>
 
-<input type="button" value="strokeRect (200, 200, 160, 600)" onclick="{
+<input type="button" value="strokeRect (40, 40, 160, 600)" onclick="{
   const canvas = document.getElementById('myCoolTag');
   const ctx = canvas.getContext('2d');
   myCtx.shadowColor = '#d53';
@@ -97,7 +97,7 @@ You use loops and variables to make fast fancy drawings <br><br>
   myCtx.lineJoin = 'bevel';
   myCtx.lineWidth = 15;
   myCtx.strokeStyle = '#38f';
-  myCtx.strokeRect(200, 200, 160, 600);
+  myCtx.strokeRect(40, 40, 160, 600);
 }"><br><br>
    
 <input type="button" value="Clear all" onclick="{
