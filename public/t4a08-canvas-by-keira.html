@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   <h5>version 0.0.1-30</h5>
+   <h5>version 0.0.1-31</h5>
 <head>
    <title>Canvas</title>
 </head>
@@ -34,10 +34,23 @@ You use loops and variables to make fast fancy drawings <br><br>
    myContext.beginPath();
    myContext.lineWidth = 10;
    myContext.strokeStyle = 'green';
-   myContext.arc(95, 50, 40, 0, 2 * Math.PI);
+   myContext.moveTo(x, y);
+   myContext.arc(x + 10, y + 10, 40, 0, 2 * Math.PI);
    myContext.stroke();
 }">
-   <br><br>
+   <input type="button" value="Move Left" onclick="{
+   x -= 10;
+}">
+<input type="button" value="Move Right" onclick="{
+   x += 10;
+}">
+<input type="button" value="Move Up" onclick="{
+   y -= 10;
+}">
+<input type="button" value="Move Down" onclick="{
+   y += 10;
+}"><br><br>
+   
 
 
    
