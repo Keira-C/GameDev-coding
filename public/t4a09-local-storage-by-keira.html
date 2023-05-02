@@ -45,7 +45,7 @@
         margin-top: 10px;
       }
     </style>
-    <h5>version 0.0.1-21</h5>
+    <h5>version 0.0.1-22</h5>
   </head>
   <body>
     <h2>Local Storage</h2>
@@ -55,7 +55,7 @@
    
     <input type="button" value="Store Text" onClick="{
        localStorage.setItem('myStoredText', document.getElementById('myText01').value);
-       document.getElementById('myDiv01').innerHTML='Text has been stored!';
+       document.getElementById('myDiv01').innerHTML=  myText01 + ' has been stored!';
        document.getElementById('myText01').value = '';
     }">
     <input type="button" value="Retrieve Text" onClick="{
@@ -68,7 +68,8 @@
       };
     </script>
     
-     
+    <input type="text" id="myText02" value="">
+    
     
   </body>
 </html>
