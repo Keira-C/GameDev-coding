@@ -45,7 +45,7 @@
         margin-top: 10px;
       }
     </style>
-    <h5>version 0.0.1-22</h5>
+    <h5>version 0.0.1-23</h5>
   </head>
   <body>
     <h2>Local Storage</h2>
@@ -55,13 +55,13 @@
    
     <input type="button" value="Store Text" onClick="{
        localStorage.setItem('myStoredText', document.getElementById('myText01').value);
-       document.getElementById('myDiv01').innerHTML=  myText01 + ' has been stored!';
+       document.getElementById('myDiv01').innerHTML=  myStoredText + ' has been stored!';
        document.getElementById('myText01').value = '';
     }">
     <input type="button" value="Retrieve Text" onClick="{
        document.getElementById('myText01').value = localStorage.getItem('myStoredText');
        document.getElementById('myDiv01').innerHTML='';
-    }"> 
+    }"> <br><br>
     <script defer>
       window.onbeforeunload = function() {
         localStorage.setItem('myStoredText', document.getElementById('myText01').value);
