@@ -40,9 +40,9 @@ function myCheckHit(){
    
 
    // YOU WIN and go to next level!
-   if ( myHitOther('myImg01','myImg02') ){
+   if ( myHitOther('myImg01.png','myImg02.png') ){
        alert('You Win, now go to the next level')
-      document.getElementById('myImg01').style.left = '20px'
+      document.getElementById('myImg01.png').style.left = '20px'
       location = 'https://www.google.ca'
    }
 
@@ -51,12 +51,12 @@ function myCheckHit(){
 
    // checking for window boundaries
    // far left bounce
-  if( parseInt(document.getElementById('myImg01').style.left) > window.innerWidth - document.getElementById('myImg01').width ){
+  if( parseInt(document.getElementById('myImg01.png').style.left) > window.innerWidth - document.getElementById('myImg01.png').width ){
       myHorizontalSpeed *= -1
    }
   
   // far right bounce
-  if( parseInt(document.getElementById('myImg01').style.left) < -10  ){
+  if( parseInt(document.getElementById('myImg01.png').style.left) < -10  ){
       myHorizontalSpeed = myHorizontalSpeed * -1
    }
 
@@ -89,7 +89,7 @@ function myCheckHit(){
   clearInterval(myTimer01)
   clearInterval(myTimer02)
   myTimer01 = setInterval(function(){
-     document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + myHorizontalSpeed + 'px'
+     document.getElementById('myImg01.png').style.left = parseInt(document.getElementById('myImg01.png').style.left) + myHorizontalSpeed + 'px'
      myCheckHit()     // checks for all collisions
   }, 50)
 }"><br><br>
@@ -105,6 +105,6 @@ function myCheckHit(){
 }"><br><br>
 
 
-<img id="myImg01" src="myImgNew.jpg" title="myImg01" style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
-<img id="myImg02" src="myImgNew.jpg" title="myImg02" style="position:absolute; width:100px;  height:80px; left:350px; top:390px;">
+<img id="myImg01.png" src="myImgNew.jpg" title="myImg01.png" style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
+<img id="myImg02.png" src="myImgNew.jpg" title="myImg02.png" style="position:absolute; width:100px;  height:80px; left:350px; top:390px;">
 
