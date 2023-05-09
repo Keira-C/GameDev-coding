@@ -1,4 +1,4 @@
-version 0.0.1-10
+version 0.0.1-11
 <head>
 <title>LEVEL 01</title>
    <style>
@@ -101,8 +101,8 @@ function myCheckHit(){
 <input type=button value="START" onclick="{
   clearInterval(myClock)
   let myTemp = '100px 0px'
-  myGlobalX -= 5
-  myClock = setInterval(function(){   
+  myClock = setInterval(function(){ 
+   myGlobalX -= 5
       myTemp =  myGlobalX + 'px 0px'
       document.getElementById('myBody').style.backgroundPosition = myTemp
   }, 100)
