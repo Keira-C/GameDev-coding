@@ -1,4 +1,4 @@
-version 0.0.1-6
+version 0.0.1-7
 <head>
 <title>LEVEL 01</title>
    <style>
@@ -95,11 +95,11 @@ function myCheckHit(){
 
 <input id="myText01" type=text value="" size=50 placeholder="Feedback here"><br>
 
-<input type=button value="Auto Background Left" onclick="{
+<input type=button value="START" onclick="{
   clearInterval(myClock)
   let myTemp = '100px 0px'
-  myClock = setInterval(function(){
-      myGlobalX -= 5
+  myGlobalX -= 5
+  myClock = setInterval(function(){   
       myTemp =  myGlobalX + 'px 0px'
       document.getElementById('myBody').style.backgroundPosition = myTemp
   }, 100)
@@ -123,4 +123,4 @@ function myCheckHit(){
 <img id="myImg01" src="myImg01.png"  style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
 <img id="myImg02" src="MyAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:350px; top:190px;">
 <img id="myImg03" src="MyAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:500px; top:190px;">
-<img id="myImg04" src="myPlanet01.png"  style="position:absolute; width:100px; height:80px; left:500px; top:400px;">
+<img id="myImg04" src="myPlanet01.png"  style="position:absolute; width:100px; left:500px; top:400px;">
