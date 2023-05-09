@@ -1,4 +1,4 @@
-version 0.0.1-12
+version 0.0.1-13
 <head>
 <title>LEVEL 01</title>
    <style>
@@ -40,20 +40,20 @@ function myCheckHit(){
 
    if ( myHitOther('myImg01','myImg02') ){
       document.getElementById('myImg01').style.left = '20px'
-      document.all.myText01.value = 'You hit myImg02'  
+      document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
    
    if ( myHitOther('myImg01','myImg03') ){
        //alert('you lose')
       document.getElementById('myImg01').style.left = '20px'
-      document.all.myText01.value = 'You hit myImg03'  
+      document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
    
   // you LOSE refresh the page
    if (myScore <= 0){
-    document.all.myText01.value = 'You Lose scrore at zero!'  
+    document.all.myText01.value = 'You lose score at zero!'  
     alert('Sorry you lose')
     location.reload()
    }
@@ -125,6 +125,7 @@ function myCheckHit(){
 
 <img id="myImg01" src="myImg01.png"  style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
 <img id="myImg02" src="MyAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:350px; top:190px;">
+<img id="myImg02" src="MyAsteroid01.png"  style="position:absolute; width:70px; left:620px; top:170px;">
 <img id="myImg03" src="MyAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:800px; top:190px;">
-<img id="myImg04" src="MyAsteroid02.png"  style="position:absolute; width:70px; left:700px; top:260px;">
-<img id="myImg04" src="myPlanet01.png"  style="position:absolute; width:100px; left:500px; top:400px;">
+<img id="myImg03" src="MyAsteroid02.png"  style="position:absolute; width:70px; left:700px; top:260px;">
+<img id="myImg04" src="myPlanet01.png"  style="position:absolute; width:100px; left:1900px; top:400px;">
