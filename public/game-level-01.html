@@ -1,4 +1,4 @@
-version 0.0.1-20
+version 0.0.1-21
 <head>
 <title>LEVEL 01</title>
    <style>
@@ -118,24 +118,29 @@ function myCheckHit(){
       document.getElementById('myBody').style.backgroundPosition = myTemp
   }, 100)
     
-}">
+  myTemp = '100px 0px'
+  myGlobalX = 5
+  myTemp =  myGlobalX + 'px 0px'
+ document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 10 + 'px'
+                                                         
+}"><br>
    
-<input id="myText01" type=text value="" size=50 placeholder="Feedback here"><b
+<input id="myText01" type=text value="" size=50 placeholder="Feedback here"><br>
 
 <input type=button value="Right" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
+  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 20 + 'px'
   myCheckHit()     // checks for all collisions
 }">
 
 <input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
+  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 20 + 'px'
   myCheckHit()     // checks for all collisions
 }"><br><br>
 
 
 
 
-<img id="myImg01" src="MyAsteroid01.png"  style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
+<img id="myImg01" src="myImg01.png"  style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
 <img id="myImg02" src="MyAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:350px; top:190px;">
 <img id="myImg03" src="MyAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:500px; top:190px;">
 <img id="myImg04" src="myPlanet01.png"  style="position:absolute; width:100px; height:80px; left:500px; top:400px;">
