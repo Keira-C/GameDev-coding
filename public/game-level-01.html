@@ -1,4 +1,4 @@
-version 0.0.1-22
+version 0.0.1-23
 <head>
 <title>LEVEL 01</title>
    <style>
@@ -88,7 +88,7 @@ function myCheckHit(){
 
 </script>
 
-Press the "d" key to go right and "s" key to go down or use the buttons labelled "right" and "down"
+<br>Press the "d" key to go right and "s" key to go down or use the buttons labelled "right" and "down"
 
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground02.jpg"  onkeydown="{
@@ -123,24 +123,20 @@ Press the "d" key to go right and "s" key to go down or use the buttons labelled
   myTemp =  myGlobalX + 'px 0px'
  document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 10 + 'px'
                                                          
-}"><br>
-   
-<input id="myText01" type=text value="" size=50 placeholder="Feedback here"><br>
-
-<input type=button value="Right" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+}">
+   <input type=button value="Right" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 20 + 'px'
   myCheckHit()     // checks for all collisions
 }">
-
-<input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+   
+   <input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 20 + 'px'
   myCheckHit()     // checks for all collisions
-}"><br><br>
+}"><br>
+   
+<input id="myText01" type=text value="" size=50 placeholder="Feedback here"><br><br>
 
-
-
-
-<img id="myImg01" src="myImg01.png"  style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
-<img id="myImg02" src="MyAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:350px; top:190px;">
-<img id="myImg03" src="MyAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:500px; top:190px;">
+<img id="myImg01" src="MyImg01.png"  style="position:absolute; width:100px; height:80px; left: 50px; top:290px;">
+<img id="myImg02" src="MyAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:350px; top:290px;">
+<img id="myImg03" src="MyAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:500px; top:290px;">
 <img id="myImg04" src="myPlanet01.png"  style="position:absolute; width:100px; height:80px; left:500px; top:400px;">
