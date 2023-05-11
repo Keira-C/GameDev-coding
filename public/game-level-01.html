@@ -1,4 +1,4 @@
-version 0.0.1-21
+version 0.0.1-22
 <head>
 <title>LEVEL 01</title>
    <style>
@@ -67,7 +67,7 @@ function myCheckHit(){
    
   // you LOSE refresh the page
    if (myScore <= 0){
-    document.all.myText01.value = 'You Lose scrore at zero!'  
+    document.all.myText01.value = 'You lose! score at zero!'  
     alert('Sorry you lose')
     location.reload()
    }
@@ -75,10 +75,10 @@ function myCheckHit(){
    // YOU WIN and go to next level!
 
    if ( myHitOther('myImg01','myImg04') ){
-      document.all.myText01.value = 'You hit myImg04 and you win the game!'  
-       alert('You Win, now go to the next level')
+      document.all.myText01.value = 'You landed on the planet and you win the game!'  
+       alert('You win, now go to the next level')
       document.getElementById('myImg01').style.left = '20px'
-      location = 'https://www.google.ca'
+      location = 'game-level-02.html'
    }
 
    // more if statements here
@@ -88,7 +88,7 @@ function myCheckHit(){
 
 </script>
 
-
+Press the "d" key to go right and "s" key to go down or use the buttons labelled "right" and "down"
 
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground02.jpg"  onkeydown="{
