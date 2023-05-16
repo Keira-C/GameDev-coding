@@ -1,4 +1,4 @@
-version 0.0.1-25
+version 0.0.1-26
 <head>
 <title>LEVEL 01</title>
    <style>
@@ -6,18 +6,6 @@ version 0.0.1-25
       color: Gold;
       }
       
-      .button {
-  background-color: Gold; 
-  border: none;
-  color: Black;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
    </style>
 </head>
 
@@ -111,6 +99,11 @@ SHORTCUTS S AND D KEYS
 
    <input type=button value="Right" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 20 + 'px'
+  myCheckHit()     // checks for all collisions
+}">
+   
+   <input type=button value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImg01').style.right = parseInt(document.getElementById('myImg01').style.right) + 20 + 'px'
   myCheckHit()     // checks for all collisions
 }">
    
