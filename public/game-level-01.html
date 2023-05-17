@@ -1,4 +1,4 @@
-version 0.0.1-32
+version 0.0.1-33
 <head>
 <title>LEVEL 01</title>
    <style>
@@ -94,10 +94,10 @@ function myCheckHit(){
       document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
    }  
        if (event.key == 'w') {   // w = go up
-      document.getElementById('myImg01').style.bottom = parseInt(document.getElementById('myImg01').style.bottom) + 10 + 'px'  
+      document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -10 + 'px'  
    }
       if (event.key == 'a') {   // a = go left
-      document.getElementById('myImg01').style.right = parseInt(document.getElementById('myImg01').style.right) + 10 + 'px'               
+      document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -10 + 'px'               
    }                                                                                                                
    // put more here
   myCheckHit()     // checks for all collisions
@@ -110,7 +110,7 @@ function myCheckHit(){
 <h1 align=center><font color=Gold>LEVEL 01</font></h1>
 
 <input type=button value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.right = parseInt(document.getElementById('myImg01').style.right) + 20 + 'px'
+  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -20 + 'px'
   myCheckHit()     // checks for all collisions
 }">
    
