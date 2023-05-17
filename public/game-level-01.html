@@ -1,4 +1,4 @@
-version 0.0.1-30
+version 0.0.1-31
 <head>
 <title>LEVEL 01</title>
    <style>
@@ -53,7 +53,7 @@ function myCheckHit(){
       myScore -= 1
    }   
    
-    if ( myHitOther('myImg01','myImg04') ){
+    if ( myHitOther('myImg01','myImg05') ){
        //alert('you lose')
       document.getElementById('myImg01').style.left = '20px'
       document.all.myText01.value = 'You hit myImg03'  
@@ -69,7 +69,7 @@ function myCheckHit(){
 
    // YOU WIN and go to next level!
 
-   if ( myHitOther('myImg01','myImg05') ){
+   if ( myHitOther('myImg01','myImg04') ){
       document.all.myText01.value = 'You landed on the planet and you win the game!'  
        alert('You win, now go to the next level')
       document.getElementById('myImg01').style.left = '20px'
@@ -130,5 +130,5 @@ function myCheckHit(){
 <img id="myImg01" src="MyImg01.png"  style="position:absolute; width:100px; height:80px; left: 50px; top:290px;">
 <img id="myImg02" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:350px; top:290px;">
 <img id="myImg03" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:500px; top:290px;">
-<img id="myImg04" src="myAsteroid02.png"  style="position:absolute; width:100px; left:500px; top:490px;">
-<img id="myImg05" src="myPlanet01.gif"  style="position:absolute; width:200px;  left:1200px; top:500px;">
+<img id="myImg05" src="myAsteroid02.png"  style="position:absolute; width:100px; left:500px; top:490px;">
+<img id="myImg04" src="myPlanet01.gif"  style="position:absolute; width:200px;  left:1200px; top:500px;">
