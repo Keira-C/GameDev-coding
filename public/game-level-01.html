@@ -1,4 +1,4 @@
-version 0.0.1-28
+version 0.0.1-29
 <head>
 <title>LEVEL 01</title>
    <style>
@@ -53,6 +53,13 @@ function myCheckHit(){
       myScore -= 1
    }   
    
+    if ( myHitOther('myImg01','myImg04') ){
+       //alert('you lose')
+      document.getElementById('myImg01').style.left = '20px'
+      document.all.myText01.value = 'You hit myImg03'  
+      myScore -= 1
+   }   
+   
   // you LOSE refresh the page
    if (myScore <= 0){
     document.all.myText01.value = 'You lose! score at zero!'  
@@ -62,7 +69,7 @@ function myCheckHit(){
 
    // YOU WIN and go to next level!
 
-   if ( myHitOther('myImg01','myImg04') ){
+   if ( myHitOther('myImg01','myImg05') ){
       document.all.myText01.value = 'You landed on the planet and you win the game!'  
        alert('You win, now go to the next level')
       document.getElementById('myImg01').style.left = '20px'
@@ -86,6 +93,12 @@ function myCheckHit(){
    if (event.key == 's') {   // s = go down
       document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
    }  
+       if (event.key == 'w') {   // w = go up
+      document.getElementById('myImg01').style.bottom = parseInt(document.getElementById('myImg01').style.bottom) + 10 + 'px'  
+   }
+      if (event.key == 'a') {   // a = go left
+      document.getElementById('myImg01').style.right = parseInt(document.getElementById('myImg01').style.right) + 10 + 'px'               
+   }                                                                                                                
    // put more here
   myCheckHit()     // checks for all collisions
 }">
