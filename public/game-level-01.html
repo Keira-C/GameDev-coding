@@ -1,4 +1,4 @@
-version 0.0.1-36
+version 0.0.1-37 
 <head>
 <title>LEVEL 01</title>
    <style>
@@ -122,12 +122,12 @@ function myCheckHit(){
    <input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 20 + 'px'
   myCheckHit()     // checks for all collisions
-}"><br>
+}">
    
     <input type=button value="Up" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -20 + 'px'
   myCheckHit()     // checks for all collisions
-}"><br>
+}"><br><br>
    
 <input id="myText01" type=text value="" size=50 placeholder="Feedback here"><br><br>
 
