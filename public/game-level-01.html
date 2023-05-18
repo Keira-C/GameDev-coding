@@ -1,4 +1,4 @@
-version 0.0.1-34
+version 0.0.1-35
 <head>
 <title>LEVEL 01</title>
    <style>
@@ -42,28 +42,27 @@ function myCheckHit(){
 
    if ( myHitOther('myImg01','myImg02') ){
       document.getElementById('myImg01').style.left = '20px'
-      document.all.myText01.value = 'You hit myImg02'  
+      document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
    
    if ( myHitOther('myImg01','myImg03') ){
        //alert('you lose')
       document.getElementById('myImg01').style.left = '20px'
-      document.all.myText01.value = 'You hit myImg03'  
+      document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
    
     if ( myHitOther('myImg01','myImg04') ){
        //alert('you lose')
       document.getElementById('myImg01').style.left = '20px'
-      document.all.myText01.value = 'You hit myImg04'  
+      document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
    
   // you LOSE refresh the page
    if (myScore <= 0){
-    document.all.myText01.value = 'You lose! score at zero!'  
-    alert('Sorry you lose')
+    document.all.myText01.value = 'You lose! Score at zero!'  
     location = 'game-start-page.html'
    }
 
