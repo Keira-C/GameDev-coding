@@ -1,4 +1,4 @@
-version 0.0.1-8
+version 0.0.1-9
 <head>
 <title>LEVEL 02</title>
    <style>
@@ -42,38 +42,38 @@ function myCheckHit(){
 
    if ( myHitOther('myImg01','myImg02') ){
       document.getElementById('myImg01').style.left = '20px'
-      document.all.myText01.value = 'You hit myImg02'  
+      document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
    
    if ( myHitOther('myImg01','myImg03') ){
        //alert('you lose')
       document.getElementById('myImg01').style.left = '20px'
-      document.all.myText01.value = 'You hit myImg03'  
+      document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
   if ( myHitOther('myImg01','myImg04') ){
        //alert('you lose')
       document.getElementById('myImg01').style.left = '20px'
-      document.all.myText01.value = 'You hit myImg03'  
+      document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
   if ( myHitOther('myImg01','myImg05') ){
        //alert('you lose')
       document.getElementById('myImg01').style.left = '20px'
-      document.all.myText01.value = 'You hit myImg03'  
+      document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
   if ( myHitOther('myImg01','myImg06') ){
        //alert('you lose')
       document.getElementById('myImg01').style.left = '20px'
-      document.all.myText01.value = 'You hit myImg03'  
+      document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
    
   // you LOSE refresh the page
    if (myScore <= 0){
-    document.all.myText01.value = 'You Lose scrore at zero!'  
+    document.all.myText01.value = 'Score at zero!'  
     alert('Sorry you lose')
     location.reload()
    }
@@ -81,8 +81,8 @@ function myCheckHit(){
    // YOU WIN and go to next level!
 
    if ( myHitOther('myImg01','myImg07') ){
-      document.all.myText01.value = 'You hit the planet!'  
-       alert('You Win, now go to the next level')
+      document.all.myText01.value = 'You landed on the planet!'  
+       alert('Next level')
       document.getElementById('myImg01').style.left = '20px'
       location = 'https://www.google.ca'
    }
