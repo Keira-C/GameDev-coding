@@ -1,4 +1,4 @@
-version 0.0.1-50
+version 0.0.1-51
 <head>
 <title>LEVEL 01</title>
    <style>
@@ -86,8 +86,8 @@ function myCheckHit(){
    // YOU WIN and go to next level!
 
    if ( myHitPlanet('myImg01','myImg05') ){
-      document.all.myText01.value = 'You landed on the planet and you win the game!'  
-       alert('You win, now go to the next level')
+      document.all.myText01.value = 'You landed on the planet!'  
+       alert('Next level')
       document.getElementById('myImg01').style.left = '20px'
       location = 'game-level-02.html'
       
@@ -149,7 +149,6 @@ function myCheckHit(){
 <input id="myText01" type=text value="" size=50 placeholder="Feedback here"><br><br>
 
 <img id="myImg01" src="myRocket01.png"  style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
-
 <img id="myImg02" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:350px; top:180px;">
 <img id="myImg03" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:500px; top:280px;">
 <img id="myImg04" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:540px;  top:490px;">
