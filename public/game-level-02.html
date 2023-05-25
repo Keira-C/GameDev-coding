@@ -1,4 +1,4 @@
-version 0.0.1-5
+version 0.0.1-6
 <head>
 <title>LEVEL 02</title>
    <style>
@@ -132,6 +132,11 @@ function myCheckHit(){
       document.getElementById('myBody').style.backgroundPosition = myTemp
   }, 100)
     
+}">
+
+<input type=button value="PAUSE" onclick="{
+  clearInterval(myClock);
+  myClock = null;
 }">
 
 <input type=button value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
