@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-20
+   version 0.0.1-21
    <head>
 <title>LEVEL 02</title>
    <style>
@@ -98,6 +98,36 @@ function myCheckHit(){
 
    // more if statements here
 
+}
+
+   function myMoveAsteroids() {
+   const asteroids = $('.move');
+   const screenWidth = $(window).width();
+   const img01 = $('#myImg01');
+   const img01Width = img01.width();
+
+   asteroids.each(function() {
+      const asteroid = $(this);
+      const asteroidWidth = asteroid.width();
+      const initialLeft = screenWidth + asteroidWidth;
+      const speed = 5; // Adjust the speed as needed
+
+      asteroid.css('left', initialLeft).animate(
+         {
+            left: -asteroidWidth,
+         },
+         screenWidth * speed,
+         function() {
+            // Animation complete, reset the position
+            asteroid.css('left', initialLeft);
+            myMoveAsteroids(); // Start the animation again
+         }
+      );
+   });
+
+   // Move the screen with myImg01
+   const screenOffset = img01.offset().left - (screenWidth / 2) + (img01Width / 2);
+   $('body').scrollLeft(screenOffset);
 }
 
 
