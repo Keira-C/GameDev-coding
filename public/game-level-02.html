@@ -1,4 +1,4 @@
-version 0.0.1-12
+version 0.0.1-13
 <head>
 <title>LEVEL 02</title>
    <style>
@@ -22,6 +22,11 @@ version 0.0.1-12
   color: #fff;
       border-radius: 5px;  
       }
+      
+      img.move {
+         position:relative;
+      }
+      
    </style>
 </head>
 
@@ -107,7 +112,13 @@ function myCheckHit(){
 
 }
 
-
+function myMoveAsteroids(){
+   width = img.get(0).width,
+      screenWidth = (window).width(),
+img.css ("left", -width).animate({
+            "left": screenWidth
+        }, 4000, myMoveAsteroids);
+    }}
 </script>
 
 
@@ -176,11 +187,11 @@ function myCheckHit(){
 
 
 
-<img id="myImg01" src="myImg01.png"  style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
-<img id="myImg02" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:350px; top:190px;">
+<img id="myImg01" src="myRocket01.png"  style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
+<img class="move" id="myImg02" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:350px; top:190px;">
 <img id="myImg03" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:500px; top:390px;">
 <img id="myImg04" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:350px; top:490px;">
-<img id="myImg05" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:650px; top:600px;">
+<img class="move" id="myImg05" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:650px; top:600px;">
 <img id="myImg06" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:720px; top:390px;">
 <img id="myImg06" src="myAsteroid02.png"  style="position:absolute; width:70px; height:70px; left:1350px; top:390px;">
 <img id="myImg07" src="myPlanetImg01.png" style="position:absolute; width:100px; height:100px; left:1400px; top:400px;">
