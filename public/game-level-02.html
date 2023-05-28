@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-14
+   version 0.0.1-15
 <head>
 <title>LEVEL 02</title>
 <style>
@@ -136,6 +136,12 @@
       }
    }
 
+   $(function() {
+    var img = $("#plane"),
+        width = img.get(0).width,
+        screenWidth = $(window).width(),
+        duration = 5000;
+      
    function myMoveAsteroids() {
       const img = $('.move');
       const width = img.width();
@@ -144,7 +150,7 @@
          {
             left: screenWidth,
          },
-         4000,
+         duration,
          myMoveAsteroids
       );
    }
