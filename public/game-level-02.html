@@ -1,27 +1,14 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-19
+   version 0.0.1-20
    <head>
 <title>LEVEL 02</title>
    <style>
       body {background-color: Black;
       color: Gold;
       }
-      input[type=text] {
-  width: 40%;
-  padding: 12px 20px;
-  margin: 4px 0;
-  box-sizing: border-box;
-  border: 4px solid White;
-  background-color: Gold ;
-  color: Black;
-}
+
    
-      
-      img.move {
-         position:relative;
-      }
-      
    </style>
 </head>
 
@@ -87,6 +74,12 @@ function myCheckHit(){
       myScore -= 1
    }   
    
+   if ( myHitOther('myImg01','myImg07') ){
+       //alert('you lose')
+      document.getElementById('myImg01').style.left = '20px'
+      document.all.myText01.value = 'You hit an asteroid'  
+      myScore -= 1
+   }   
   // you LOSE refresh the page
    if (myScore <= 0){
     document.all.myText01.value = 'Score at zero!'  
@@ -96,7 +89,7 @@ function myCheckHit(){
 
    // YOU WIN and go to next level!
 
-   if ( myHitOther('myImg01','myImg07') ){
+   if ( myHitOther('myImg01','myImg08') ){
       document.all.myText01.value = 'You landed on the planet!'  
        alert('Next level')
       document.getElementById('myImg01').style.left = '20px'
@@ -107,13 +100,7 @@ function myCheckHit(){
 
 }
 
-function myMoveAsteroids(){
-   width = img.get(0).width,
-      screenWidth = (window).width(),
-img.css ("left", -width).animate({
-            "left": screenWidth
-        }, 4000, myMoveAsteroids);
-    }}
+
 </script>
 
 
@@ -154,11 +141,6 @@ img.css ("left", -width).animate({
     
 }">
 
-<input type=button value="PAUSE" onclick="{
-  clearInterval(myClock);
-  myClock = null;
-}">
-
 <input type=button value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -10 + 'px'
   myCheckHit()     // checks for all collisions
@@ -183,10 +165,12 @@ img.css ("left", -width).animate({
 
 
 <img id="myImg01" src="myRocket01.png"  style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
-<img class="move" id="myImg02" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:350px; top:190px;">
+<img id="myImg02" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:350px; top:190px;">
 <img id="myImg03" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:500px; top:390px;">
 <img id="myImg04" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:350px; top:490px;">
-<img class="move" id="myImg05" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:650px; top:600px;">
+<img id="myImg05" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:650px; top:600px;">
 <img id="myImg06" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:720px; top:390px;">
-<img id="myImg06" src="myAsteroid02.png"  style="position:absolute; width:70px; height:70px; left:1350px; top:390px;">
-<img id="myImg07" src="myPlanetImg01.png" style="position:absolute; width:100px; height:100px; left:1400px; top:400px;">
+<img id="myImg07" src="myAsteroid02.png"  style="position:absolute; width:70px; height:70px; left:1350px; top:390px;">
+<img id="myImg08" src="myPlanetImg01.png" style="position:absolute; width:100px; height:100px; left:1400px; top:400px;">
+   </body>
+</html>
