@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-30
+   version 0.0.1-31
    <head>
 <title>LEVEL 02</title>
    <style>
@@ -93,8 +93,8 @@ function myCheckHit(){
    // YOU WIN and go to next level!
 
    if ( myHitOther('myImg01','myImg08') ){
-      document.all.myText01.value = 'You landed on the planet!' 
-      document.getElementById('myDiv01') = "NEXT LEVEL"
+      document.all.myText01.value = 'You landed on the planet!'  
+       alert('Next level')
       document.getElementById('myImg01').style.left = '20px'
       location = 'https://www.google.ca'
    }
@@ -183,6 +183,6 @@ function myCheckHit(){
 <img id="myImg05" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:650px; top:600px;">
 <img id="myImg06" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:720px; top:390px;">
 <img id="myImg07" src="myAsteroid02.png"  style="position:absolute; width:70px; height:70px; left:1350px; top:390px;">
-<img id="myImg08" src="myPlanetImg01.png" style="position:absolute; width:100px; height:100px; left:1400px; top:400px;">
+<img id="myImg08" src="myPlanet02.png" style="position:absolute; width:100px; height:100px; left:1400px; top:400px;">
    </body>
 </html>
