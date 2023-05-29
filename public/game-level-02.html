@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-28
+   version 0.0.1-29
    <head>
 <title>LEVEL 02</title>
    <style>
@@ -10,7 +10,7 @@
       
    
        input.hidden {
-          visibility: hidden;
+          displayy: none;
       }
    </style>
 </head>
@@ -93,8 +93,7 @@ function myCheckHit(){
    // YOU WIN and go to next level!
 
    if ( myHitOther('myImg01','myImg08') ){
-      document.all.myText01.value = 'You landed on the planet!'  
-       alert('Next level')
+      document.all.myText01.value = 'You landed on the planet!' 
       document.getElementById('myImg01').style.left = '20px'
       location = 'https://www.google.ca'
    }
