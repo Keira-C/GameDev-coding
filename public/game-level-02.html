@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-29
+   version 0.0.1-30
    <head>
 <title>LEVEL 02</title>
    <style>
@@ -10,7 +10,7 @@
       
    
        input.hidden {
-          displayy: none;
+          display: none;
       }
    </style>
 </head>
@@ -94,6 +94,7 @@ function myCheckHit(){
 
    if ( myHitOther('myImg01','myImg08') ){
       document.all.myText01.value = 'You landed on the planet!' 
+      document.getElementById('myDiv01') = "NEXT LEVEL"
       document.getElementById('myImg01').style.left = '20px'
       location = 'https://www.google.ca'
    }
@@ -171,7 +172,8 @@ function myCheckHit(){
 }"><br>
 
 <input id="myText01" type=text value="" size=50 placeholder="Feedback here"><br>
-
+   <div id="myDiv01" onclick="{document.getElementById('myImg01').style.left = '20px'
+      location = 'https://www.google.ca'}"> </div>
 
 
 <img id="myImg01" src="myRocket01.png"  style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
