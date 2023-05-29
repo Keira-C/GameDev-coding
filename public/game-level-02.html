@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-25
+   version 0.0.1-26
    <head>
 <title>LEVEL 02</title>
    <style>
@@ -130,7 +130,7 @@ function myCheckHit(){
 
 
 
-<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground02.jpg"  onkeydown="{
+<body id="myBody" style="background-repeat:repeat; background-size: 80%;" background="myBackground02.jpg"  onkeydown="{
    document.all.myText01.value = event.key
    if (event.key == 'd') {  // d = go right
      document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
@@ -147,6 +147,7 @@ function myCheckHit(){
    // put more here
   myCheckHit()     // checks for all collisions
 }">
+   >
 
 
 
@@ -161,7 +162,7 @@ function myCheckHit(){
   document.getElementById('myBody').style.backgroundPosition =myTemp
                                                               }">
 
-<input type=button value="START" onclick="{
+<input class="button" type="button" value="START" onclick="{
   clearInterval('myClock')
   myClock = setInterval(function(){
      document.getElementById('myButton01').click() 
@@ -170,26 +171,26 @@ function myCheckHit(){
   
 }">
    
-   <input class="button" type=button value="PAUSE" onclick="{
+   <input class="button" type="button" value="PAUSE" onclick="{
   clearInterval(myClock);
   myClock = null;  
 }">
 
-<input class="button" type=button value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<input class="button" type="button" value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -10 + 'px'
   myCheckHit()     // checks for all collisions
 }">
 
-<input class="button" type=button value="Right" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<input class="button" type="button" value="Right" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
   myCheckHit()     // checks for all collisions
 }">
 
-<input class="button" type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<input class="button" type="button" value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
   myCheckHit()     // checks for all collisions
 }">
-<input class="button" type=button value="Up" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<input class="button" type="button" value="Up" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -10 + 'px'
   myCheckHit()     // checks for all collisions
 }"><br>
