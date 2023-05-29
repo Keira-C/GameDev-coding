@@ -1,29 +1,13 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-26
+   version 0.0.1-27
    <head>
 <title>LEVEL 02</title>
    <style>
-      body {background-color: Black;
+      body {
       color: Gold;
       }
-input[type=text] {
-  width: 40%;
-  padding: 10px 18px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 2px solid White;
-  background-color: Gold ;
-  color: Black;
-}
-      input.button {
-         display: inline-block;
-         padding:6px 16px;
-  font-size: 10px;
-  background-color: DarkOrange;
-  color: #fff;
-      border-radius: 3px;  
-      }
+      
    
        input.hidden {
           visibility: hidden;
@@ -118,20 +102,14 @@ function myCheckHit(){
    // more if statements here
 
 }
-
-   // Move the screen with myImg01
-   const screenOffset = img01.offset().left - (screenWidth / 2) + (img01Width / 2);
-   $('body').scrollLeft(screenOffset);
-}
-
-
 </script>
 
 
 
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%;" background="myBackground02.jpg"  onkeydown="{
-   document.all.myText01.value = event.key
+  
+         document.all.myText01.value = event.key
    if (event.key == 'd') {  // d = go right
      document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
    }   
@@ -139,12 +117,12 @@ function myCheckHit(){
       document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
    }  
        if (event.key == 'w') {   // w = go up
-      document.getElementById('myImg01').style.bottom = parseInt(document.getElementById('myImg01').style.top) + -10 + 'px'  
+      document.getElementById('myImg01').style.bottom = parseInt(document.getElementById('myImg01').style.top) +- 10 + 'px'  
    }
       if (event.key == 'a') {   // a = go left
-      document.getElementById('myImg01').style.right = parseInt(document.getElementById('myImg01').style.left) + -10 + 'px'               
+      document.getElementById('myImg01').style.right = parseInt(document.getElementById('myImg01').style.left) +- 10 + 'px'               
    }                                                                                                                
-   // put more here
+   
   myCheckHit()     // checks for all collisions
 }">
    >
