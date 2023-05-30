@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-35
+   version 0.0.1-36
    <head>
 <title>LEVEL 02</title>
    <style>
@@ -148,10 +148,17 @@ function myCheckHit(){
   document.getElementById('myBody').style.backgroundPosition =myTemp
                                                               }">
    
-   <input class="button" type="button" value="PAUSE" onclick="{
+   <input class="button" type="button" value="&#10073" onclick="{
   clearInterval(myClock);
   myClock = null;  
 }">
+   
+  <input type="button" value="&#9658" onclick="{
+   clearInterval('myClock')
+  myClock = setInterval(function(){
+     document.getElementById('myButton01').click() 
+  }, 100)
+                                               }">
 
 <input class="button" type="button" value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -10 + 'px'
