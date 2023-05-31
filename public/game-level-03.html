@@ -1,8 +1,9 @@
 
 <html>
-   version 0.0.1-6
+   version 0.0.1-7
    <head>
 <title>LEVEL 03</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <style>
       body {
       color: Gold;
@@ -29,17 +30,7 @@
      document.getElementById('myButton01').click() 
   }, 100)}
    
-   function myMoveAsteroids(){
-   const img = $('.move');
-      const width = img.width();
-      const screenWidth = $(window).width();
-      img.css('left', -width).animate(
-         {
-            left: screenWidth,
-         },
-         4000,
-         myMoveAsteroids
-      );}
+   
     
 
    // global functions here
