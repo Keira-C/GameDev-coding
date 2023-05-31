@@ -1,6 +1,6 @@
 
 <html>
-   version 0.0.1-7
+   version 0.0.1-8
    <head>
 <title>LEVEL 03</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,6 @@
       body {
       color: Gold;
       }
-      
    
        input.hidden {
           display: none;
@@ -29,9 +28,6 @@
   myClock = setInterval(function(){
      document.getElementById('myButton01').click() 
   }, 100)}
-   
-   
-    
 
    // global functions here
 function myHitOther(my1,my2){
@@ -50,7 +46,6 @@ function myHitOther(my1,my2){
        return true
    }
 }
-
 
 function myCheckHit(){
    document.all.myText01.value = myScore  // show the present score
@@ -92,6 +87,36 @@ function myCheckHit(){
       document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
+   
+    
+   if ( myHitOther('myImg01','myImg08') ){
+       //alert('you lose')
+      document.getElementById('myImg01').style.left = '20px'
+      document.all.myText01.value = 'You hit an asteroid'  
+      myScore -= 1
+   }   
+   
+    
+   if ( myHitOther('myImg01','myImg09') ){
+       //alert('you lose')
+      document.getElementById('myImg01').style.left = '20px'
+      document.all.myText01.value = 'You hit an asteroid'  
+      myScore -= 1
+   }   
+    
+   if ( myHitOther('myImg01','myImg10') ){
+       //alert('you lose')
+      document.getElementById('myImg01').style.left = '20px'
+      document.all.myText01.value = 'You hit an asteroid'  
+      myScore -= 1
+   }   
+    
+   if ( myHitOther('myImg01','myImg11') ){
+       //alert('you lose')
+      document.getElementById('myImg01').style.left = '20px'
+      document.all.myText01.value = 'You hit an asteroid'  
+      myScore -= 1
+   }   
   // you LOSE refresh the page
    if (myScore <= 0){
     document.all.myText01.value = 'Score at zero!'  
@@ -101,7 +126,7 @@ function myCheckHit(){
 
    // YOU WIN and go to next level!
 
-   if ( myHitOther('myImg01','myImg08') ){
+   if ( myHitOther('myImg01','myImg12') ){
       document.all.myText01.value = 'You landed on the planet!'  
        alert('Next level')
       document.getElementById('myImg01').style.left = '20px'
@@ -184,16 +209,19 @@ function myCheckHit(){
   myCheckHit()     // checks for all collisions
 }"><br>
 
-<input id="myText01" type=text value="" size=50 placeholder="Feedback here"><br>
-
-
+<input id="myText01" type=text value="" size=50 placeholder="score here"><br>
+   
 <img id="myImg01" src="myRocket01.png"  style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
 <img id="myImg02" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:350px; top:170px;">
 <img id="myImg03" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:500px; top:390px;">
 <img id="myImg04" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:350px; top:490px;">
 <img id="myImg05" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:650px; top:600px;">
 <img id="myImg06" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:720px; top:390px;">
-<img id="myImg07" src="myAsteroid02.png"  style="position:absolute; width:70px; height:70px; left:1350px; top:320px;">
-<img id="myImg08" src="myPlanet02.png" style="position:absolute; width:100px; height:100px; left:1400px; top:400px;">
+<img id="myImg07" src="myAsteroid02.png"  style="position:absolute; width:70px; height:70px; left:1050px; top:320px;">
+   <img id="myImg08" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:1050px; top:170px;">
+   <img id="myImg09" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:960px; top:550px;">
+   <img id="myImg10" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:850px; top:600px;">
+   <img id="myImg11" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:1030px; top:900px;">
+<img id="myImg12" src="myPlanet02.png" style="position:absolute; width:100px; height:100px; left:1400px; top:400px;">
    </body>
 </html>
