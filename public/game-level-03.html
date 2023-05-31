@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-4
+   version 0.0.1-5
    <head>
 <title>LEVEL 03</title>
    <style>
@@ -28,6 +28,18 @@
   myClock = setInterval(function(){
      document.getElementById('myButton01').click() 
   }, 100)}
+   
+   function myMoveAsteroids(){
+   const img = $('.move');
+      const width = img.width();
+      const screenWidth = $(window).width();
+      img.css('left', -width).animate(
+         {
+            left: screenWidth,
+         },
+         4000,
+         myMoveAsteroids
+      );}
     
 
    // global functions here
@@ -131,7 +143,7 @@ function myCheckHit(){
 }"
       onload="myStartBackground()">
    
-
+onload="myMoveAsteroids"
 
 
 
