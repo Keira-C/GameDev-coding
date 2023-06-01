@@ -1,11 +1,11 @@
-version 0.0.1-12
+version 0.0.1-13
 <head>
 <title>Local Storage</title>
 <style>
 body {background-color: Lavender;
    align-center: center;
    justify-content: center; 
-   height: 20px;
+   height: 40px;
       margin: 0;}
    
    .button {
@@ -35,7 +35,7 @@ body {background-color: Lavender;
  <input id="myText1" type=text size=70 value="" placeholder="Write here to store"><br>
  <div id="myDiv01"></div>
  
-<input class="button" type="button" value="Store Text" onClick="{
+<br><input class="button" type="button" value="Store Text" onClick="{
    localStorage.setItem('myStoredText', document.getElementById('myText1').value)
   document.getElementById('myDiv01').innerHTML=  'text has been stored!';
    document.getElementById('myText1').value = '';
