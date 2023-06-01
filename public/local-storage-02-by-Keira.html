@@ -1,7 +1,9 @@
 <head>
 <title>Local Storage</title>
 <style>
-body {background colour: AliceBlue}
+body {background-colour: AliceBlue;
+   align-center: center;
+   justify-content: center;}
 </style>
 </head>
 <h2>Local Storage</h2>
@@ -23,7 +25,7 @@ body {background colour: AliceBlue}
 <input type="button" value="Store Text" onClick="{
    localStorage.setItem('myStoredText', document.getElementById('myText1').value)
   document.getElementById('myDiv01').innerHTML=  'text has been stored!';
-   document.getElementById('myText1').value = ''
+   document.getElementById('myText1').value = '';
 }">
 
 <input type="button" value="Retrieve Text" onClick="{
