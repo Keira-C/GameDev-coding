@@ -1,6 +1,6 @@
 
 <html>
-   version 0.0.1-11
+   version 0.0.1-12
    <head>
 <title>LEVEL 03</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,6 +27,18 @@
   clearInterval('myClock')
   myClock = setInterval(function(){
      document.getElementById('myButton01').click() 
+  }, 100)}
+   
+   function myMoveAsteroid01(){
+  clearInterval('myClock')
+  myClock = setInterval(function(){
+     document.getElementById('myButton02').click() 
+  }, 100)}
+   
+   function myMoveAsteroid02(){
+  clearInterval('myClock')
+  myClock = setInterval(function(){
+     document.getElementById('myButton03').click() 
   }, 100)}
 
    // global functions here
@@ -175,7 +187,19 @@ function myCheckHit(){
   document.getElementById('myBody').style.backgroundPosition =myTemp
                                                               }">
 
-
+ <input class="hidden" id="myButton02" type=button value="button" onclick="{
+  myTemp = '100px 0px'
+  myGlobalX -= 10
+  myTemp =  myGlobalX + 'px 0px'
+  document.getElementById('myImgA').style.backgroundPosition =myTemp
+                                                              }">
+   
+    <input class="hidden" id="myButton03" type=button value="button" onclick="{
+  myTemp = '100px 0px'
+  myGlobalX -= 10
+  myTemp =  myGlobalX + 'px 0px'
+  document.getElementById('myImgB').style.backgroundPosition =myTemp
+                                                              }">
    
    <input class="button" type="button" value="&#10073;&#10073;" onclick="{
   clearInterval(myClock);
@@ -222,6 +246,8 @@ function myCheckHit(){
    <img id="myImg09" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:990px; top:550px;">
    <img id="myImg10" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:850px; top:600px;">
    <img id="myImg11" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:1030px; top:700px;">
+   <img id="myImgA" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:1030px; top:700px;">
+   <img id="myImgB" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:1030px; top:700px;">
 <img id="myImg12" src="myPlanet02.png" style="position:absolute; width:100px; height:100px; left:2500px; top:400px;">
    </body>
 </html>
