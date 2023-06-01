@@ -1,4 +1,4 @@
-version 0.0.1-6
+version 0.0.1-7
 <head>
 <title>Local Storage</title>
 <style>
@@ -8,7 +8,16 @@ body {background-color: Lavender;
    justify-content: center; 
    height: 100vh;
       margin: 0;}
-  
+   
+   .button {
+      display: inline-block;
+      padding: 2px 2px;
+      font-size: 4px;
+      background-color: Purple;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 </style>
 </head>
 
@@ -28,13 +37,13 @@ body {background-color: Lavender;
  <input id="myText1" type=text size=70 value="" placeholder="Write here to store"><br>
  <div id="myDiv01"></div>
  
-<input type="button" value="Store Text" onClick="{
+<input class="button" type="button" value="Store Text" onClick="{
    localStorage.setItem('myStoredText', document.getElementById('myText1').value)
   document.getElementById('myDiv01').innerHTML=  'text has been stored!';
    document.getElementById('myText1').value = '';
 }">
 
-<input type="button" value="Retrieve Text" onClick="{
+<input class="button" type="button" value="Retrieve Text" onClick="{
    document.getElementById('myText1').value = localStorage.getItem('myStoredText')
 }"> 
 
