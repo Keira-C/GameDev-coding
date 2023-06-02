@@ -1,6 +1,6 @@
 
 <html>
-   version 0.0.1-22
+   version 0.0.1-23
    <head>
 <title>LEVEL 03</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -93,6 +93,20 @@ function myCheckHit(){
    
     
    if ( myHitOther('myImg01','myImg08') ){
+       //alert('you lose')
+      document.getElementById('myImg01').style.left = '20px'
+      document.all.myText01.value = 'You hit an asteroid'  
+      myScore -= 1
+   }   
+   
+    if ( myHitOther('myImg01','myImg08-a') ){
+       //alert('you lose')
+      document.getElementById('myImg01').style.left = '20px'
+      document.all.myText01.value = 'You hit an asteroid'  
+      myScore -= 1
+   }   
+   
+    if ( myHitOther('myImg01','myImg08-b') ){
        //alert('you lose')
       document.getElementById('myImg01').style.left = '20px'
       document.all.myText01.value = 'You hit an asteroid'  
@@ -221,13 +235,15 @@ function myCheckHit(){
 <img id="myImg05" src="myAsteroid02.png"  style="position:absolute; width:80px; height:80px; left:650px; top:600px;">
 <img id="myImg06" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:720px; top:390px;">
 <img id="myImg07" src="myAsteroid02.png"  style="position:absolute; width:70px; height:70px; left:1050px; top:320px;">
-   <img id="myImg08" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:1050px; top:170px;">
-   <img id="myImg09" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:990px; top:550px;">
-   <img id="myImg10" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:850px; top:600px;">
-   <img id="myImg11" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:1030px; top:700px;">
-   <img id="myImgA" src="myAsteroid02.png"  style="position:relative; width:100px; height:80px; left:2030px; top:700px;">
-   <img id="myImgB" src="myAsteroid02.png"  style="position:relative; width:100px; height:80px; left:1630px; top:400px;">
-<img id="myImg12" src="myPlanet02.png" style="position:relative; width:100px; height:100px; left:2500px; top:400px;">
+<img id="myImg08" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:1050px; top:170px;">
+   <img id="myImg08-a" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:1350px; top:370px;">
+   <img id="myImg08-b" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:1420px; top:180px;">
+<img id="myImg09" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:990px; top:550px;">
+<img id="myImg10" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:850px; top:600px;">
+<img id="myImg11" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:1030px; top:700px;">
+<img id="myImgA" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:2030px; top:700px;">
+<img id="myImgB" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:1630px; top:400px;">
+<img id="myImg12" src="myPlanet02.png" style="position:absolute; width:100px; height:100px; left:2500px; top:400px;">
   
    </body>
 </html>
