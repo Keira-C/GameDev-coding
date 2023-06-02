@@ -1,6 +1,6 @@
 
 <html>
-   version 0.0.1-20
+   version 0.0.1-21
    <head>
 <title>LEVEL 03</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,12 @@
   top: 0;
 }
 
-      
+     img.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+ 
    </style>
 </head>
 
@@ -36,17 +41,6 @@
      document.getElementById('myButton01').click() 
   }, 100)}
    
-   function myMoveAsteroid01(){
-  clearInterval('myClock')
-  myClock = setInterval(function(){
-     document.getElementById('myButton02').click() 
-  }, 100)}
-   
-   function myMoveAsteroid02(){
-  clearInterval('myClock')
-  myClock = setInterval(function(){
-     document.getElementById('myButton03').click() 
-  }, 100)}
 
    // global functions here
 function myHitOther(my1,my2){
@@ -193,20 +187,8 @@ function myCheckHit(){
   myTemp =  myGlobalX + 'px 0px'
   document.getElementById('myBody').style.backgroundPosition =myTemp
                                                               }">
-
- <input class="hidden" id="myButton02" type=button value="button" onclick="{
-  myTemp = '100px 0px'
-  myGlobalX -= 10
-  myTemp =  myGlobalX + 'px 0px'
-  document.getElementById('myImgA').style.backgroundPosition =myTemp
-                                                              }">
    
-    <input class="hidden" id="myButton03" type=button value="button" onclick="{
-  myTemp = '100px 0px'
-  myGlobalX -= 10
-  myTemp =  myGlobalX + 'px 0px'
-  document.getElementById('myImgB').style.position =myTemp
-                                                              }">
+    
    
    <input class="button" type="button" value="&#10073;&#10073;" onclick="{
   clearInterval(myClock);
