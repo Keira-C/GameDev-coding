@@ -1,6 +1,6 @@
 
 <html>
-   version 0.0.1-29
+   version 0.0.1-30
    <head>
 <title>LEVEL 03</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -208,19 +208,8 @@ function myCheckHit(){
     
 }">
   
-  <input class="hidden" id="myMoveAsteroids" type="button" value="move asteroids" onclick="
-           const myMoveAsteroidsButton = document.getElementById('myMoveAsteroids');
-           myMoveAsteroidsButton.addEventListener('click', myFunction() {
-           const asteroids = document.querySelectorAll('[id="myImg05"]');
-                                                                   asteroids.forEach(myFunction(asteroid) {
-           const currentLeft = parseInt(asteroid.style.left);
-                                                                   asteroid.style.left = (currentLeft - 10) + 'px';
-                                                                   });
-                                                                   myCheckHit(); 
-                                                                   });
-                                                                   
-           "
-                                                                            >
+  <input id="myMoveAsteroids" type="button" value="move asteroids">
+      
    
 <input class="button" type="button" value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -10 + 'px'
