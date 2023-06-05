@@ -1,6 +1,6 @@
 
 <html>
-   version 0.0.1-31
+   version 0.0.1-32
    <head>
 <title>LEVEL 03</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -177,7 +177,7 @@ function myCheckHit(){
    }                                                                                                         
   myCheckHit()     // checks for all collisions
 }"
-      onload="myStartBackground()">
+      onload="myStartBackground()" >
    
 
 
@@ -190,10 +190,8 @@ function myCheckHit(){
   myTemp = '100px 0px'
   myGlobalX -= 20
   myTemp =  myGlobalX + 'px 0px'
-  document.getElementById('myBody').style.backgroundPosition =myTemp
+  document.getElementById('myBody').style.backgroundPosition = myTemp
                                                               }">
-   
-    
    
    <input class="button" type="button" value="&#10073;&#10073;" onclick="{
   clearInterval(myClock);
