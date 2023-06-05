@@ -1,6 +1,6 @@
 
 <html>
-   version 0.0.1-26
+   version 0.0.1-27
    <head>
 <title>LEVEL 03</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,25 +13,9 @@
           display: none;
       }
     
-      .header {
-      position: fixed;
-      top: 0;
-      z-index: 1;
-      width: 100%;
-      background-color: #f1f1f1;
-      }
       
-      .progress-container {
-      width: 100%;
-      height: 8px;
-      background: #ccc;
-      }
       
-      .progress-bar {
-     height: 8px;
-     background: #04AA6D;
-     width: 0%;
-      }
+     
  
    </style>
 </head>
@@ -173,24 +157,8 @@ function myCheckHit(){
 
 }
    
-  window.onscroll = function() {myScrollIndicator()};
-   
-   function myScrollIndicator() {
-      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      var height = document.documentElement.scrollHeight - document.document.clientHeight;
-      var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
 }
-</script>
-
-<div class="header">
-   <div class="progress-container">
-      <div class="progress-bar id="myProgressBar"></div>
-                                                 </div>
-                                                 </div>
-                                                 
-                                             
-                                                
+</script>                                                                                                                                              
 
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%;" background="myBackground02.jpg"  onkeydown="{
@@ -241,7 +209,18 @@ function myCheckHit(){
 }">
   
   <input id="myMoveAsteroids" type="button" value="move asteroids" onclick="
-           const moveAsteroidsButton = document.getElementById>
+           const myMoveAsteroidsButton = document.getElementById('myMoveAsteroids');
+           myMoveAsteroidsButton.addEventListener('click', myFunction() {
+           const asteroids = document.querySelectorAll('[id="myImg"]');
+                                                                   asteroids.forEach(myFunction(asteroid) {
+           const currentLeft = parseInt(asteroid.style.left);
+                                                                   asteroid.style.left = (currentLeft - 10) + 'px';
+                                                                   });
+                                                                   myCheckHit(); 
+                                                                   });
+                                                                   
+           
+                                                                            >
    
 <input class="button" type="button" value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -10 + 'px'
