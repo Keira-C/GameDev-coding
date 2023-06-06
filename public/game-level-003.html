@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+   <version 0.0.1-43>
+   <head>
+      <title>LEVEL 03</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+         body {
+            color: Gold;
+         }
+
+         input.hidden {
+            display: none;
+         }
+      </style>
+   </head>
+   <body id="myBody" style="background-repeat: repeat; background-size: 80%; background-image: url('https://img.freepik.com/free-vector/night-ocean-landscape-full-moon-stars-shine_107791-7397.jpg?w=2000');" onload="myStartBackground()" onkeydown="{
+      document.all.myText01.value = event.key;
+      if (event.key == 'd') {
+         document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px';
+      }
+      if (event.key == 's') {
+         document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px';
+      }
+      if (event.key == 'w') {
+         document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 10 + 'px';
+      }
+      if (event.key == 'a') {
+         document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 10 + 'px';
+      }
+      myCheckHit(); // checks for all collisions
+   }">
+      <h1 align=center style="font-family: Lucida Console, Courier New, monospace">LEVEL 03</h1>
+      <input class="hidden" id="myButton" type="button" value="button" onclick="{
+         myTemp = '100px 0px';
+         myGlobalX -= 20;
+         myTemp =  myGlobalX + 'px 0px';
+         document.getElementById('myBody').style.backgroundPosition = myTemp;
+      }">
+      <input class="button" type="button" value="&#10073;&#10073;" onclick="{
+         clearInterval(myClock);
+         myClock = null;
+      }">
+      <input class="button" type="button" value="&#9658" onclick="{
+         clearInterval('myClock');
+         myClock = setInterval(function(){
+            document.getElementById('myButton').click();
+         }, 100);
+      }">
+      <input class="button" type="button" value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+         document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 10 + 'px';
+      }">
+      <input class="button" type="button" value="Right" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+         document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px';
+      }">
+      <input class="button" type="button" value="Up" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+         document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 10 + 'px';
+      }">
+      <input class="button" type="button" value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+         document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px';
+      }">
+      <img id="myImg01" src="myTank01.png" style="position:absolute; TOP:250px; LEFT:250px;">
+      <p>Hit 'd' to move right, 's' to move down, 'w' to move up, 'a' to move left.</p>
+      <input type="text" size="30" name="myText01" readonly>
+      <script>
+         var myGlobalX = 100; // global variable
+         var myClock = setInterval(function(){
+            document.getElementById('myButton').click();
+         }, 100);
+
+         function myStartBackground() {
+            document.getElementById('myButton').click();
+         }
+         
+         function myCheckHit() {
+            if (document.getElementById('myImg01').style.left >= window.innerWidth - 100 + 'px') {
+               alert('Game over!');
+               document.getElementById('myImg01').style.left = '10px';
+               document.getElementById('myImg01').style.top = '10px';
+            }
+         }
+      </script>
+   </body>
+</html>
