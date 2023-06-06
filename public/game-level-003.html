@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-4
+   version 0.0.1-5
    <head>
       <title>LEVEL 03</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,18 +14,20 @@
          }
       </style>
    </head>
-   <script>
-      
-      
-         var myGlobalX = 100; // global variable
-         var myClock = setInterval(function(){
-            document.getElementById('myButton').click();
-         }, 100);
-
-         function myStartBackground() {
-            document.getElementById('myButton').click();
-         }
-         
+   <script>  
+        
+   let myGlobalX = 0
+   let myClock
+   let myScore = 10
+   
+ function myStartBackground(){
+  clearInterval('myClock')
+  myClock = setInterval(function(){
+     document.getElementById('myButton01').click() 
+  }, 100)
+    
+}
+   
          function myHitOther(my1,my2){
    left1   = parseInt(document.getElementById(my1).style.left)
    right1  = left1 + parseInt(document.getElementById(my1).style.width)
@@ -124,22 +126,26 @@ function myCheckHit(){
       myCheckHit(); // checks for all collisions
    }">
       <h1 align=center style="font-family: Lucida Console, Courier New, monospace">LEVEL 03</h1>
+      
       <input class="hidden" id="myButton" type="button" value="button" onclick="{
          myTemp = '100px 0px';
          myGlobalX -= 20;
          myTemp =  myGlobalX + 'px 0px';
          document.getElementById('myBody').style.backgroundPosition = myTemp;
       }">
+      
       <input class="button" type="button" value="&#10073;&#10073;" onclick="{
          clearInterval(myClock);
          myClock = null;
       }">
+      
       <input class="button" type="button" value="&#9658" onclick="{
          clearInterval('myClock');
          myClock = setInterval(function(){
             document.getElementById('myButton').click();
          }, 100);
       }">
+      
       <input class="button" type="button" value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
          document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 10 + 'px';
       }">
