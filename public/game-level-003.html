@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   <version 0.0.1-43>
+   <version 0.0.1-2>
    <head>
       <title>LEVEL 03</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,8 @@
          }
       </style>
    </head>
-   <body id="myBody" style="background-repeat: repeat; background-size: 80%; background-image: url('https://img.freepik.com/free-vector/night-ocean-landscape-full-moon-stars-shine_107791-7397.jpg?w=2000');" onload="myStartBackground()" onkeydown="{
+   <body id="myBody" style="background-repeat: repeat; background-size: 80%; 
+     background-image: url('myBackground02.jpg');" onload="myStartBackground()" onkeydown="{
       document.all.myText01.value = event.key;
       if (event.key == 'd') {
          document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px';
@@ -59,7 +60,7 @@
       <input class="button" type="button" value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
          document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px';
       }">
-      <img id="myImg01" src="myTank01.png" style="position:absolute; TOP:250px; LEFT:250px;">
+    
       <p>Hit 'd' to move right, 's' to move down, 'w' to move up, 'a' to move left.</p>
       <input type="text" size="30" name="myText01" readonly>
       <script>
@@ -80,5 +81,14 @@
             }
          }
       </script>
+      
+<img id="myImg01" src="myRocket01.png"  style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
+<img id="myImg02" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:350px; top:170px;">
+<img id="myImg03" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:500px; top:390px;">
+<img id="myImg04" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:350px; top:490px;">
+<img id="myImg05" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:650px; top:600px;">
+<img id="myImg06" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:720px; top:390px;">
+<img id="myImg07" src="myAsteroid02.png"  style="position:absolute; width:70px; height:70px; left:1350px; top:320px;">
+<img id="myImg08" src="myPlanet02.png" style="position:absolute; width:100px; height:100px; left:1400px; top:400px;">
    </body>
 </html>
