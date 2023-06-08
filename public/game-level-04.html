@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-21
+   version 0.0.1-22
    <head>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>LEVEL 04</title>
@@ -227,7 +227,7 @@ const flavoursScrollWidth = flavoursContainer.scrollWidth;
    <input type="button" value="Start" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   clearInterval(myTimer01)
   myTimer01 = setInterval(function(){
-     document.getElementById('myImg04').style.left = parseInt(document.getElementById('myImg04').style.left) -+ 10 + 'px'
+     document.getElementById('myImg04').style.left = parseInt(document.getElementById('myImg02').style.left) + -10 + 'px'
      myCheckHit()     // checks for all collisions
   }, 50)
 }"><br><br>
