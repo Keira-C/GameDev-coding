@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-52
+   version 0.0.1-53
    <head>
 <title>LEVEL 02</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +14,12 @@
           display: none;
       }
 
+      .container {
+  width: 300px;
+  overflow-x: scroll;
+  white-space: nowrap;
+ 
+}
    </style>
 </head>
 
@@ -130,12 +136,23 @@ moveAsteroidsButton.addEventListener('click', function() {
   myCheckHit();
 });
 
+   const flavoursContainer = document.getElementById('flavoursContainer');
+const flavoursScrollWidth = flavoursContainer.scrollWidth;
+
+window.addEventListener('load', () => {
+  self.setInterval(() => {
+    if (flavoursContainer.scrollLeft !== flavoursScrollWidth) {
+      flavoursContainer.scrollTo(flavoursContainer.scrollLeft + 1, 0);
+    }
+  }, 15);
+});
+   
 </script>
 
 
 
 
-<body id="myBody" style="background-repeat:repeat; background-size: 80%;" background="myBackground02.jpg" onkeydown="{
+<body class="container" id="myBody" style="background-repeat:repeat; background-size: 80%;" background="myBackground02.jpg" onkeydown="{
          document.all.myText02.value = event.key
   if (event.key == 'd') {  // d = go right
      document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
