@@ -1,4 +1,4 @@
-
+version 0.0.1-1
 <head>
   <title>Start</title>
   <style>
@@ -26,20 +26,19 @@
 </head>
 <body>
   <script>
-    let mySound1 = newAudio()
-    let mySound2 = newAudio(game-transition.wav)
+    let mySound1 = newAudio();
+    let mySound2 = newAudio("game-transition.wav");
     
-    function myDelayPageLoad () {
-      setTimeout (function) {
+    function myDelayPageLoad() {
+      setTimeout (function() {
         window.location.href="game-level-01.html"; } , 3000);
     }
   </script>
     
 
   <div class="button" style="font-family: Lucida Console, New Courier, mononspace;" onclick="{
-   myDelayPageLoad(); 
-    stopSound();
-    mySound2.play()
+   myDelayPageLoad();
+    mySound2.play();
    }">START SPACE ADVENTURE</div>
 </body>
 </html>
