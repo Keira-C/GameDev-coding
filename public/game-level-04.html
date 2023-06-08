@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-22
+   version 0.0.1-23
    <head>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>LEVEL 04</title>
@@ -13,12 +13,7 @@
  .hidden {
    display: none;
    }
-      .container {
-  width: 300px;
-  overflow-x: scroll;
-  white-space: nowrap;
-  background-color: #fff;
-}
+      
    </style>
 </head>
 
@@ -183,22 +178,12 @@ function myCheckHit(){
 
 }
 
-   const flavoursContainer = document.getElementById('myBody');
-const flavoursScrollWidth = flavoursContainer.scrollWidth;
-
-   window.addEventListener('load', () => {
-    self.setInterval(() => {
-      if (flavoursContainer.scrollLeft !== flavoursScrollWidth) {
-        flavoursContainer.scrollTo(flavoursContainer.scrollLeft + 1, 0);
-      }
-    }, 15);
-  });
 
 </script>
 
 
 
-<body class="container" id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground02.jpg"  onkeydown="{
+<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground02.jpg"  onkeydown="{
    document.all.myText01.value = event.key
    if (event.key == 'd') {  // d = go right
      document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
@@ -227,7 +212,7 @@ const flavoursScrollWidth = flavoursContainer.scrollWidth;
    <input type="button" value="Start" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   clearInterval(myTimer01)
   myTimer01 = setInterval(function(){
-     document.getElementById('myImg04').style.left = parseInt(document.getElementById('myImg02').style.left) + -10 + 'px'
+     document.getElementById('myImg02').style.left = parseInt(document.getElementById('myImg02').style.left) + -10 + 'px'
      myCheckHit()     // checks for all collisions
   }, 50)
 }"><br><br>
@@ -263,7 +248,7 @@ const flavoursScrollWidth = flavoursContainer.scrollWidth;
 <img id="myImg07" src="myAsteroid02.png" title="myImg07" style="position:absolute; width:70px; height:70px; left:1050px; top:320px;">
 <img id="myImg08" src="myAsteroid01.png" title="myImg08" style="position:absolute; width:100px; height:80px; left:1050px; top:170px;">
    <img id="myImg08-a" src="myAsteroid01.png" title="myImg08-a" style="position:absolute; width:100px; height:80px; left:1350px; top:370px;">
-   <img id="myImg08-b" src="myAsteroid01.png" title="myImg" style="position:absolute; width:100px; height:80px; left:1420px; top:180px;">
+   <img id="myImg08-b" src="myAsteroid01.png" title="myImg08-b" style="position:absolute; width:100px; height:80px; left:1420px; top:180px;">
 <img id="myImg09" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:990px; top:550px;">
 <img id="myImg10" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:850px; top:600px;">
 <img id="myImg11" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:1030px; top:700px;">
