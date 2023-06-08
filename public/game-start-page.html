@@ -1,6 +1,6 @@
 
 <head>
-  <title>Home</title>
+  <title>Start</title>
   <style>
      /* CSS styles */
     body {
@@ -25,7 +25,21 @@
   </style>
 </head>
 <body>
+  <script>
+    let mySound1 = newAudio()
+    let mySound2 = newAudio(game-transition.wav)
+    
+    function myDelayPageLoad () {
+      setTimeout (function) {
+        window.location.href="game-level-01.html"; } , 3000);
+    }
+  </script>
+    
 
-  <div class="button" style="font-family: Lucida Console, New Courier, mononspace;" onclick="location = 'game-level-01.html'">START SPACE ADVENTURE</div>
+  <div class="button" style="font-family: Lucida Console, New Courier, mononspace;" onclick="{
+   myDelayPageLoad(); 
+    stopSound();
+    mySound2.play()
+   }">START SPACE ADVENTURE</div>
 </body>
 </html>
