@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-53
+   version 0.0.1-54
    <head>
 <title>LEVEL 02</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -118,15 +118,15 @@ function myCheckHit(){
 
 }
    
-   // Find the move asteroids button element
+   
 const moveAsteroidsButton = document.getElementById('moveAsteroidsButton');
 
-// Add a click event listener to the button
+
 moveAsteroidsButton.addEventListener('click', function() {
-  // Get all the asteroid elements
+  
   const asteroids = document.querySelectorAll('[id^="myImg"]');
 
-  // Loop through each asteroid and move it to the left
+ t
   asteroids.forEach(function(asteroid) {
     const currentLeft = parseInt(asteroid.style.left);
     asteroid.style.left = (currentLeft - 10) + 'px';
@@ -136,7 +136,7 @@ moveAsteroidsButton.addEventListener('click', function() {
   myCheckHit();
 });
 
-   const flavoursContainer = document.getElementById('flavoursContainer');
+   const flavoursContainer = document.getElementById('myBody');
 const flavoursScrollWidth = flavoursContainer.scrollWidth;
 
 window.addEventListener('load', () => {
