@@ -13,6 +13,14 @@
  .hidden {
    display: none;
    }
+    
+      .moveAnimation {
+         aniamtion: moveImg02 4s infinite;
+      }
+      @keyframes moveImg02 {
+         0% { left: 350px; }
+         100% { left: 0px; }
+      }
       
    </style>
 </head>
@@ -24,14 +32,6 @@
    let myGlobalX = 0
    let myClock
    let myScore = 10
-   let timer01
-   let timer02
-
-  function myMoveBackground() { 
-  clearInterval('myClock')
-  myClock = setInterval(function(){
-     document.getElementById('myButton01').click() 
-  }, 100) }
 
    // global functions here
 function myHitOther(my1,my2){
@@ -209,13 +209,7 @@ function myCheckHit(){
 
 <h1 align=center style="font-family: Lucida console, Courier New, monospace;"><font color=Gold>LEVEL 04</font></h1>
    
-   <input type="button" value="Start" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  clearInterval(myTimer01)
-  myTimer01 = setInterval(function(){
-     document.getElementById('myImg02').style.left = parseInt(document.getElementById('myImg02').style.left) + -10 + 'px'
-     myCheckHit()     // checks for all collisions
-  }, 50)
-}"><br><br>
+  
    
 <input type=button value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -20 + 'px'
@@ -240,7 +234,7 @@ function myCheckHit(){
 <input id="myText01" type=text value="" size=50 placeholder="Feedback here"><br><br>
    
 <img id="myImg01" src="myRocket01.png" title="myImg01" style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
-<img id="myImg02" src="myAsteroid01.png" title="myImg02" style="position:absolute; width:100px; height:80px; left:350px; top:170px;">
+<img id="myImg02" src="myAsteroid01.png" title="myImg02" class="moveAnimation" style="position:absolute; width:100px; height:80px; left:350px; top:170px;">
 <img id="myImg03" src="myAsteroid01.png" title="myImg03" style="position:absolute; width:100px; height:80px; left:500px; top:390px;">
 <img id="myImg04" src="myAsteroid01.png" title="myImg04" style="position:absolute; width:100px; height:80px; left:350px; top:490px;">
 <img id="myImg05" src="myAsteroid02.png" title="myImg05"style="position:absolute; width:80px; height:80px; left:650px; top:600px;">
