@@ -1,11 +1,12 @@
-version 0.0.1-1
+<!DOCTYPE html>
+<html>
 <head>
   <title>Start</title>
   <style>
-     /* CSS styles */
+    /* CSS styles */
     body {
-    color: Gold;
-    background-color: Black;
+      color: Gold;
+      background-color: Black;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -26,19 +27,25 @@ version 0.0.1-1
 </head>
 <body>
   <script>
-    let mySound1 = newAudio();
-    let mySound2 = newAudio("game-transition.wav");
+    let mySound1 = new Audio();
+    let mySound2 = new Audio("game-transition.wav");
     
     function myDelayPageLoad() {
-      setTimeout (function() {
-        window.location.href="game-level-01.html"; } , 3000);
+      setTimeout(function() {
+        window.location.href = "game-level-01.html";
+      }, 3000);
+    }
+
+    function stopSound() {
+      mySound1.pause();
+      mySound1.currentTime = 0;
     }
   </script>
-    
 
-  <div class="button" style="font-family: Lucida Console, New Courier, mononspace;" onclick="{
-   myDelayPageLoad();
+  <div class="button" style="font-family: Lucida Console, New Courier, monospace;" onclick="{
+    myDelayPageLoad();
+    stopSound();
     mySound2.play();
-   }">START SPACE ADVENTURE</div>
+  }">START SPACE ADVENTURE</div>
 </body>
 </html>
