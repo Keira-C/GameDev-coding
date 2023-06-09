@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-27
+   version 0.0.1-28
    <head>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>LEVEL 04</title>
@@ -20,7 +20,77 @@
    </style>
 </head>
 
-<script>
+
+
+
+<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground02.jpg"  onkeydown="{
+   document.all.myText01.value = event.key
+   if (event.key == 'd') {  // d = go right
+     document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
+   }   
+   if (event.key == 's') {   // s = go down
+      document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
+   }  
+       if (event.key == 'w') {   // w = go up
+      document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -10 + 'px'  
+   }
+      if (event.key == 'a') {   // a = go left
+      document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -10 + 'px'               
+   }                                                                                                                
+   // put more here
+  myCheckHit()     // checks for all collisions
+                                                                                                                    
+}" 
+   >
+
+
+
+
+
+<h1 align=center style="font-family: Lucida console, Courier New, monospace;"><font color=Gold>LEVEL 04</font></h1>
+   
+  
+   
+<input type=button value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -20 + 'px'
+  myCheckHit()     // checks for all collisions
+}">
+   
+   <input type=button value="Right" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 20 + 'px'
+  myCheckHit()     // checks for all collisions
+}">
+   
+   <input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 20 + 'px'
+  myCheckHit()     // checks for all collisions
+}">
+   
+    <input type=button value="Up" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -20 + 'px'
+  myCheckHit()     // checks for all collisions
+}"><br><br>
+   
+<input id="myText01" type=text value="" size=50 placeholder="Feedback here"><br><br>
+   
+<img id="myImg01" src="myRocket01.png" title="myImg01" style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
+<img id="myImg02" src="myAsteroid01.png" title="myImg02" class="moveAnimation" style="position:absolute; width:100px; height:80px; left:350px; top:170px;">
+<img id="myImg03" src="myAsteroid01.png" title="myImg03" style="position:absolute; width:100px; height:80px; left:500px; top:390px;">
+<img id="myImg04" src="myAsteroid01.png" title="myImg04" style="position:absolute; width:100px; height:80px; left:350px; top:490px;">
+<img id="myImg05" src="myAsteroid02.png" title="myImg05"style="position:absolute; width:80px; height:80px; left:650px; top:600px;">
+<img id="myImg06" src="myAsteroid02.png" title="myImg06" style="position:absolute; width:100px; height:80px; left:720px; top:390px;">
+<img id="myImg07" src="myAsteroid02.png" title="myImg07" style="position:absolute; width:70px; height:70px; left:1050px; top:320px;">
+<img id="myImg08" src="myAsteroid01.png" title="myImg08" style="position:absolute; width:100px; height:80px; left:1050px; top:170px;">
+   <img id="myImg08-a" src="myAsteroid01.png" title="myImg08-a" style="position:absolute; width:100px; height:80px; left:1350px; top:370px;">
+   <img id="myImg08-b" src="myAsteroid01.png" title="myImg08-b" style="position:absolute; width:100px; height:80px; left:1420px; top:180px;">
+<img id="myImg09" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:990px; top:550px;">
+<img id="myImg10" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:850px; top:600px;">
+<img id="myImg11" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:1030px; top:700px;">
+<img id="myImgA" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:2030px; top:700px;">
+<img id="myImgB" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:1630px; top:400px;">
+<img id="myImg12" src="myPlanet02.png" style="position:absolute; width:100px; height:100px; left:2500px; top:400px;">
+   
+   <script>
 
    // global variables here
 
@@ -32,6 +102,7 @@
    // global functions here
    
    function myMoveAsteroids() {
+      let myTimer01;
   clearInterval(myTimer01);
   myTimer01 = setInterval(function() {
     document.getElementById('myImg03').style.left = parseInt(document.getElementById('myImg03').style.left) - 10 + 'px';
@@ -207,73 +278,5 @@ function myCheckHit(){
 
 </script>
 
-
-
-<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground02.jpg"  onkeydown="{
-   document.all.myText01.value = event.key
-   if (event.key == 'd') {  // d = go right
-     document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
-   }   
-   if (event.key == 's') {   // s = go down
-      document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
-   }  
-       if (event.key == 'w') {   // w = go up
-      document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -10 + 'px'  
-   }
-      if (event.key == 'a') {   // a = go left
-      document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -10 + 'px'               
-   }                                                                                                                
-   // put more here
-  myCheckHit()     // checks for all collisions
-                                                                                                                    
-}" 
-   >
-
-
-
-
-
-<h1 align=center style="font-family: Lucida console, Courier New, monospace;"><font color=Gold>LEVEL 04</font></h1>
-   
-  
-   
-<input type=button value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -20 + 'px'
-  myCheckHit()     // checks for all collisions
-}">
-   
-   <input type=button value="Right" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 20 + 'px'
-  myCheckHit()     // checks for all collisions
-}">
-   
-   <input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 20 + 'px'
-  myCheckHit()     // checks for all collisions
-}">
-   
-    <input type=button value="Up" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -20 + 'px'
-  myCheckHit()     // checks for all collisions
-}"><br><br>
-   
-<input id="myText01" type=text value="" size=50 placeholder="Feedback here"><br><br>
-   
-<img id="myImg01" src="myRocket01.png" title="myImg01" style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
-<img id="myImg02" src="myAsteroid01.png" title="myImg02" class="moveAnimation" style="position:absolute; width:100px; height:80px; left:350px; top:170px;">
-<img id="myImg03" src="myAsteroid01.png" title="myImg03" style="position:absolute; width:100px; height:80px; left:500px; top:390px;">
-<img id="myImg04" src="myAsteroid01.png" title="myImg04" style="position:absolute; width:100px; height:80px; left:350px; top:490px;">
-<img id="myImg05" src="myAsteroid02.png" title="myImg05"style="position:absolute; width:80px; height:80px; left:650px; top:600px;">
-<img id="myImg06" src="myAsteroid02.png" title="myImg06" style="position:absolute; width:100px; height:80px; left:720px; top:390px;">
-<img id="myImg07" src="myAsteroid02.png" title="myImg07" style="position:absolute; width:70px; height:70px; left:1050px; top:320px;">
-<img id="myImg08" src="myAsteroid01.png" title="myImg08" style="position:absolute; width:100px; height:80px; left:1050px; top:170px;">
-   <img id="myImg08-a" src="myAsteroid01.png" title="myImg08-a" style="position:absolute; width:100px; height:80px; left:1350px; top:370px;">
-   <img id="myImg08-b" src="myAsteroid01.png" title="myImg08-b" style="position:absolute; width:100px; height:80px; left:1420px; top:180px;">
-<img id="myImg09" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:990px; top:550px;">
-<img id="myImg10" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:850px; top:600px;">
-<img id="myImg11" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:1030px; top:700px;">
-<img id="myImgA" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:2030px; top:700px;">
-<img id="myImgB" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:1630px; top:400px;">
-<img id="myImg12" src="myPlanet02.png" style="position:absolute; width:100px; height:100px; left:2500px; top:400px;">
    </body>
 </html>
