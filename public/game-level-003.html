@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-19
+   version 0.0.1-20
    <head>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>LEVEL 003</title>
@@ -181,16 +181,31 @@ function myCheckHit(){
 
 }
 
-   const flavoursContainer = document.getElementById('myBody');
+   const moveAsteroidsButton = document.getElementById('moveAsteroidsButton');
+
+moveAsteroidsButton.addEventListener('click', function() {
+  const asteroids = document.querySelectorAll('[id^="myImg"]');
+  
+  asteroids.forEach(function(asteroid) {
+    const currentLeft = parseInt(asteroid.style.left);
+    asteroid.style.left = (currentLeft - 10) + 'px';
+  });
+  
+  // Call the collision detection function
+  myCheckHit();
+});
+
+const flavoursContainer = document.getElementById('myBody');
 const flavoursScrollWidth = flavoursContainer.scrollWidth;
 
-   window.addEventListener('load', () => {
-    self.setInterval(() => {
-      if (flavoursContainer.scrollLeft !== flavoursScrollWidth) {
-        flavoursContainer.scrollTo(flavoursContainer.scrollLeft + 1, 0);
-      }
-    }, 15);
-  });
+window.addEventListener('load', () => {
+  setInterval(() => {
+    if (flavoursContainer.scrollLeft !== flavoursScrollWidth) {
+      flavoursContainer.scrollTo(flavoursContainer.scrollLeft + 1, 0);
+    }
+  }, 15);
+});
+
 
 </script>
 
@@ -213,7 +228,7 @@ const flavoursScrollWidth = flavoursContainer.scrollWidth;
    // put more here
   myCheckHit()     // checks for all collisions
                                                                                                                     
-}" 
+mySound1.play()}" 
     onload="myMoveBackground()" >
 
 
