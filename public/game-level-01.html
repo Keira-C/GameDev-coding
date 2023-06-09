@@ -1,4 +1,4 @@
-version 0.0.1-69
+version 0.0.1-70
 <head>
 <title>LEVEL 01</title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -131,24 +131,25 @@ function myCheckHit(){
    if ( myHitOther('myImg01','myImg02') ){
       document.getElementById('myImg01').style.left = '20px'
       document.all.myText01.value = 'You hit an asteroid' 
-      mySound2.play()
       myScore -= 1
+      mySound2.play()
    }   
    
    if ( myHitOther('myImg01','myImg03') ){
        //alert('you lose')
-      document.getElementById('myImg01').style.left = '20px'
-      mySound2.play()
+      document.getElementById('myImg01').style.left = '20px' 
       document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
+      mySound2.play()
    }   
    
     if ( myHitOther('myImg01','myImg04') ){
        //alert('you lose')
       document.getElementById('myImg01').style.left = '20px'
-       mySound2.play()
+      
       document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
+        mySound2.play()
    }   
    
   // you LOSE refresh the page
