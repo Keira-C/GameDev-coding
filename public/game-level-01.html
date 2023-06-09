@@ -1,4 +1,4 @@
-version 0.0.1-70
+version 0.0.1-71
 <head>
 <title>LEVEL 01</title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -77,15 +77,16 @@ height: 100%;
    let myGlobalX = 0
    let myClock
    let myScore = 10
-
+let mySound1 = new Audio('Radiostar.m4a');
+      let mySound2 = new Audio('blaster.mp3');
    
 function myPlaySound() {
-         let mySound1 = new Audio('Radiostar.m4a');
+         mySound1.currentTime = 0;
          mySound1.play();
       }
    
    function myPlaySound2() {
-         let mySound2 = new Audio('blaster.mp3');
+         mySound2.currentTime = 0;
          mySound2.play();
       }
    
