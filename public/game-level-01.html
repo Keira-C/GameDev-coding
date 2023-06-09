@@ -1,4 +1,4 @@
-version 0.0.1-73
+version 0.0.1-74
 <head>
 <title>LEVEL 01</title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,25 +42,17 @@ height: 100%;
 
 <h1 align=center style="font-family: Lucida console, Courier New, monospace;"><font color=Gold>LEVEL 01</font></h1>
 
-<input type=button value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -20 + 'px'
-  myCheckHit()     // checks for all collisions
-}">
+<input type=button value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="moveLeft(); myCheckHit();">
+  
    
-   <input type=button value="Right" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 20 + 'px'
-  myCheckHit()     // checks for all collisions
-}">
+   <input type=button value="Right" onTouchStart="{this.click(); event.preventDefault();}" onclick="moveRight(); myCheckHit();
+  ">
    
-   <input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 20 + 'px'
-  myCheckHit()     // checks for all collisions
-}">
+   <input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="moveDown(); myCheckHit();
+  ">
    
-    <input type=button value="Up" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -20 + 'px'
-  myCheckHit()     // checks for all collisions
-}"><br><br>
+    <input type=button value="Up" onTouchStart="{this.click(); event.preventDefault();}" onclick="moveUp(); myCheckHit();
+"><br><br>
    
 <input id="myText01" type=text value="" size=50 placeholder="Feedback here"><br><br>
 
@@ -80,15 +72,7 @@ height: 100%;
 let mySound1 = new Audio('game-background.mp3');
       let mySound2 = new Audio('blaster.mp3');
    
-function myPlaySound() {
-         mySound1.currentTime = 0;
-         mySound1.play();
-      }
-   
-   function myPlaySound2() {
-         mySound2.currentTime = 0;
-         mySound2.play();
-      }
+
    
    // global functions here
 function myHitOther(my1,my2){
@@ -148,6 +132,7 @@ function myCheckHit(){
        //alert('you lose')
       document.getElementById('myImg01').style.left = '20px'
       
+     
       document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
         mySound2.play()
@@ -171,6 +156,31 @@ function myCheckHit(){
 
    // more if statements here
 
-}
+}     
+                                                                                                                       function moveLeft() {
+         document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 10 + 'px';
+      }
+
+      function moveRight() {
+         document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px';
+      }
+
+      function moveDown() {
+         document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px';
+      }
+
+      function moveUp() {
+         document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 10 + 'px';
+      }
+       
+                                                                                                                     function myPlaySound() {
+         mySound1.currentTime = 0;
+         mySound1.play();
+      }
+   
+   function myPlaySound2() {
+         mySound2.currentTime = 0;
+         mySound2.play();
+      }
 </script>
 </body>
