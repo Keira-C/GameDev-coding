@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-26
+   version 0.0.1-27
    <head>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>LEVEL 04</title>
-      <audio autoplay loop>
-  <source src="game-background.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
    <style>
       body {
       color: Gold;
@@ -18,9 +14,7 @@
    display: none;
    }
     
-    html {
-  scroll-behavior: smooth;
-}
+
  
       
    </style>
@@ -33,11 +27,11 @@
    let myGlobalX = 0
    let myClock
    let myScore = 10
-   let myTimer01
+   
 
    // global functions here
    
-   function myMoveAsteroids() function myMoveAsteroids() {
+   function myMoveAsteroids() {
   clearInterval(myTimer01);
   myTimer01 = setInterval(function() {
     document.getElementById('myImg03').style.left = parseInt(document.getElementById('myImg03').style.left) - 10 + 'px';
