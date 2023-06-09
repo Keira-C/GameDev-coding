@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-20
+   version 0.0.1-21
    <head>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>LEVEL 003</title>
@@ -21,6 +21,7 @@
 }
    </style>
 </head>
+<input id="moveAsteroidsButton" type="button" value="Move Asteroids">
 
 <script>
 
@@ -29,6 +30,8 @@
    let myGlobalX = 0
    let myClock
    let myScore = 10
+   
+   let mySound1 = new Audio ('game-background.mp3')
 
   function myMoveBackground() { 
   clearInterval('myClock')
@@ -181,9 +184,7 @@ function myCheckHit(){
 
 }
 
-   const moveAsteroidsButton = document.getElementById('moveAsteroidsButton');
-
-moveAsteroidsButton.addEventListener('click', function() {
+   moveAsteroidsButton.addEventListener('click', function() {
   const asteroids = document.querySelectorAll('[id^="myImg"]');
   
   asteroids.forEach(function(asteroid) {
@@ -194,6 +195,7 @@ moveAsteroidsButton.addEventListener('click', function() {
   // Call the collision detection function
   myCheckHit();
 });
+
 
 const flavoursContainer = document.getElementById('myBody');
 const flavoursScrollWidth = flavoursContainer.scrollWidth;
