@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-22
+   version 0.0.1-23
    <head>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>LEVEL 003</title>
@@ -201,7 +201,7 @@ function myAsteroidClicker() {
   clearInterval('myClock')
   myClock = setInterval(function(){
      document.getElementById('moveAsteroidsButton').click() 
-  }, 100) }
+  }, 100)  myCheckHit();}
 
 
 </script>
@@ -250,7 +250,8 @@ mySound1.play()}"
   clearInterval('myClock')
   myClock = setInterval(function(){
      document.getElementById('myButton01').click() 
-  }, 100)
+  }, 100);
+    myAsteroidClicker() 
     
 }">
 
