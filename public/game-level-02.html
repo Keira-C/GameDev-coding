@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-57
+   version 0.0.1-58
    <head>
 <title>LEVEL 02</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -119,32 +119,6 @@ function myCheckHit(){
 
 }
    
-   const moveAsteroidsButton = document.getElementById('moveAsteroidsButton');
-
-moveAsteroidsButton.addEventListener('click', function() {
-  const asteroids = document.querySelectorAll('[id^="myImg"]');
-  
-  asteroids.forEach(function(asteroid) {
-    const currentLeft = parseInt(asteroid.style.left);
-    asteroid.style.left = (currentLeft - 10) + 'px';
-  });
-  
-  // Call the collision detection function
-  myCheckHit();
-});
-
-const flavoursContainer = document.getElementById('myBody');
-const flavoursScrollWidth = flavoursContainer.scrollWidth;
-
-window.addEventListener('load', () => {
-  setInterval(() => {
-    if (flavoursContainer.scrollLeft !== flavoursScrollWidth) {
-      flavoursContainer.scrollTo(flavoursContainer.scrollLeft + 1, 0);
-    }
-  }, 15);
-});
-
-   
 </script>
 
 
@@ -164,8 +138,9 @@ window.addEventListener('load', () => {
       if (event.key == 'a') {   // a = go left
       document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -10 + 'px'               
    }                                                                                                         
-  myCheckHit()     // checks for all collisions
-mySound1.play()}"
+  myCheckHit();    // checks for all collisions
+mySound1.play();
+                                                                                                                                       }"
       onload="myStartBackground();" >
    
 
@@ -175,7 +150,7 @@ mySound1.play()}"
 
 <h1 align=center style="font-family: Lucida Console, Courier New, monospace">LEVEL 02</h1>
    
-   <input id="moveAsteroidsButton" type="button" value="Move Asteroids">
+   
    
    <input class="hidden" id="myButton01" type=button value="button" onclick="{
   myTemp = '100px 0px'
