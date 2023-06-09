@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-version 0.0.1-75
+version 0.0.1-76
 <head>
 <title>LEVEL 01</title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -119,7 +119,7 @@ function myCheckHit(){
       document.getElementById('myImg01').style.left = '20px'
       document.all.myText01.value = 'You hit an asteroid' 
       myScore -= 1
-      mySound2.play()
+      myPlaySound2();
    }   
    
    if ( myHitOther('myImg01','myImg03') ){
@@ -127,7 +127,7 @@ function myCheckHit(){
       document.getElementById('myImg01').style.left = '20px' 
       document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
-      mySound2.play()
+      myPlaySound2();
    }   
    
     if ( myHitOther('myImg01','myImg04') ){
@@ -137,7 +137,7 @@ function myCheckHit(){
      
       document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
-        mySound2.play()
+        myPlaySound2();
    }   
    
   // you LOSE refresh the page
