@@ -20,7 +20,7 @@
    </style>
 </head>
 
-
+<input class="hidden" id="moveAsteroidsButton" type="button" value="Move Asteroids">
 
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground02.jpg"  onkeydown="{
@@ -41,7 +41,7 @@
   myCheckHit()     // checks for all collisions
                                                                                                                     
 }" 
-   >
+ onload="mySound1.play();"  >
 
 
 
@@ -97,7 +97,7 @@
    let myGlobalX = 0
    let myClock
    let myScore = 10
-   
+   let mySound1 = new Audio ('game-background.mp3')
 
    // global functions here
    
@@ -122,12 +122,8 @@
     const myImg01Left = parseInt(document.getElementById('myImg01').style.left);
     const windowWidth = window.innerWidth;
     const scrollThreshold = windowWidth / 2;
-
-    if (myImg01Left > scrollThreshold) {
-      window.scrollTo(myImg01Left - scrollThreshold, 0);
-    }
-
-    myCheckHit(); // checks for all collisions
+    
+  myCheckHit(); // checks for all collisions
   }, 50);
 }
 
@@ -271,9 +267,13 @@ function myCheckHit(){
       
    }
 
-   // more if statements here
-
 }
+      function myAsteroidClicker() { 
+  clearInterval('myClock')
+   myCheckHit();
+  myClock = setInterval(function(){
+     document.getElementById('moveAsteroidsButton').click() 
+  }, 100)  }
 
 
 </script>
