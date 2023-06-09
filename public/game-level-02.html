@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-55
+   version 0.0.1-56
    <head>
 <title>LEVEL 02</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +31,7 @@
    let myClock = 0
    let myScore = 10
 
-   let mySound1 = new Audio ()
+   let mySound1 = new Audio (game-background.mp3)
 
    function myStartBackground(){
   clearInterval('myClock')
@@ -120,33 +120,6 @@ function myCheckHit(){
 }
    
    
-const moveAsteroidsButton = document.getElementById('moveAsteroidsButton');
-
-
-moveAsteroidsButton.addEventListener('click', function() {
-  
-  const asteroids = document.querySelectorAll('[id^="myImg"]');
-
- t
-  asteroids.forEach(function(asteroid) {
-    const currentLeft = parseInt(asteroid.style.left);
-    asteroid.style.left = (currentLeft - 10) + 'px';
-  });
-
-  // Call the collision detection function
-  myCheckHit();
-});
-
-   const flavoursContainer = document.getElementById('myBody');
-const flavoursScrollWidth = flavoursContainer.scrollWidth;
-
-window.addEventListener('load', () => {
-  self.setInterval(() => {
-    if (flavoursContainer.scrollLeft !== flavoursScrollWidth) {
-      flavoursContainer.scrollTo(flavoursContainer.scrollLeft + 1, 0);
-    }
-  }, 15);
-});
    
 </script>
 
@@ -169,7 +142,7 @@ window.addEventListener('load', () => {
    }                                                                                                         
   myCheckHit()     // checks for all collisions
 }"
-      onload="myStartBackground()" >
+      onload="myStartBackground(); mySound1.play();" >
    
 
 
