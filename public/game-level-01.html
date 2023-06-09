@@ -1,4 +1,4 @@
-version 0.0.1-71
+version 0.0.1-72
 <head>
 <title>LEVEL 01</title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@ height: 100%;
 
 
 
-<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground02.jpg" onload="{mySound1.play();}"  onkeydown="{
+<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground02.jpg" onload="myPlaySound();"  onkeydown="{
    document.all.myText01.value = event.key
    if (event.key == 'd') {  // d = go right
      document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
