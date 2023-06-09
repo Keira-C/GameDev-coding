@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-25
+   version 0.0.1-26
    <head>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>LEVEL 04</title>
+      <audio autoplay loop>
+  <source src="game-background.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
    <style>
       body {
       color: Gold;
@@ -14,13 +18,10 @@
    display: none;
    }
     
-      .moveAnimation {
-         aniamtion: moveImg02 2s infinite;
-      }
-      @keyframes moveImg02 {
-         0% { left: 350px; }
-         100% { left: 0px; }
-      }
+    html {
+  scroll-behavior: smooth;
+}
+ 
       
    </style>
 </head>
@@ -36,13 +37,35 @@
 
    // global functions here
    
-   function myMoveAsteroids() { onTouchStart="{this.click(); event.preventDefault();}" 
-  clearInterval(myTimer01)
-  myTimer01 = setInterval(function(){
-     document.getElementById('myImg03').style.left = parseInt(document.getElementById('myImg03').style.left) + -10 + 'px'
-     myCheckHit()     // checks for all collisions
-  }, 50)
+   function myMoveAsteroids() function myMoveAsteroids() {
+  clearInterval(myTimer01);
+  myTimer01 = setInterval(function() {
+    document.getElementById('myImg03').style.left = parseInt(document.getElementById('myImg03').style.left) - 10 + 'px';
+    document.getElementById('myImg04').style.left = parseInt(document.getElementById('myImg04').style.left) - 10 + 'px';
+    
+    document.getElementById('myImg06').style.left = parseInt(document.getElementById('myImg06').style.left) - 10 + 'px';
+    
+    document.getElementById('myImg08').style.left = parseInt(document.getElementById('myImg08').style.left) - 10 + 'px';
+    document.getElementById('myImg08-a').style.left = parseInt(document.getElementById('myImg08-a').style.left) - 10 + 'px';
+    
+    document.getElementById('myImg09').style.left = parseInt(document.getElementById('myImg09').style.left) - 10 + 'px';
+    document.getElementById('myImg10').style.left = parseInt(document.getElementById('myImg10').style.left) - 10 + 'px';
+    
+    document.getElementById('myImgA').style.left = parseInt(document.getElementById('myImgA').style.left) - 10 + 'px';
+    document.getElementById('myImgB').style.left = parseInt(document.getElementById('myImgB').style.left) - 10 + 'px';
+
+    const myImg01Left = parseInt(document.getElementById('myImg01').style.left);
+    const windowWidth = window.innerWidth;
+    const scrollThreshold = windowWidth / 2;
+
+    if (myImg01Left > scrollThreshold) {
+      window.scrollTo(myImg01Left - scrollThreshold, 0);
+    }
+
+    myCheckHit(); // checks for all collisions
+  }, 50);
 }
+
 function myHitOther(my1,my2){
    left1   = parseInt(document.getElementById(my1).style.left)
    right1  = left1 + parseInt(document.getElementById(my1).style.width)
