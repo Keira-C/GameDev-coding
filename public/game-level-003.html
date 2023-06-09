@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-21
+   version 0.0.1-22
    <head>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>LEVEL 003</title>
@@ -21,7 +21,7 @@
 }
    </style>
 </head>
-<input id="moveAsteroidsButton" type="button" value="Move Asteroids">
+<input class="hidden" id="moveAsteroidsButton" type="button" value="Move Asteroids">
 
 <script>
 
@@ -197,16 +197,11 @@ function myCheckHit(){
 });
 
 
-const flavoursContainer = document.getElementById('myBody');
-const flavoursScrollWidth = flavoursContainer.scrollWidth;
-
-window.addEventListener('load', () => {
-  setInterval(() => {
-    if (flavoursContainer.scrollLeft !== flavoursScrollWidth) {
-      flavoursContainer.scrollTo(flavoursContainer.scrollLeft + 1, 0);
-    }
-  }, 15);
-});
+function myAsteroidClicker() { 
+  clearInterval('myClock')
+  myClock = setInterval(function(){
+     document.getElementById('moveAsteroidsButton').click() 
+  }, 100) }
 
 
 </script>
@@ -231,7 +226,7 @@ window.addEventListener('load', () => {
   myCheckHit()     // checks for all collisions
                                                                                                                     
 mySound1.play()}" 
-    onload="myMoveBackground()" >
+    onload="myMoveBackground(); myAsteroidClicker();" >
 
 
 
@@ -283,7 +278,7 @@ mySound1.play()}"
    
 <input id="myText01" type=text value="" size=50 placeholder="Feedback here"><br><br>
    
-<img id="myImg01" src="myRocket01.png"  style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
+<img id="my-Img01" src="myRocket01.png"  style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
 <img id="myImg02" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:350px; top:170px;">
 <img id="myImg03" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:500px; top:390px;">
 <img id="myImg04" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:350px; top:490px;">
@@ -298,6 +293,6 @@ mySound1.play()}"
 <img id="myImg11" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:1030px; top:700px;">
 <img id="myImgA" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:930px; top:500px;">
 <img id="myImgB" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:630px; top:400px;">
-<img id="myImg12" src="myPlanet02.png" style="position:absolute; width:100px; height:100px; left:1400px; top:400px;">
+<img id="my-Img12" src="myPlanet02.png" style="position:absolute; width:100px; height:100px; left:1400px; top:400px;">
    </body>
 </html>
