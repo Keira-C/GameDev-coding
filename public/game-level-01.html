@@ -1,4 +1,4 @@
-version 0.0.1-66
+version 0.0.1-67
 <head>
 <title>LEVEL 01</title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,8 +20,12 @@ height: 100%;
    let myClock
    let myScore = 10
 
-   let mySound1 = new Audio('Radiostar.m4a')
-
+   
+function myPlaySound() {
+         let mySound1 = new Audio('Radiostar.m4a');
+         mySound1.play();
+      }
+   
    // global functions here
 function myHitOther(my1,my2){
    left1   = parseInt(document.getElementById(my1).style.left)
