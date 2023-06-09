@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   version 0.0.1-25
+   version 0.0.1-27
    <head>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>LEVEL 003</title>
@@ -78,89 +78,89 @@ function myHitPlanet(my1,my2){
 function myCheckHit(){
    document.all.myText01.value = myScore  // show the present score
 
-   if ( myHitOther('myImg01','myImg02') ){
-      document.getElementById('myImg01').style.left = '20px'
+   if ( myHitOther('MyImg01','myImg02') ){
+      document.getElementById('MyImg01').style.left = '20px'
       document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
    
-   if ( myHitOther('myImg01','myImg03') ){
+   if ( myHitOther('MyImg01','myImg03') ){
        //alert('you lose')
-      document.getElementById('myImg01').style.left = '20px'
+      document.getElementById('MyImg01').style.left = '20px'
       document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
    
-    if ( myHitOther('myImg01','myImg04') ){
+    if ( myHitOther('MyImg01','myImg04') ){
        //alert('you lose')
-      document.getElementById('myImg01').style.left = '20px'
+      document.getElementById('MyImg01').style.left = '20px'
       document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
    
-   if ( myHitOther('myImg01','myImg05') ){
+   if ( myHitOther('MyImg01','myImg05') ){
        //alert('you lose')
-      document.getElementById('myImg01').style.left = '20px'
+      document.getElementById('MyImg01').style.left = '20px'
       document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
-   if ( myHitOther('myImg01','myImg06') ){
+   if ( myHitOther('MyImg01','myImg06') ){
        //alert('you lose')
-      document.getElementById('myImg01').style.left = '20px'
+      document.getElementById('MyImg01').style.left = '20px'
       document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
-   if ( myHitOther('myImg01','myImg07') ){
+   if ( myHitOther('MyImg01','myImg07') ){
        //alert('you lose')
-      document.getElementById('myImg01').style.left = '20px'
+      document.getElementById('MyImg01').style.left = '20px'
       document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
-   if ( myHitOther('myImg01','myImg08') ){
+   if ( myHitOther('MyImg01','myImg08') ){
        //alert('you lose')
-      document.getElementById('myImg01').style.left = '20px'
+      document.getElementById('MyImg01').style.left = '20px'
       document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
-   if ( myHitOther('myImg01','myImg08-a') ){
+   if ( myHitOther('MyImg01','myImg08-a') ){
        //alert('you lose')
-      document.getElementById('myImg01').style.left = '20px'
+      document.getElementById('MyImg01').style.left = '20px'
       document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
-   if ( myHitOther('myImg01','myImg08-b') ){
+   if ( myHitOther('MyImg01','myImg08-b') ){
        //alert('you lose')
-      document.getElementById('myImg01').style.left = '20px'
+      document.getElementById('MyImg01').style.left = '20px'
       document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
-   if ( myHitOther('myImg01','myImg09') ){
+   if ( myHitOther('MyImg01','myImg09') ){
        //alert('you lose')
-      document.getElementById('myImg01').style.left = '20px'
+      document.getElementById('MyImg01').style.left = '20px'
       document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
-   if ( myHitOther('myImg01','myImg10') ){
+   if ( myHitOther('MyImg01','myImg10') ){
        //alert('you lose')
-      document.getElementById('myImg01').style.left = '20px'
+      document.getElementById('MyImg01').style.left = '20px'
       document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
-   if ( myHitOther('myImg01','myImg11') ){
+   if ( myHitOther('MyImg01','myImg11') ){
        //alert('you lose')
-      document.getElementById('myImg01').style.left = '20px'
+      document.getElementById('MyImg01').style.left = '20px'
       document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
-   if ( myHitOther('myImg01','myImgA') ){
+   if ( myHitOther('MyImg01','myImgA') ){
        //alert('you lose')
-      document.getElementById('myImg01').style.left = '20px'
+      document.getElementById('MyImg01').style.left = '20px'
       document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
-   if ( myHitOther('myImg01','myImgB') ){
+   if ( myHitOther('MyImg01','myImgB') ){
        //alert('you lose')
-      document.getElementById('myImg01').style.left = '20px'
+      document.getElementById('MyImg01').style.left = '20px'
       document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
@@ -172,10 +172,10 @@ function myCheckHit(){
 
    // YOU WIN and go to next level!
 
-   if ( myHitPlanet('myImg01','myImg12') ){
+   if ( myHitPlanet('MyImg01','MyImg12') ){
       document.all.myText01.value = 'You landed on the planet!'  
        alert('Next level')
-      document.getElementById('myImg01').style.left = '20px'
+      document.getElementById('MyImg01').style.left = '20px'
       location = 'game-end-page.html'
       
    }
@@ -199,9 +199,10 @@ function myCheckHit(){
 
 function myAsteroidClicker() { 
   clearInterval('myClock')
+   myCheckHit();
   myClock = setInterval(function(){
      document.getElementById('moveAsteroidsButton').click() 
-  }, 100)  myCheckHit();}
+  }, 100)  }
 
 
 </script>
@@ -211,23 +212,23 @@ function myAsteroidClicker() {
 <body class="container" id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground02.jpg"  onkeydown="{
    document.all.myText01.value = event.key
    if (event.key == 'd') {  // d = go right
-     document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
+     document.getElementById('MyImg01').style.left = parseInt(document.getElementById('MyImg01').style.left) + 10 + 'px'
    }   
    if (event.key == 's') {   // s = go down
-      document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
+      document.getElementById('MyImg01').style.top = parseInt(document.getElementById('MyImg01').style.top) + 10 + 'px'
    }  
        if (event.key == 'w') {   // w = go up
-      document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -10 + 'px'  
+      document.getElementById('MyImg01').style.top = parseInt(document.getElementById('MyImg01').style.top) + -10 + 'px'  
    }
       if (event.key == 'a') {   // a = go left
-      document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -10 + 'px'               
+      document.getElementById('MyImg01').style.left = parseInt(document.getElementById('MyImg01').style.left) + -10 + 'px'               
    }                                                                                                                
    // put more here
   myCheckHit()     // checks for all collisions
                                                                                                                     
 mySound1.play()
                      }" 
-    onload="{myMoveBackground(); myAsteroidClicker();}" >
+    onload="myMoveBackground(); myAsteroidClicker();" >
 
 
 
@@ -236,6 +237,7 @@ mySound1.play()
 <h1 align=center style="font-family: Lucida console, Courier New, monospace;"><font color=Gold>LEVEL 03</font></h1>
    
    <input class="hidden" id="myButton01" type=button value="background move left" onclick="{
+   let myTemp
   myTemp = '100px 0px'
   myGlobalX -= 20
   myTemp =  myGlobalX + 'px 0px'
@@ -259,28 +261,28 @@ mySound1.play()
    
    
 <input type=button value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -20 + 'px'
+  document.getElementById('MyImg01').style.left = parseInt(document.getElementById('MyImg01').style.left) + -20 + 'px'
   myCheckHit()     // checks for all collisions
 }">
    
    <input type=button value="Right" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 20 + 'px'
+  document.getElementById('MyImg01').style.left = parseInt(document.getElementById('MyImg01').style.left) + 20 + 'px'
   myCheckHit()     // checks for all collisions
 }">
    
    <input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 20 + 'px'
+  document.getElementById('MyImg01').style.top = parseInt(document.getElementById('MyImg01').style.top) + 20 + 'px'
   myCheckHit()     // checks for all collisions
 }">
    
     <input type=button value="Up" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -20 + 'px'
+  document.getElementById('MyImg01').style.top = parseInt(document.getElementById('MyImg01').style.top) + -20 + 'px'
   myCheckHit()     // checks for all collisions
 }"><br><br>
    
 <input id="myText01" type=text value="" size=50 placeholder="Feedback here"><br><br>
    
-<img id="my-Img01" src="myRocket01.png"  style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
+<img id="MyImg01" src="myRocket01.png"  style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
 <img id="myImg02" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:350px; top:170px;">
 <img id="myImg03" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:500px; top:390px;">
 <img id="myImg04" src="myAsteroid01.png"  style="position:absolute; width:100px; height:80px; left:350px; top:490px;">
@@ -295,6 +297,6 @@ mySound1.play()
 <img id="myImg11" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:1030px; top:700px;">
 <img id="myImgA" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:930px; top:500px;">
 <img id="myImgB" src="myAsteroid02.png"  style="position:absolute; width:100px; height:80px; left:630px; top:400px;">
-<img id="my-Img12" src="myPlanet02.png" style="position:absolute; width:100px; height:100px; left:1400px; top:400px;">
+<img id="MyImg12" src="myPlanet02.png" style="position:absolute; width:100px; height:100px; left:1400px; top:400px;">
    </body>
 </html>
