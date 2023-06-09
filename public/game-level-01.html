@@ -1,4 +1,4 @@
-version 0.0.1-67
+version 0.0.1-68
 <head>
 <title>LEVEL 01</title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +24,11 @@ height: 100%;
 function myPlaySound() {
          let mySound1 = new Audio('Radiostar.m4a');
          mySound1.play();
+      }
+   
+   function myPlaySound2() {
+         let mySound2 = new Audio('blaster.mp3');
+         mySound2.play();
       }
    
    // global functions here
@@ -67,13 +72,15 @@ function myCheckHit(){
 
    if ( myHitOther('myImg01','myImg02') ){
       document.getElementById('myImg01').style.left = '20px'
-      document.all.myText01.value = 'You hit an asteroid'  
+      document.all.myText01.value = 'You hit an asteroid' 
+      mySound2.play()
       myScore -= 1
    }   
    
    if ( myHitOther('myImg01','myImg03') ){
        //alert('you lose')
       document.getElementById('myImg01').style.left = '20px'
+      mySound2.play()
       document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
@@ -81,6 +88,7 @@ function myCheckHit(){
     if ( myHitOther('myImg01','myImg04') ){
        //alert('you lose')
       document.getElementById('myImg01').style.left = '20px'
+       mySound2.play()
       document.all.myText01.value = 'You hit an asteroid'  
       myScore -= 1
    }   
